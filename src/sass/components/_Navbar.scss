@@ -1,0 +1,144 @@
+@use "../abstracts/" as *;
+
+.navbar-list {
+  &--desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    text-transform: capitalize;
+    margin-right: 0;
+    li {
+      @include navLinkFontSize;
+      margin: auto 0.5rem;
+      @include linkHoverAnimation(
+        $color-tar-600,
+        $color-dark-brown,
+        20px,
+        1.5px
+      );
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+
+        @include roundedBtn($color-light-brown, $color-lighter-brown);
+        display: flex;
+        align-items: center;
+        margin-right: 3vw;
+        font-family: inherit;
+      }
+    }
+  }
+}
+
+///////////////////////////
+// ! MEDIA QUERIES
+///////////////////////////
+// / going up
+@media (min-width: $md-device) {
+  .navbar-list {
+    &--desktop {
+      li {
+        &:last-child {
+          padding: 1vw;
+          height: 2vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        margin: auto 1rem;
+        &:last-child {
+          // * add clamp for this later
+          font-size: 1.5vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        @include linkHoverAnimation(
+          $color-tar-600,
+          $color-dark-brown,
+          30px,
+          1.5px
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        @include linkHoverAnimation(
+          $color-tar-600,
+          $color-dark-brown,
+          40px,
+          2.5px
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        @include linkHoverAnimation(
+          $color-tar-600,
+          $color-dark-brown,
+          50px,
+          3px
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 2300px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        margin: auto 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2700px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        @include linkHoverAnimation(
+          $color-tar-600,
+          $color-dark-brown,
+          70px,
+          5px
+        );
+      }
+    }
+  }
+}
+
+@media (max-width: $md-device) {
+  .navbar-list--desktop {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

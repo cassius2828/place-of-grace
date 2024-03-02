@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+#header {
+  background-color: $color-company-white;
+  position: fixed;
+  min-height: 5vw;
+  max-height: 25rem;
+  z-index: 3;
+  width: 100vw;
+  -webkit-box-shadow: 0px 4px 15px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+///////////////////////////
+// ! MEDIA QUERIES
+///////////////////////////
+
+@media (min-width: $md-device) {
+  #header {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 2200px) {
+  #header {
+    justify-content: space-between;
+  }
+}

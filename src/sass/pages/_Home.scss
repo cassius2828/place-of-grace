@@ -1,0 +1,111 @@
+@use "../abstracts/" as *;
+
+#homepage {
+  padding-top: 10vw;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+
+  &-right {
+    background-image: url(../../../images/How-Walking-Together-Helps-You-Stay-Together-desktop.png);
+    background-size: cover;
+    background-position: 50% 25%;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &--img__hero {
+    width: 100%;
+  }
+
+  &--hr__story {
+    @include base-hr-style($color-burgandy-light, 2px);
+  }
+  &-left {
+    margin-top: 3rem;
+    padding: 0rem 3rem;
+  }
+  &--text {
+    &__title {
+      letter-spacing: 1vw;
+      @include titleFontSize(full);
+      text-align: center;
+      margin-bottom: 1vw;
+    }
+    &__story {
+      margin: 1.25vw 0;
+      @include paragraphFontSize(phone);
+      line-height: 5vw;
+    }
+  }
+
+  &__signature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage {
+    &--text {
+      &__story {
+        padding: 0 5vw;
+      }
+    }
+  }
+}
+
+@media (min-width: $md-device) {
+  #homepage {
+    flex-direction: row;
+  }
+
+  .homepage {
+    width: 80%;
+    &--img__hero {
+      width: 100%;
+    }
+    &-right {
+      min-height: 50vh;
+    }
+
+    &--text {
+      &__title {
+        @include titleFontSize(half);
+    
+      }
+      &__story {
+        margin: 1.25vw 0;
+        line-height: 2.5vw;
+      }
+    }
+
+    &--img__hero {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 4000px) {
+  .homepage {
+    margin: 0 auto;
+    &-left {
+      width: 50%;
+    }
+    &-right {
+      width: 50%;
+    
+    }
+  }
+}
+
+// ! first see need for all elements to be resized
+// * introducing html font size increase from her on out
+// * this will be placed in typography going forward
+
