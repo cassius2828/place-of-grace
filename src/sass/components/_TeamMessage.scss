@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.team-message {
+  position: relative;
+  z-index: 1;
+  padding: 15vh 5vw;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  background-color: $color-company-white;
+  &__text {
+    &--title {
+      margin: 2vw auto;
+      text-align: center;
+      width: 75%;
+      @include titleFontSize(half);
+    }
+    &--paragraph {
+      width: 75%;
+      margin: 2vw auto;
+      line-height: 4vw;
+      @include paragraphFontSize(phone);
+      line-height: clamp(2.5rem, 2vw, 5rem);
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .team-message {
+    // width: 75%;
+    padding-top: clamp(15rem, 15vh, 20rem);
+    margin: auto;
+  }
+}
+
+@media (min-width: 4000px) {
+  .team-message {
+    // need to keep so padding top doesnt change
+    padding: 10vw;
+    padding-top: clamp(15rem, 15vh, 20rem);
+  }
+}

@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.carousel-img-container {
+  width: 100%;
+
+  img {
+    width: 100vw;
+    max-height: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-img-container {
+    img {
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+@media (min-width: $md-device) {
+  .slick-slider {
+    display: none;
+  }
+}

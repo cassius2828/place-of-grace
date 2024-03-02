@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.iFrames-container {
+    width: 50%;
+    min-height: 10vw;
+    margin: auto;
+}
+#cpatsframe {
+    width: 100%;
+    height: 10vw;
+}
