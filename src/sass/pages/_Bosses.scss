@@ -1,0 +1,97 @@
+@use "../abstracts/" as *;
+.staff {
+  width: 100vw;
+  background-color: $color-cream;
+  padding-top: 10vw;
+  display: flex;
+  flex-direction: column;
+
+  &__meetstaff {
+    // meet staff container, title, and paragraph
+    &--text {
+      
+      &-container {
+        padding: 4vw;
+
+        hr {
+          @include base-hr-style($color-burgandy-light, 1px);
+        }
+      }
+
+      &__title {
+        text-align: center;
+        margin: 2vw auto;
+        // add clamps to this
+        @include titleFontSize(full);
+      }
+
+      &__paragraph {
+        margin: 2vw auto;
+        @include paragraphFontSize(phone);
+        padding: 0 4vw;   line-height: clamp(3rem, 3vw, 10rem);
+      }
+    }
+  }
+
+  .boss-card {
+    text-align: center;
+    margin: 3vw auto;
+
+    img {
+      width: 50%;
+      border-radius: $base-br;
+    }
+    .name-email-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      &--name {
+        @include staffCardName;
+        margin-right: 2vw;
+      }
+
+      &--title {
+        @include staffCardTitle;
+      }
+    }
+  }
+}
+
+@media (min-width: $md-device) {
+  .staff {
+    &__meetstaff {
+      &-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      &--text {
+        &__title {
+          margin: 2vw auto;
+          @include titleFontSize(half);
+          text-align: center;
+        }
+
+        &__paragraph {
+          @include paragraphFontSize(tablet);
+        }
+      }
+
+      &--boss-container {
+        display: flex;
+        flex-direction: row;
+        padding-right: 4vw;
+        .boss-card {
+          margin: auto 2vw;
+       
+          img {
+            width: 20vw;
+          }
+        }
+      }
+    }
+  }
+}

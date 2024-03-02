@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// FONT FAMILY
+$font-family-primary: Montserrat;
+
+
+
+// THEME COLORS
+
+$color-company-white: #fefefe;
+$color-cream: #efe9e0;
+$color-lighter-brown: #d3af7f;
+$color-light-brown: #bc9461;
+$color-dark-brown: #9b6d47;
+$color-darker-brown: #5b412b;
+$color-burgandy-light: #701111;
+$color-burgandy-dark: #4f0a0a;
+
+// THEME COLORS OPACITY
+$color-company-white-opacity2: #fefefe3e;
+$color-company-white-opacity4: #fefefe99;
+$color-company-white-opacity6: #fefefe6a;
+$color-company-white-opacity8: #fefefebb;
+
+$color-company-white-opacity95: #fefefeea;
+$color-burgandy-light-opacity8: #701111c1;
+
+$color-cream-opacity8: #efe9e0b7;
+$color-lighter-brown-opacity8: #d3af7fb7;
+
+
+// GRAYSCALE
+$color-pure-black: #000;
+$color-tar-600: #27292d;
+$color-dark-gray-500: #3f4447;
+$color-gray-400: #717277;
+$color-gray-300: #a9afb2;
+$color-white-200: #e6eaed;
+$color-white-100: #f6f8f9;
+$color-pure-white: #fff;
+
+// TYPOGRAPHY
+
+// * tabs
+$text-tab-xs: 1rem;
+$text-tab-sm: 2rem;
+$text-tab-default: 2.5rem;
+$text-tab-lg: 3.25rem;
+$text-tab-xl: 4rem;
+$text-tab-xxl: 6rem;
+
+
+// BREAKPOINTS
+$xxs-device: 320px;
+$xs-device: 375px;
+$s-device: 425px;
+$md-device: 800px;
+$lg-device: 990px;
+$xl-device: 1450px;
+$xxl-device: 1650px;
+$xxxl-device: 2000px;
+$huge-device: 2400px;
+
+
+// BORDER RADIUS
+$base-br: 4px;
+
+
