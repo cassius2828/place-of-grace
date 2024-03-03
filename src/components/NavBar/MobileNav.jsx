@@ -4,7 +4,7 @@ const MobileNav = ({ toggle, setToggle }) => {
   return (
     <>
       <Hamburger toggle={toggle} setToggle={setToggle} />
-      <NavListMobile toggle={toggle} />
+      <NavListMobile className={`mobile-nav-list`} toggle={toggle} />
     </>
   );
 };

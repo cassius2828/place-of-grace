@@ -2,9 +2,7 @@
 import NavListDesktop from "./NavListDesktop";
 import Logo from "../Logo/Logo";
 
-
-
-const NavigationBar = ({openMobileMenu}) => {
+const NavigationBar = ({ openMobileMenu }) => {
   return (
     <>
       <nav className="navbar">
@@ -15,8 +13,11 @@ const NavigationBar = ({openMobileMenu}) => {
               : `navbar-container`
           }
         >
-          <Logo logoNum={'1'} imageUrl="https://placeofgrace.net/NewPoGLogo.svg" />
-          <NavListDesktop />
+          <Logo
+            logoNum={"1"}
+            imageUrl="https://placeofgrace.net/NewPoGLogo.svg"
+          />
+          <NavListDesktop className={`navbar-list--desktop`} />
         </div>{" "}
       </nav>{" "}
     </>

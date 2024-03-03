@@ -13,7 +13,7 @@ function MobileApp() {
         {" "}
         <MobileNav />
         <MobileMain />
-        <Footer />
+       
         <ScrollToTop/>
       </BrowserRouter>
     </div>

@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  animation: fadeIn 0.3s ease-out;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -29,17 +33,79 @@ ul {
   list-style: none;
 }
 
+hr {
+  opacity: 1;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: Montserrat;
   font-weight: 400;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
 }
 
 .text-tab {
   margin-left: 2.5rem;
+}
+
+.accordion {
+  margin: auto auto 2rem auto;
+}
+.accordion-item {
+  border: none;
+}
+.accordion-body {
+  background-color: #f6f8f9;
+  width: 75vw;
+}
+.accordion-button:not(.collapsed) {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #701111;
+  background-color: rgba(254, 254, 254, 0.4156862745);
+  outline: none;
+  transition: 0.3s all ease;
+  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
+}
+.accordion-button:not(.collapsed):focus {
+  box-shadow: 0px 0px 3px #701111;
+}
+.accordion-button:not(.collapsed)::after {
+  content: none;
 }
 
 .bg-video {
@@ -216,7 +282,7 @@ button {
   outline-offset: 2rem;
 }
 .composition__photo:hover {
-  outline: 1.5rem solid #701111;
+  outline: 0.5rem solid #701111;
   transform: scale(1.05) translateY(-0.5rem);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 3;
@@ -554,10 +620,10 @@ button {
   margin: 1rem 0;
 }
 .signature h3 {
-  font-size: clamp(2rem, 1vw + 1rem, 7rem);
+  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
 }
 .signature span {
-  font-size: clamp(2rem, 0.5vw + 1rem, 6rem);
+  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
 }
 .signature-img {
   width: 100%;
@@ -606,20 +672,21 @@ button {
   padding-bottom: 3vw;
 }
 .testimonial__container .button {
-  position: absolute;
-  bottom: 1%;
+  top: 7.5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 10vw;
-  max-width: 50rem;
-  height: 5vw;
-  max-height: 12rem;
-  font-size: clamp(1rem, 2vw, 7rem);
-  padding: 1rem;
+  font-size: clamp(1rem, 1.75vw, 6rem);
+  padding: clamp(0.5rem, 1.5vw, 5rem);
+  height: auto;
+}
+.testimonial__icon {
+  position: relative;
+  left: -2rem;
 }
 .testimonial__card {
-  width: 60%;
+  min-width: 60%;
+  max-width: 85%;
   margin: 4vw auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
@@ -655,19 +722,14 @@ button {
 }
 .testimonial__text {
   transform: skewX(12deg);
+  width: 70%;
+  margin: auto;
 }
-.testimonial__caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  color: #fff;
-  text-transform: uppercase;
-  font-size: clamp(1.5rem, 1vw + 0.1rem, 6rem);
-  text-align: center;
-  opacity: 0;
-  transition: all 0.5s;
-  backface-visibility: hidden;
+.testimonial__text--caption {
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.5vw + 0.1rem, 3.75rem);
+  text-align: left;
 }
 .testimonial__card:hover .testimonial__caption {
   opacity: 1;
@@ -690,8 +752,8 @@ button {
 /*<a href="https://www.freepik.com/free-photo/high-angle-shot-magnificent-mountains-covered-with-trees-blue-sky_9077120.htm#query=hill&position=5&from_view=search&track=sph&uuid=e8588934-7050-4902-9d88-6d92df718fe5">Image by wirestock</a> on Freepik*/
 @media (max-width: 425px) {
   .testimonial__card {
-    width: 75%;
-    padding: 1rem;
+    min-width: 75%;
+    padding: 2rem;
     font-size: 0.6rem;
     margin: 3rem auto;
     transform: skewX(0);
@@ -705,6 +767,9 @@ button {
   .testimonial__text {
     transform: skewX(0);
   }
+  .testimonial__text--caption {
+    margin-left: 1rem;
+  }
   .testimonial__img {
     transform: translateX(-0.75rem);
   }
@@ -714,10 +779,8 @@ button {
     width: 75%;
   }
   .testimonial__container .button {
-    width: 6rem;
-    height: 2.5rem;
     font-size: 1.25rem;
-    padding: 1px;
+    padding: 5px;
   }
 }
 @media (max-width: 800px) {
@@ -733,9 +796,6 @@ button {
     transform: translateX(0) skewX(12deg);
     left: -0.5rem;
   }
-  .testimonial__caption {
-    font-size: 1rem;
-  }
   .testimonial__text {
     transform: skewX(12deg);
   }
@@ -747,6 +807,11 @@ button {
   .testimonial__card {
     font-size: clamp(1rem, 0.75vw + 1rem, 8rem);
     width: 50%;
+  }
+}
+@media (min-width: 3000px) {
+  .testimonial__text {
+    width: 100%;
   }
 }
 #header {
@@ -1196,21 +1261,17 @@ button {
   text-align: center;
   margin: 3vw auto;
 }
-.staff .boss-card img {
-  width: 50%;
-  border-radius: 4px;
-}
 .staff .boss-card .name-email-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .staff .boss-card__text--name {
-  font-size: clamp(2rem, 1vw + 1rem, 7rem);
+  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
   margin-right: 2vw;
 }
 .staff .boss-card__text--title {
-  font-size: clamp(2rem, 0.5vw + 1rem, 6rem);
+  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
 }
 
 @media (min-width: 800px) {
@@ -1230,13 +1291,17 @@ button {
   .staff__meetstaff--boss-container {
     display: flex;
     flex-direction: row;
-    padding-right: 4vw;
   }
   .staff__meetstaff--boss-container .boss-card {
     margin: auto 2vw;
   }
+  .staff__meetstaff--boss-container .boss-card .name-email-container {
+    height: auto;
+  }
   .staff__meetstaff--boss-container .boss-card img {
-    width: 20vw;
+    width: auto;
+    border-radius: 4px;
+    transform: none;
   }
 }
 .contact {
@@ -1381,17 +1446,69 @@ button {
     margin: 1vw 0;
   }
 }
-#homepage {
+.landing-page__text--title {
+  position: absolute;
+  top: 8%;
+  font-size: clamp(6rem, 10vw + 0.1rem, 12rem);
+  color: #fefefe;
+  animation: moveInLeft 1.5s ease-in;
+}
+.landing-page__nav-container {
+  position: absolute;
+  top: 60%;
+  font-size: clamp(3rem, 2vw + 0.1rem, 8rem);
+  color: #fefefe;
+  border: solid 1px #fefefe;
+  border-radius: 4px;
+  padding: 1rem;
+  animation: moveInRight 1.5s ease-in;
+  backface-visibility: hidden;
+  transition: all 0.2s ease-out;
+}
+.landing-page__nav-container:hover {
+  transition: all 0.2s ease-out;
+  background-color: rgba(254, 254, 254, 0.2431372549);
+}
+.landing-page__nav-list li {
+  transition: 0.3s all ease-out;
+}
+.landing-page__nav-list li:hover {
+  color: #701111;
+}
+
+.hero-bg {
+  position: relative;
+  background: url(../../../public/images/hero/happy-patient-holding-caregiver-hand-600nw-688645165.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .landing-page__text--title {
+    top: 20%;
+    left: 10%;
+  }
+  .landing-page__nav-container {
+    top: 55%;
+    left: 15%;
+  }
+}
+#OurStory {
   padding-top: 10vw;
   display: flex;
   flex-direction: column-reverse;
 }
 
-.homepage {
+.OurStory {
   display: flex;
   flex-direction: column;
 }
-.homepage-right {
+.OurStory-right {
   background-image: url(../../../images/How-Walking-Together-Helps-You-Stay-Together-desktop.png);
   background-size: cover;
   background-position: 50% 25%;
@@ -1399,72 +1516,72 @@ button {
   width: 100%;
   background-repeat: no-repeat;
 }
-.homepage--img__hero {
+.OurStory--img__hero {
   width: 100%;
 }
-.homepage--hr__story {
+.OurStory--hr__story {
   width: 60%;
   margin: 1rem auto;
   border: solid 2px #701111;
 }
-.homepage-left {
+.OurStory-left {
   margin-top: 3rem;
   padding: 0rem 3rem;
 }
-.homepage--text__title {
+.OurStory--text__title {
   letter-spacing: 1vw;
   font-size: clamp(3rem, 3vw + 1rem, 20rem);
   text-align: center;
   margin-bottom: 1vw;
 }
-.homepage--text__story {
+.OurStory--text__story {
   margin: 1.25vw 0;
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   line-height: 5vw;
 }
-.homepage__signature-container {
+.OurStory__signature-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .homepage--text__story {
+  .OurStory--text__story {
     padding: 0 5vw;
   }
 }
 @media (min-width: 800px) {
-  #homepage {
+  #OurStory {
     flex-direction: row;
   }
-  .homepage {
+  .OurStory {
     width: 80%;
   }
-  .homepage--img__hero {
+  .OurStory--img__hero {
     width: 100%;
   }
-  .homepage-right {
+  .OurStory-right {
     min-height: 50vh;
   }
-  .homepage--text__title {
+  .OurStory--text__title {
     font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
   }
-  .homepage--text__story {
+  .OurStory--text__story {
     margin: 1.25vw 0;
     line-height: 2.5vw;
   }
-  .homepage--img__hero {
+  .OurStory--img__hero {
     display: none;
   }
 }
 @media (min-width: 4000px) {
-  .homepage {
+  .OurStory {
     margin: 0 auto;
   }
-  .homepage-left {
+  .OurStory-left {
     width: 50%;
   }
-  .homepage-right {
+  .OurStory-right {
     width: 50%;
   }
 }
@@ -1607,12 +1724,21 @@ button {
 }
 .staff-card {
   text-align: center;
-  width: 50%;
   margin: 2rem 0;
 }
-.staff-card img {
+.staff-card__img-bg {
+  width: clamp(3rem, 20vw, 10rem);
+  height: clamp(3rem, 20vw, 10rem);
+  border-radius: 50%;
+  border: solid 2px #701111;
+  overflow: hidden;
+  margin: auto;
+}
+.staff-card__img-bg img {
   width: 100%;
-  border-radius: 4px;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1.75) translate(0, 1rem);
 }
 .staff-card .name-email-container {
   display: flex;
@@ -1621,10 +1747,10 @@ button {
 }
 .staff-card__text--name {
   margin-right: 2vw;
-  font-size: clamp(2rem, 1vw + 1rem, 7rem);
+  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
 }
 .staff-card__text--title {
-  font-size: clamp(2rem, 0.5vw + 1rem, 6rem);
+  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
 }
 .staff a:hover {
   color: #701111;
@@ -1642,6 +1768,11 @@ button {
   border: solid 1px #701111;
 }
 
+@media (min-width: 375px) {
+  .staff-card img {
+    transform: scale(1.5) translate(0, 1.25rem);
+  }
+}
 @media (min-width: 768px) {
   .staff-card__text--name {
     margin-right: 1vw;
@@ -1649,7 +1780,7 @@ button {
 }
 @media (min-width: 900px) {
   .staff__stafflist-grid {
-    grid-template-columns: repeat(auto-fill, minmax(33vw, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   }
 }
 #serve {
@@ -1673,6 +1804,7 @@ button {
 .serve-left {
   margin-top: 3rem;
   padding: 0rem 3rem;
+  position: relative;
 }
 .serve--text__title {
   font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
@@ -1689,16 +1821,12 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
+  justify-items: center;
   width: 100%;
 }
-.serve__signature-container .signature {
-  margin: 0;
-}
-.serve__signature-container .signature-left {
-  margin-top: 2rem;
-}
-.serve__signature-container img {
-  width: 20rem;
+.serve__signature-container button {
+  margin: 2rem;
+  text-transform: capitalize;
 }
 
 @media (min-width: 768px) {

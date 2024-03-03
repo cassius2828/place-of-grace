@@ -4,7 +4,11 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const HeadshotCard = ({ img, name, title, level, email }) => {
   return (
     <div className={level + "-card"}>
-      <img src={img} alt={name + " the " + title} />
+      <div className="staff-card__img-bg">
+        {" "}
+        <img src={img} alt={name + " the " + title} />
+      </div>
+
       <div className="name-email-container">
         <h3 className={`${level}-card__text--name`}>{name}</h3>
         <a href={`mailto:${email}`}>

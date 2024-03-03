@@ -21,6 +21,7 @@
   &-left {
     margin-top: 3rem;
     padding: 0rem 3rem;
+    position: relative;
   }
 
   &--text {
@@ -41,18 +42,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
+    justify-items: center;
     width: 100%;
 
-    .signature {
-      margin: 0;
-
-      &-left {
-        margin-top: 2rem;
-      }
-    }
-
-    img {
-      width: 20rem;
+    button {
+      margin: 2rem;
+      text-transform: capitalize;
     }
   }
 }

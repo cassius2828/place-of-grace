@@ -40,19 +40,11 @@ const FooterOriginLinkLayout = () => {
           />
         </ul>
         <ul className="footer__list footer__list3">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.sdrc.org/eligible"
-          >
-            <li>San Diego Regional Center</li>
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://nbrc.net/client-services/eligibility/"
-          >
+          <a href="https://nbrc.net/client-services/eligibility/">
             <li>North Bay Regional Center </li>
+          </a>{" "}
+          <a href="https://www.sdrc.org/eligible">
+            <li>San Diego Regional Center</li>
           </a>
         </ul>
       </div>

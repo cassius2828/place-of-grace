@@ -1,28 +1,29 @@
-import SignatureCard from "../../components/Reusables/SignatureCard";
+// import SignatureCard from "../../components/Reusables/SignatureCard";
 import SignatureContainer from "../../layout/SignatureContainer/SignatureContainer";
 import ServeContainer from "./ServeContainer";
 import ServeStory from "./ServeStory";
-import nbrc from "/images/nbrc.png";
-import sdrc from "/images/sdrc.jpg";
+// import nbrc from "https://nbrc.net/client-services/eligibility";
+// import sdrc from "https://www.sdrc.org/eligible";
+// import nbrc from "#";
+// import sdrc from "#";
 import Carousel from "../../components/Reusables/Carousel";
 import ImageFloats from "../../components/ImageFloats/ImageFloats";
+import {RoundedButton} from "../../components/Reusables/Buttons";
+import { NavLink } from "react-router-dom";
+
 
 const Serve = () => {
   return (
     <section id="serve">
       <ServeContainer side="left">
         <ServeStory />
-        <SignatureContainer className="serve__signature-container">
-          <SignatureCard
-            side="left"
-            imageUrl={nbrc}
-            alt="North Bay Regional Center Logo"
-          />{" "}
-          <SignatureCard
-            side="right"
-            imageUrl={sdrc}
-            alt="San Diego Regional Center Logo"
-          />
+        <SignatureContainer isBar={true} className="serve__signature-container">
+          <NavLink to={"https://nbrc.net/client-services/eligibility/"}>
+            <RoundedButton text={`north bay regional center`} />
+          </NavLink>
+          <NavLink to={`https://www.sdrc.org/eligible`}>
+            <RoundedButton text={`san diego regional center`} />
+          </NavLink>
         </SignatureContainer>
       </ServeContainer>
 

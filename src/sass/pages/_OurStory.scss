@@ -1,12 +1,12 @@
 @use "../abstracts/" as *;
 
-#homepage {
+#OurStory {
   padding-top: 10vw;
   display: flex;
   flex-direction: column-reverse;
 }
 
-.homepage {
+.OurStory {
   display: flex;
   flex-direction: column;
 
@@ -52,7 +52,7 @@
 }
 
 @media (min-width: 768px) {
-  .homepage {
+  .OurStory {
     &--text {
       &__story {
         padding: 0 5vw;
@@ -62,11 +62,11 @@
 }
 
 @media (min-width: $md-device) {
-  #homepage {
+  #OurStory {
     flex-direction: row;
   }
 
-  .homepage {
+  .OurStory {
     width: 80%;
     &--img__hero {
       width: 100%;
@@ -93,7 +93,7 @@
 }
 
 @media (min-width: 4000px) {
-  .homepage {
+  .OurStory {
     margin: 0 auto;
     &-left {
       width: 50%;

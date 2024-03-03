@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  animation: fadeIn 0.3s ease-out;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -26,3 +30,6 @@ ul {
   list-style: none;
 }
 
+hr {
+  opacity: 1;
+}

@@ -1,10 +1,10 @@
-const HomeHeroImg = () => {
+const OurStoryHeroImg = () => {
   return (
     <img
-      className="homepage--img__hero"
+      className="OurStory--img__hero"
       src="/images/How-Walking-Together-Helps-You-Stay-Together.jpg"
       alt=""
     />
   );
 }
-export default HomeHeroImg
+export default OurStoryHeroImg

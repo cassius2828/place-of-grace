@@ -1,3 +1,5 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 const TestimonialCard = ({image, name, caption, quote}) => {
   return (
     <div className="testimonial__card">
@@ -10,7 +12,8 @@ const TestimonialCard = ({image, name, caption, quote}) => {
         <figcaption className="testimonial__caption">{name}</figcaption>
       </figure> */}
       <div className="testimonial__text">
-        <h3 className="testimonial__text--caption">
+        <FontAwesomeIcon className="testimonial__icon" size="3x" icon={faQuoteLeft}/>
+        <h3 style={{fontWeight: '800'}} className="testimonial__text--caption">
           I had the best week ever with my family
         </h3>
         <p className="testimonial__text--quote">

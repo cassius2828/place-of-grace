@@ -3,7 +3,7 @@
 .testimonial {
   &__container {
     position: relative;
-    padding-top: clamp(22rem,20vh, 40rem);
+    padding-top: clamp(22rem, 20vh, 40rem);
     margin-top: -25rem;
     background-image: linear-gradient(
         to right bottom,
@@ -16,29 +16,33 @@
     padding-bottom: 3vw;
 
     .button {
-      position: absolute;
-      bottom: 1%;
+      top: 7.5%;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
-      width: 10vw;
-      max-width: 50rem;
-      height: 5vw;
-      max-height: 12rem;
-      font-size: clamp(1rem, 2vw, 7rem);
-      padding: 1rem;
+      // width: 10vw;
+      // max-width: 50rem;
+      // height: 5vw;
+      // max-height: 12rem;
+      font-size: clamp(1rem, 1.75vw, 6rem);
+      padding: clamp(0.5rem, 1.5vw, 5rem);
+      height: auto;
     }
   }
-
+  &__icon {
+    position: relative;
+    left: -2rem;
+  }
   &__card {
-    width: 60%;
+    min-width: 60%;
+    max-width: 85%;
     margin: 4vw auto;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
-   @include paragraphFontSize(phone);
+    @include paragraphFontSize(phone);
     // change this for mobile
     transform: skewX(-12deg);
   }
@@ -72,22 +76,16 @@
 
   &__text {
     transform: skewX(12deg);
-  }
+    width: 70%;
+    margin: auto;
+    &--caption {
+      text-transform: capitalize;
+      font-weight: 800;
+      // maybe use this for variable font size heights
+      font-size: clamp(1.25rem, 1.5vw + 0.1rem, 3.75rem);
 
-  &__caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    color: #fff;
-    text-transform: uppercase;
-    // maybe use this for variable font size heights
-    font-size: clamp(1.5rem, 1vw + 0.1rem, 6rem);
-
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s;
-    backface-visibility: hidden;
+      text-align: left;
+    }
   }
 
   &__card:hover .testimonial__caption {
@@ -115,8 +113,8 @@
 @media (max-width: 425px) {
   .testimonial {
     &__card {
-      width: 75%;
-      padding: 1rem;
+      min-width: 75%;
+      padding: 2rem;
 
       font-size: 0.6rem;
       margin: 3rem auto;
@@ -133,6 +131,10 @@
     }
     &__text {
       transform: skewX(0);
+
+      &--caption {
+        margin-left: 1rem;
+      }
     }
     &__img {
       // not sure why 200% works but it does for these pics in these dimensions
@@ -149,10 +151,8 @@
     }
     &__container {
       .button {
-        width: 6rem;
-        height: 2.5rem;
         font-size: 1.25rem;
-        padding: 1px;
+        padding: 5px;
       }
     }
   }
@@ -175,9 +175,6 @@
       left: -0.5rem;
     }
 
-    &__caption {
-      font-size: 1rem;
-    }
     &__text {
       transform: skewX(12deg);
     }
@@ -190,10 +187,16 @@
 @media (min-width: 2000px) {
   .testimonial {
     &__card {
-   @include paragraphFontSize(tablet);
+      @include paragraphFontSize(tablet);
       width: 50%;
-    
     }
   }
 }
 
+@media (min-width: 3000px) {
+  .testimonial {
+    &__text {
+      width: 100%;
+    }
+  }
+}

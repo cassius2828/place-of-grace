@@ -1,15 +1,22 @@
 import SignatureCard from "../../components/Reusables/SignatureCard";
 import SignatureContainer from "../../layout/SignatureContainer/SignatureContainer";
-import HomeHeroImg from "./HomeHeroImg";
-import HomepageContainer from "./HomepageContainer";
-import HomepageStory from "./HomepageStory";
+import OurStoryHeroImg from "./OurStoryHeroImg";
+import OurStoryContainer from "./OurStoryContainer";
+import OurStoryText from "./OurStoryText";
 
-const Home = () => {
+/*
+Home --> OurStory
+ourstory --> 
+
+*/
+
+
+const OurStory = () => {
   return (
-    <section id="homepage">
-      <HomepageContainer side="left">
-        <HomepageStory />
-        <SignatureContainer className="homepage__signature-container">
+    <section id="OurStory">
+      <OurStoryContainer side="left">
+        <OurStoryText />
+        <SignatureContainer className="OurStory__signature-container">
           <SignatureCard
             side="left"
             imageUrl="/images/360_F_429547_YJTlwk2Ld5kYDAbtCUwFgzmatgUHEg.jpg"
@@ -25,12 +32,12 @@ const Home = () => {
             jobTitle="Co-Founder | CEO"
           />
         </SignatureContainer>
-      </HomepageContainer>
+      </OurStoryContainer>
 
-      <HomepageContainer side="right">
-        <HomeHeroImg />
-      </HomepageContainer>
+      <OurStoryContainer side="right">
+        <OurStoryHeroImg />
+      </OurStoryContainer>
     </section>
   );
 };
-export default Home;
+export default OurStory;
