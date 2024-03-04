@@ -1618,10 +1618,16 @@ button {
   letter-spacing: 1vw;
   margin-bottom: 3vw;
 }
+.mission__text--title-2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
 .mission__text--paragraph {
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   line-height: 4vw;
-  margin-bottom: 5vw;
+  margin-bottom: 10vw;
 }
 .mission-cards-container {
   width: 100%;
@@ -1670,6 +1676,7 @@ button {
   }
   .mission-card__text--paragraph {
     font-size: clamp(1rem, 1vw + 1rem, 8rem);
+    margin-bottom: 0;
   }
 }
 @media (min-width: 900px) {
@@ -1683,7 +1690,7 @@ button {
   }
   .mission-cards-container {
     grid-template-columns: repeat(3, 1fr);
-    height: clamp(10rem, 100vh, 110rem);
+    height: clamp(10rem, 50vh, 110rem);
     align-content: end;
   }
   .mission-card {

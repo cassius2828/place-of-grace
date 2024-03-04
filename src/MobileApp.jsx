@@ -11,7 +11,7 @@ function MobileApp() {
     <div className={openMobileMenu ? `mobile-app mobile-active` : `mobile-app`}>
       <BrowserRouter>
         {" "}
-        <MobileNav />
+        
         <MobileMain />
        
         <ScrollToTop/>

@@ -91,6 +91,9 @@ THINGS NEEDED
 OUR MISSION
 ///////////////////////////
 
+
+- either shorten gap or add our values text to prompt client to keep scrolling 
+
 ///////////////////////////
 PRACTICAL CHANGES I THINK SHOULD STAY
 ///////////////////////////

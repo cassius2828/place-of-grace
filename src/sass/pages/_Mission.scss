@@ -38,11 +38,19 @@
       margin-bottom: 3vw;
       // * below is for larger vw
       //  line-height: 5vw;
+
+      &-2 {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4rem;
+        
+      }
     }
     &--paragraph {
       @include paragraphFontSize(phone);
       line-height: 4vw;
-      margin-bottom: 5vw;
+      margin-bottom: 10vw;
     }
   }
 
@@ -100,8 +108,11 @@
       width: 60%;
 
       &__text {
+        &--title {
+          
+        }
         &--paragraph {
-          @include cardParagraphFontSize(tablet);
+          @include cardParagraphFontSize(tablet);margin-bottom:0;
         }
       }
     }
@@ -119,8 +130,9 @@
       padding-right: 10vw;
     }
     &-cards-container {
+     
       grid-template-columns: repeat(3, 1fr);
-      height: clamp(10rem, 100vh, 110rem);
+      height: clamp(10rem, 50vh, 110rem);
       align-content: end;
     }
 
