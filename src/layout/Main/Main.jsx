@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-
 // Lazy loading components
 const Home = lazy(() => import("../../pages/Home/OurStory"));
 const Mission = lazy(() => import("../../pages/Mission/Mission"));
@@ -24,7 +23,7 @@ const PageTitles = {
   "/contact": "A Place of Grace | Contact",
 };
 
-const MobileMain = () => {
+const Main = () => {
   // State to manage the document title
   const [tabTitle, setTabTitle] = React.useState(PageTitles[location.pathname]);
 
@@ -41,7 +40,13 @@ const MobileMain = () => {
   return (
     <main id="mobile-main">
       {/* Suspense for lazy loading */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div id="suspense">
+            <span className="loader"></span>
+          </div>
+        }
+      >
         <Routes>
           {/* Route definitions */}
           <Route index element={<LandingPage />} />
@@ -57,4 +62,4 @@ const MobileMain = () => {
   );
 };
 
-export default MobileMain;
+export default Main;

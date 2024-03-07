@@ -1,4 +1,4 @@
-import image from '../../../public/images/How-Walking-Together-Helps-You-Stay-Together.jpg'
+import image from '/images/How-Walking-Together-Helps-You-Stay-Together.jpg'
 
 const ServeHeroImg = () => {
   return (

@@ -1,6 +1,6 @@
-import Abby from "../../../public/staff/Abby.webp";
-import Dye from "../../../public/staff/Dye.webp";
-import Freddie from "../../../public/staff/Freddie.webp";
+import Abby from "/staff/Abby.webp";
+import Dye from "/staff/Dye.webp";
+import Freddie from "/staff/Freddie.webp";
 import TestimonialCard from "./TestimonialCard";
 import { RoundedButton } from "../../components/Reusables/Buttons.jsx";
 

@@ -1,4 +1,4 @@
-import VideoOfHills from "../../../public/videos/708884_Faial Island Azores Landscape Scenery_By_Paride_Musci_Artlist_HD.mp4";
+import VideoOfHills from "/videos/708884_Faial Island Azores Landscape Scenery_By_Paride_Musci_Artlist_HD.mp4";
 const BgVideo = () => {
   return (
     <div className="bg-video">

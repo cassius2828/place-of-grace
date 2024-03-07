@@ -1,10 +1,10 @@
-import picnic from "../../../public/images/clients/home2.png";
-import party from "../../../public/images/clients/home1.jpg";
-import xmas from "../../../public/images/clients/home3.png";
-// import groupLeft from "../../../public/images/clients/group-left.png";
-// import groupMiddle from "../../../public/images/clients/group-middle.png";
-// import groupRight from "../../../public/images/clients/group-right.png";
-import groupwide from "../../../public/images/clients/group-wide.jpeg";
+import picnic from "/images/clients/home2.png";
+import party from "/images/clients/home1.jpg";
+import xmas from "/images/clients/home3.png";
+// import groupLeft from "/images/clients/group-left.png";
+// import groupMiddle from "/images/clients/group-middle.png";
+// import groupRight from "/images/clients/group-right.png";
+import groupwide from "/images/clients/group-wide.jpeg";
 
 import Slider from "react-slick";
 const Carousel = ({slidesToShow}) => {

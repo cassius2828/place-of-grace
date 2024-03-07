@@ -1,5 +1,7 @@
 import { useState } from "react";
 import NavListDesktop from "../../components/NavBar/NavListDesktop";
+
+
 const LandingPage = () => {
   const [showNav, setShowNav] = useState(false);
   const handleShowNav = () => {
@@ -8,6 +10,8 @@ const LandingPage = () => {
   const handleHideNav = () => {
     setShowNav(false);
   };
+
+
   return (
     <section className="landing-page" id="landing-page">
       <div className="hero-bg">
@@ -20,7 +24,9 @@ const LandingPage = () => {
           onMouseLeave={handleHideNav}
           className="landing-page__nav-container"
         >
-         {showNav ? <NavListDesktop className={`landing-page__nav-list`}/> : 'Learn About Us'}
+         {showNav ? 
+         <NavListDesktop className={`landing-page__nav-list`}/> 
+         : 'Learn About Us'}
         </div>
       </div>
     </section>

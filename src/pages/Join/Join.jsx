@@ -10,8 +10,6 @@ const Join = () => {
     <section id="join" className="join">
       <TeamMessage/>
       <TestimonialContainer />
-
-   
     </section>
   );
 };

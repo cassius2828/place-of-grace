@@ -1,18 +1,9 @@
-import { useState } from "react";
+
 import BgVideo from "../BgVideo/BgVideo";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 
-const initialState = {
-  firstName: "",
-  firstNameValid: false,
-  lastName: "",
-  lastNameValid: false,
-  email: "",
-  emailValid: false,
-  message: "",
-  messageValid: false,
-};
+
 
 const ContactFormSection = () => {
   // useEffect(() => {

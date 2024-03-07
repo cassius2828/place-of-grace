@@ -1,5 +1,4 @@
 import { faHandHoldingHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextTab from "../../components/Reusables/TextTab";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 

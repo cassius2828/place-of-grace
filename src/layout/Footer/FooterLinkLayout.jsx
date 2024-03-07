@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavListItem from "../../components/NavBar/NavListItem";
-const FooterOriginLinkLayout = () => {
+const FooterLinkLayout = () => {
   let isDesktop = true;
   return (
     <>
@@ -74,7 +74,7 @@ const FooterOriginLinkLayout = () => {
     </>
   );
 };
-export default FooterOriginLinkLayout;
+export default FooterLinkLayout;
 
 /*
 

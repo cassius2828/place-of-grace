@@ -1,17 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../../components/Logo/Logo";
-import {
-  RoundedButton,
-  RoundedButtonTransparent,
-} from "../../components/Reusables/Buttons";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 import FooterButtonContainer from "./FooterButtonContainer";
-import FooterLinkGrid from "./FooterLinkGrid";
-import FooterOriginLinkLayout from "./FooterOriginLinkLayout";
+import FooterLinkLayout from "./FooterLinkLayout";
 
 const Footer = () => {
   return (
@@ -27,11 +16,9 @@ const Footer = () => {
       </h1>
       <hr />
       <br />
-     <FooterButtonContainer/>
+      <FooterButtonContainer />
       <hr />
-      {/* <FooterLinkGrid/> */}
-  
-<FooterOriginLinkLayout/>
+      <FooterLinkLayout />
       <hr />
       <div className="footer__copyright">
         <span className="copyright">

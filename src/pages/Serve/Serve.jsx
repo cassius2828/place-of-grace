@@ -1,13 +1,9 @@
-// import SignatureCard from "../../components/Reusables/SignatureCard";
 import SignatureContainer from "../../layout/SignatureContainer/SignatureContainer";
 import ServeContainer from "./ServeContainer";
 import ServeStory from "./ServeStory";
-// import nbrc from "https://nbrc.net/client-services/eligibility";
-// import sdrc from "https://www.sdrc.org/eligible";
-// import nbrc from "#";
-// import sdrc from "#";
 import Carousel from "../../components/Reusables/Carousel";
 import ImageFloats from "../../components/ImageFloats/ImageFloats";
+
 import {RoundedButton} from "../../components/Reusables/Buttons";
 import { NavLink } from "react-router-dom";
 

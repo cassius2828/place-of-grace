@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../../../../pog/place-of-grace-landing-pg-copy/src/customHooks/useGlobalContext";
+import {useGlobalContext} from "../../customHooks/useGlobalContext";
 
 const Hamburger = () => {
   const { handleMobileMenuToggle } = useGlobalContext();

@@ -1,6 +1,6 @@
-import picnic from "../../../public/images/clients/home2.png";
-import party from "../../../public/images/clients/home1.jpg";
-import xmas from "../../../public/images/clients/home3.png";
+import picnic from "/images/clients/home2.png";
+import party from "/images/clients/home1.jpg";
+import xmas from "/images/clients/home3.png";
 
 const ImageFloats = () => {
   return (
