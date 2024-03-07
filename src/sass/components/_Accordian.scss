@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+
+.accordion {
+  //  width here will keep accordian at same size
+  margin: auto auto 2rem auto;
+
+  &-item {
+    border: none;
+  }
+  &-body {
+    background-color: $color-white-100;
+    //  width here will make accordian smaller when not active
+  }
+  // this can change whether the category is in the middle or end
+&__category {
+  // margin: auto;
+}
+  &-button:not(.collapsed) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: $color-burgandy-light;
+    background-color: $color-company-white-opacity6;
+    outline: none;
+    transition: 0.3s all ease;
+    @include staffCardName;
+    &:focus {
+      box-shadow: 0px 0px 3px $color-burgandy-light;
+      z-index: 0;
+    }
+    &::after {
+      content: none;
+    }
+   
+  }
+}

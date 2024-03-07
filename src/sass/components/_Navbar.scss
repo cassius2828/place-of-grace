@@ -1,0 +1,109 @@
+@use "../abstracts/" as *;
+#desktop-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar-list {
+  &--desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-transform: capitalize;
+    margin-right: 0;
+    li {
+      font-size: clamp(1rem, 1vw + 0.1rem, 4rem);
+      margin: auto 0.5rem;
+      @include linkHoverAnimation(
+        $color-tar-600,
+        $color-dark-brown,
+        17px,
+        1.5px
+      );
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+
+        @include roundedBtn($color-light-brown, $color-lighter-brown);
+        display: flex;
+        align-items: center;
+        margin-right: 3vw;
+        font-family: inherit;
+      }
+    }
+  }
+}
+
+///////////////////////////
+// ! MEDIA QUERIES
+///////////////////////////
+// / going up
+@media (min-width: $md-device) {
+  .navbar-list {
+    &--desktop {
+      li {
+        &:last-child {
+          padding: 1vw;
+          height: 2vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        margin: auto 1rem;
+        &:last-child {
+          // * add clamp for this later
+          font-size: 1.5vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1230px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        @include navLinkFontSize;
+        @include linkHoverAnimation(
+          $color-tar-600,
+          $color-dark-brown,
+          30px,
+          1.5px
+        );
+      }
+    }
+  }
+}
+
+@media (min-width: 2300px) {
+  .navbar-list {
+    &--desktop {
+      li {
+        margin: auto 1.5rem;
+      }
+    }
+  }
+}
+
+///////////////////////////
+// * MAX WIDTH SECTION
+///////////////////////////
+
+@media (max-width: $md-device) {
+  .navbar-list--desktop {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,183 @@
+@use "../abstracts/" as *;
+// check this again
+.contact {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  .form-box {
+    background-color: $color-company-white-opacity4;
+    padding: 1rem;
+    z-index: 2;
+    border-radius: $base-br;
+    margin-top: -5vh;
+  }
+  &__text {
+    &--container {
+      text-align: center;
+    }
+
+    &--title {
+      margin: 1rem 0;
+      @include titleFontSize(half);
+    }
+    &--sub-title {
+      @include paragraphFontSize(phone);
+
+      margin-bottom: 2vw;
+    }
+  }
+  &__hr {
+    @include base-hr-style($color-burgandy-light, 1px);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+
+    margin: 3vw auto;
+
+    label {
+      margin: 1rem 0;
+
+      @include paragraphFontSize(phone);
+    }
+    input {
+      @include paragraphFontSize(phone);
+
+      padding: 1vw;
+      border: none;
+    }
+
+    textarea {
+      margin: 0 0 3vw 0;
+      padding: 1vw;
+      height: 5vh;
+      border: none;
+      @include paragraphFontSize(phone);
+    }
+    button {
+      @include roundedBtn($color-light-brown, $color-lighter-brown);
+
+      width: 5vw;
+      height: 3vw;
+      min-height: 4rem;
+      min-width: 10rem;
+      @include paragraphFontSize(phone);
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100vw;
+    background-color: $color-light-brown;
+    opacity: 1;
+    z-index: 5;
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-items: center;
+      align-items: center;
+      padding: 2rem;
+    }
+  }
+  &__text {
+    color: $color-company-white;
+    @include paragraphFontSize(phone);
+    text-align: center;
+  }
+
+  &__icon {
+    margin-left: 1rem;
+    @include base-animation;
+    &:hover {
+      transform: scale(1.1);
+      color: $color-cream;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .contact {
+    &__form {
+      textarea {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .contact {
+    &__form {
+      label {
+        margin: 1rem 0;
+      }
+
+      textarea {
+        height: 10vh;
+      }
+      button {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    .form-box {
+      background-color: $color-company-white-opacity8;
+      margin: 2rem 0;
+    }
+    padding: 10vh 8vw 0 8vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    .form-box {
+      width: 75%;
+      margin: 2vw auto;
+    }
+
+    padding-top: 15vh;
+
+    &__form {
+      width: 50vw;
+
+      input {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .contact {
+    &__text {
+      &--title {
+        margin-bottom: 2vw;
+      }
+    }
+    &__form {
+      input {
+        padding: 1rem;
+      }
+
+      textarea {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .contact {
+    &__form {
+      input {
+        margin: 1vw 0;
+      }
+    }
+  }
+}

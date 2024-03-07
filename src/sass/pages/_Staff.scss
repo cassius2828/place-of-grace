@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+
+.staff {
+  &__stafflist {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      justify-items: center;
+      align-items: center;
+    }
+  }
+
+  &-card {
+    text-align: center;
+    // width: 50%;
+    margin: 2rem 0;
+
+    &__img-bg {
+      width: clamp(3rem, 20vw, 10rem);
+      height: clamp(3rem, 20vw, 10rem);
+      border-radius: 50%;
+      border: solid 2px $color-burgandy-light;
+      overflow: hidden;
+      margin: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        // WHEN I GET THE ACTUAL IMAGES THEY WILL BE PRECROPPED AND THESE
+        // TRANSFORMS LIKELY WILL NOT BE NECESSARY
+        transform: scale(1.75) translate(0, 1rem);
+      }
+    }
+
+    .name-email-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      &--name {
+        margin-right: 2vw;
+        @include staffCardName;
+      }
+      &--title {
+        @include staffCardTitle;
+      }
+    }
+  }
+  a {
+    &:hover {
+      color: $color-burgandy-light;
+    }
+  }
+}
+
+.meet-the-team {
+  @include titleFontSize(half);
+  text-align: center;
+  margin: 3vw 0;
+  text-transform: capitalize;
+  &-hr {
+    @include base-hr-style($color-burgandy-light, 1px);
+  }
+}
+
+@media (min-width: 375px) {
+  .staff {
+    &-card {
+      img {
+        // WHEN I GET THE ACTUAL IMAGES THEY WILL BE PRECROPPED AND THESE
+        // TRANSFORMS LIKELY WILL NOT BE NECESSARY
+        transform: scale(1.5) translate(0, 1.25rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .staff {
+    &-card {
+      img {
+        // WHEN I GET THE ACTUAL IMAGES THEY WILL BE PRECROPPED AND THESE
+        // TRANSFORMS LIKELY WILL NOT BE NECESSARY
+        // transform: scale(1.5) translate(0, 2.5rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .staff {
+    &-card {
+      &__text {
+        &--name {
+          margin-right: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md-device) {
+  .staff {
+    &__meetstaff {
+      &--boss-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 4vw;
+      }
+    }
+    &__stafflist {
+      &-grid {
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+      }
+    }
+  }
+}

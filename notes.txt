@@ -1,0 +1,190 @@
+///////////////////////////
+OVERVIEW
+///////////////////////////
+
+- I adhered as close to the google doc reference as I could for this design.
+
+- mobile and desktop versions of app 
+
+- 6 pages of this application
+
+- I decided to use the colors from the logo for the theme colors. 
+
+- This project ultilizes industry best tools for enhanced speed and optimization
+
+- This is a full stack application, which means that there is a frontend and backend operating
+There is an emailing API I set up along with the custom email UI. I will show you the sample email
+and you can have it styled as is best for you or whoever is going to be viewing such emails.
+This emailing api allows us to ensure encryption in cross traffic of emails, a customizable UI for the recipient, and a consistent way to validate form submissions
+
+- I would have to research to find what the best hosting platform is for this site. Some I know about are Heroku, Glitch, AWS, Azure, Render, and Vercel
+
+- 3 areas for navigation
+Mobile navigation
+Desktop navigation
+Footer navigation
+
+
+///////////////////////////
+STAFF CARDS
+///////////////////////////
+
+- consistent background for staff pictures 
+- circles instead of rect
+- dave and sally on side 
+- office heiarchy 
+- possibly remove pictures from staff card and include only email, name, and title 
+- accordian menu separated by title 
+
+///////////////////////////
+SDRC
+///////////////////////////
+- Buttons
+- container or strip with different color 
+- if it is too hard find another way to use thelink like styled text 
+- emphasizes the 
+///////////////////////////
+FONT
+///////////////////////////
+- Montserrat
+- colors
+- Script rarely used 
+
+///////////////////////////
+LANDING PAGE
+///////////////////////////
+- style for landing page
+- shortened mission statement
+- possibly shorten my story
+
+
+///////////////////////////
+TEESTIMONIAL
+///////////////////////////
+add big quotes 
+
+- could use other branding materials like APOG in circle 
+///////////////////////////
+CAREERS
+///////////////////////////
+- change text to job opportunities
+- current job openings
+///////////////////////////
+THINGS NEEDED
+///////////////////////////
+
+1. Structure of home page 
+- we have a lot more text than the reference home page, thus making the image and composition look off 
+- I have some examples of hero images we can look at,
+- personally, I think a large horizontal image with the "Our Story" Text, followed by the paragraphs underneath the hero image could look better 
+
+2. Font Styles
+- a good place to look is google fonts to ensure that exact font can be used 
+
+3. Production Images
+- HD 
+- Having proper ratios for certain screen widths
+- 16:9, 1:1, 8:11.5
+4. Preferred Buttons and their Style 
+
+///////////////////////////
+OUR MISSION
+///////////////////////////
+
+
+- either shorten gap or add our values text to prompt client to keep scrolling 
+
+///////////////////////////
+PRACTICAL CHANGES I THINK SHOULD STAY
+///////////////////////////
+
+1. Job application form opening in new tab instead of inside the webpage 
+- if we did not do that then it will mess up the UI, could cause security issues, and is not very pleasant for the UX
+
+
+
+///////////////////////////
+OTHER FEATURES THAT COULD BE ADDED
+///////////////////////////
+
+1. Individual staff bios accessable by clicking on their card 
+2. directing form submission emails to multiple email accounts 
+3. Page showing good conditions of some of the homes or events
+4. Detailed focus on SEO and website searchability
+
+///////////////////////////
+THINGS LEFT TO DO
+///////////////////////////
+
+1. decide on a platform to host (frontend and backend)
+2. ! find out where original code is hosted and see if we need to buy a new domain or if we could use the existing one 
+3. test for all device compatibility with newer features 
+4. Decide what is most important in the site and have discussions about alternatives for certain browsers when nearing launch
+
+
+///////////////////////////
+PHOTOS
+///////////////////////////
+
+- set rules for picture submissions 
+
+
+///////////////////////////
+IDEAS FOR LANDING PAGE
+///////////////////////////
+
+Takes up full page 
+
+
+1. Group photo of the top management
+- professional but approachable
+- organization is family and caring vibes, but will get business done 
+- show who you are
+
+2. Collaborative photo with clients
+- show the people in our care 
+- shows how we emphazie the well being of our clients 
+- demonstratyes 
+
+
+
+
+
+
+///////////////////////////
+THINGS TO DO 3-5-24
+///////////////////////////
+
+
+
+
+
+1. CHange accordian to follwoing
+- same wisth (long)
+- add meet our administration -- Northern (do same for southern)
+- do coroporate dave sally nicole 
+- hr 
+- etc 
+
+
+2. research benefitrs of new hosting site and domain purchaseing site 
+3. 
+
+6. Authenticate DNS settings from network solutions 
+
+
+
+///////////////////////////
+THINGS TO DO AFTER GETTING RESOURCES FROM MANAGEMENT
+///////////////////////////
+
+1. Update all photos 
+- crop for correct dimensions 
+- apply to all pages 
+
+2. Organize the staff categories and put staff in there 
+- style the accordian to how they want it to be done 
+
+3. Staff testimonials 
+
+4. 
