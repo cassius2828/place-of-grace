@@ -1,7 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
 
-const NavListItem = ({ num, link, text, isDesktop, keepWhite }) => {
+const NavListItem = ({
+  isRoute = true,
+  num,
+  link,
+  text,
+  isDesktop,
+  keepWhite,
+}) => {
   const { dispatch } = useGlobalContext();
 
   return (
@@ -22,7 +29,7 @@ const NavListItem = ({ num, link, text, isDesktop, keepWhite }) => {
           isDesktop ? () => {} : () => dispatch({ type: "toggleMobileMenu" })
         }
         // i changed this to keep the vite prefix in prod but it isnt working
-        to={`/${link}`}
+        to={isRoute ? `/${link}` : `${link}`}
       >
         {text}
       </NavLink>
