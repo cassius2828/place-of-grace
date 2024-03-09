@@ -21,7 +21,8 @@ const NavListItem = ({ num, link, text, isDesktop, keepWhite }) => {
         onClick={
           isDesktop ? () => {} : () => dispatch({ type: "toggleMobileMenu" })
         }
-        to={link}
+        // i changed this to keep the vite prefix in prod but it isnt working
+        to={`/${link}`}
       >
         {text}
       </NavLink>

@@ -2,9 +2,13 @@ const OurStoryHeroImg = () => {
   return (
     <img
       className="OurStory--img__hero"
-      src="/images/How-Walking-Together-Helps-You-Stay-Together.jpg"
+      // i was getting a 304 response which meant the image was getting cached and the updated img was 
+      // not making it to the browser. THis query forces the image to have to be downloaded each time to ensure it does not get cached 
+      src="/images/How-Walking-Together-Helps-You-Stay-Together.jpg?v=123456789"
       alt=""
     />
   );
 }
 export default OurStoryHeroImg
+
+// dist/images/How-Walking-Together-Helps-You-Stay-Together.jpg

@@ -159,17 +159,13 @@ THINGS TO DO 3-5-24
 
 
 
-1. CHange accordian to follwoing
-- same wisth (long)
-- add meet our administration -- Northern (do same for southern)
-- do coroporate dave sally nicole 
-- hr 
-- etc 
 
 
+1. Figure out how to host website on netlify, solve path issues for certain images 
 2. research benefitrs of new hosting site and domain purchaseing site 
-3. 
-
+3. Compress images (https://www.tamalweb.com/compress-images-reactjs)
+4. optmize css with cssmin 
+5. research moving from network solutions to aws 
 6. Authenticate DNS settings from network solutions 
 
 

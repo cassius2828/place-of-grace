@@ -49,13 +49,14 @@ const Main = () => {
       >
         <Routes>
           {/* Route definitions */}
+          {/* i changed this to keep the vite prefix in prod but it isnt working*/}
           <Route index element={<LandingPage />} />
-          <Route path="our-story" element={<Home />} />
-          <Route path="mission" element={<Mission />} />
-          <Route path="staff" element={<StaffPage />} />
-          <Route path="serve" element={<Serve />} />
-          <Route path="careers" element={<Join />} />
-          <Route path="contact" element={<ContactSection />} />
+          <Route path="/our-story" element={<Home />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/staff" element={<StaffPage />} />
+          <Route path="/serve" element={<Serve />} />
+          <Route path="/careers" element={<Join />} />
+          <Route path="/contact" element={<ContactSection />} />
         </Routes>
       </Suspense>
     </main>
