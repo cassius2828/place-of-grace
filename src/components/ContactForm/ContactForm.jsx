@@ -1,7 +1,7 @@
 import { useState } from "react";
-
-const BASE_URL = "http://localhost:3030";
-
+import { useGlobalContext } from "../../customHooks/useGlobalContext";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+console.log(BASE_URL);
 const initialState = {
   firstName: "",
   firstNameValid: false,
@@ -16,6 +16,7 @@ const initialState = {
 const ContactForm = () => {
   const [formData, setFormData] = useState(initialState);
   const { firstName, lastName, email, message } = formData;
+  const { formRef } = useGlobalContext();
 
   // the brackets allow dynamic chosing of the state object key :)
   const handleFormChange = (e) => {
@@ -24,7 +25,6 @@ const ContactForm = () => {
   // const handleFormValidatorUI = (e) => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   // };
-
 
   const submitForm = async (e) => {
     e.preventDefault(); // Prevent form submission
@@ -62,17 +62,20 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(BASE_URL + "/form_submission", options);
+      await fetch(BASE_URL + "/form-submission", options);
     } catch (error) {
       console.log("error sending data");
     } finally {
       setFormData(initialState);
     }
   };
+
+ 
   return (
     <form action="" className="contact__form">
       <label htmlFor="firstName">First Name:</label>
       <input
+        ref={formRef}
         required
         value={firstName}
         onChange={(e) => handleFormChange(e)}

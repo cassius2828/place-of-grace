@@ -30,3 +30,12 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeInBgVideo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .15;
+  }
+}

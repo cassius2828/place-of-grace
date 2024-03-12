@@ -23,19 +23,19 @@ const Carousel = ({slidesToShow}) => {
   return (
     <Slider {...settings}>
       <div className="carousel-img-container">
-        <img src={picnic} alt="" />
+        <img src={picnic} alt="" loading="lazy" />
       </div>
       <div className="carousel-img-container">
-        <img src={party} alt="" />
+        <img src={party} alt="" loading="lazy" />
       </div>
       <div className="carousel-img-container">
-        <img src={xmas} alt="" />
+        <img src={xmas} alt="" loading="lazy" />
       </div>
       {/* <div className="carousel-img-container">
         <img src={groupLeft} alt="" />
       </div> */}
       <div className="carousel-img-container">
-        <img src={groupwide} alt="" />
+        <img src={groupwide} alt="" loading="lazy" />
       </div>
       {/* <div className="carousel-img-container">
         <img src={groupRight} alt="" />

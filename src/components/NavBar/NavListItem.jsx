@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
 
 const NavListItem = ({
@@ -8,9 +8,11 @@ const NavListItem = ({
   text,
   isDesktop,
   keepWhite,
+  func = null,
 }) => {
   const { dispatch } = useGlobalContext();
-
+  const location = useLocation();
+  const pathname = location.pathname;
   return (
     // I remeoved the a tag here
     <li
@@ -25,8 +27,13 @@ const NavListItem = ({
         // :) this allows the mobile screen to be toggled if the mobile nav is pressed
         // but if it is the desktop then nothing will happen so it does not disrupt the
         // state of the mobile nav if scaled down to a hamburger menu size for UI
+        // * also it focuses the input if already on contact route
         onClick={
-          isDesktop ? () => {} : () => dispatch({ type: "toggleMobileMenu" })
+          isDesktop
+            ? () => func(pathname)
+            : () => {
+                dispatch({ type: "toggleMobileMenu" });
+              }
         }
         // i changed this to keep the vite prefix in prod but it isnt working
         to={isRoute ? `/${link}` : `${link}`}

@@ -7,11 +7,11 @@ const Logo = ({ imageUrl, logoNum }) => {
   return (
     <>
       {openMobileMenu ? (
-        <img alt="" src={imageUrl} id={`logo-${logoNum}`} />
+        <img alt="" src={imageUrl} id={`logo-${logoNum}`} loading="lazy" />
       ) : (
         <Link to={`/`}>
           {" "}
-          <img alt="" src={imageUrl} id={`logo-${logoNum}`} />
+          <img alt="" src={imageUrl} id={`logo-${logoNum}`} loading="lazy" />
         </Link>
       )}
     </>

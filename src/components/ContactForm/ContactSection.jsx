@@ -1,39 +1,9 @@
-
+import ErrorBoundary from "../../pages/Errors/ErrorBoundary";
 import BgVideo from "../BgVideo/BgVideo";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 
-
-
 const ContactFormSection = () => {
-  // useEffect(() => {
-  //   // each of these conditional if else statements are for the outline of the form input when it is complete vs incomplete
-  //   // 1 first name
-  //   if (firstName === true && firstName !== " " && firstName !== "  ") {
-  //     setFormData({ ...formData, firstNameValid: true });
-  //   } else {
-  //     setFormData({ ...formData, firstNameValid: false });
-  //   }
-  //   // 2 last name
-  //   if (lastName === true && lastName !== " " && lastName !== "  ") {
-  //     setFormData({ ...formData, lastNameValid: true });
-  //   } else {
-  //     setFormData({ ...formData, lastNameValid: false });
-  //   }
-  //   // 3 message
-  //   if (message.length > 5) {
-  //     setFormData({ ...formData, messageValid: true });
-  //   } else {
-  //     setFormData({ ...formData, messageValid: false });
-  //   }
-  //   // 4 email
-  //   if (/(.+)@(.+){2,}\.(.+){2,}/.test(email)) {
-  //     setFormData({ ...formData, emailValid: true });
-  //   } else {
-  //     setFormData({ ...formData, emailValid: false });
-  //   }
-  // }, []);
-
   return (
     <>
       {" "}
@@ -47,11 +17,16 @@ const ContactFormSection = () => {
             </h4>
             <hr className="contact__hr" />
           </div>
-
-          <ContactForm />
+          <ErrorBoundary
+          isForm={true}
+            firstMessage="Something went wrong with the form submission"
+            secondMessage="Please try again or contact support directly at example@gmail.com to submit an inquiry"
+          >
+            <ContactForm />
+          </ErrorBoundary>
         </div>
       </section>{" "}
-     <ContactInfo/>
+      <ContactInfo />
     </>
   );
 };

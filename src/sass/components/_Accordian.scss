@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+// @import "../../../node_modules/bootstrap/scss/accordion";
 
 .accordion {
   //  width here will keep accordian at same size
@@ -12,9 +13,11 @@
     //  width here will make accordian smaller when not active
   }
   // this can change whether the category is in the middle or end
-&__category {
-  // margin: auto;
-}
+  &__category {
+    // margin: auto;
+
+  }
+
   &-button:not(.collapsed) {
     display: flex;
     justify-content: space-between;
@@ -31,6 +34,13 @@
     &::after {
       content: none;
     }
-   
+  }
+}
+
+@media (min-width: 1300px) {
+  .accordion {
+    &-button:not(.collapsed) {
+      width: 70vw;
+    }
   }
 }

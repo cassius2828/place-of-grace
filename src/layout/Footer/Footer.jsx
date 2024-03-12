@@ -6,10 +6,7 @@ const Footer = () => {
   return (
     <footer id="footer" className="footer">
       <div className="footer__logo-container">
-        <Logo
-          logoNum={`2`}
-          imageUrl={`https://placeofgrace.net/NewPoGIcon.svg`}
-        />
+        <Logo logoNum={`2`} imageUrl={`/images/NewPoGIcon.svg`} />
       </div>
       <h1 className="footer__text--h1">
         Insiprational Quote of your choice here{" "}

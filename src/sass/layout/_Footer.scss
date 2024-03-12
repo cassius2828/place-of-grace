@@ -34,6 +34,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    #contact-form-focus {
+      // margin: auto
+    }
   }
 
   &__list {
@@ -92,6 +96,7 @@
     }
   }
 }
+
 
 @media (min-width: $md-device) {
   .footer {

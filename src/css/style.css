@@ -64,6 +64,14 @@ hr {
     opacity: 1;
   }
 }
+@keyframes fadeInBgVideo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
 body {
   font-family: Montserrat;
   font-weight: 400;
@@ -107,6 +115,15 @@ h4 {
   content: none;
 }
 
+@media (min-width: 1300px) {
+  .accordion-button:not(.collapsed) {
+    width: 70vw;
+  }
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -116,6 +133,7 @@ h4 {
   z-index: 1;
   opacity: 0.15;
   overflow: hidden;
+  animation: fadeInBgVideo 1s ease-in;
 }
 .bg-video__content {
   height: 100%;
@@ -204,6 +222,18 @@ button {
     display: none;
   }
 }
+.error__form-submission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(1rem, 1vw, 10rem);
+  padding: 3rem;
+}
+.error__form-submission button {
+  margin: auto;
+}
+
 #hamburger {
   display: none;
   border-top: 2px solid #bc9461;
@@ -421,6 +451,7 @@ button {
   width: 100%;
   text-transform: capitalize;
   margin-right: 0;
+  margin-bottom: 0;
 }
 .navbar-list--desktop li {
   font-size: clamp(1rem, 1vw + 0.1rem, 4rem);
@@ -1233,7 +1264,7 @@ button {
   width: 100vw;
   background-color: #bc9461;
   opacity: 1;
-  z-index: 5;
+  z-index: 4;
 }
 .contact__info-container {
   display: grid;
@@ -1345,6 +1376,7 @@ button {
 .hero-bg {
   position: relative;
   background: url(/images/hero/happy-patient-holding-caregiver-hand-600nw-688645165.webp);
+  background-color: #2b2b2b;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1375,7 +1407,7 @@ button {
   flex-direction: column;
 }
 .OurStory-right {
-  background-image: url("/images/How-Walking-Together-Helps-You-Stay-Together-desktop.png");
+  background-image: url("/images/our-story-desktop.webp");
   background-size: cover;
   background-position: 50% 25%;
   position: relative;
@@ -1595,6 +1627,44 @@ button {
   }
   .mission-card__text--paragraph {
     color: #27292d;
+  }
+}
+.error {
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  background-color: #fefefe;
+  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  font-size: 1rem;
+  color: #27292d;
+  display: flex;
+  justify-content: center;
+}
+.error__text-container {
+  margin-top: 15vh;
+  margin-top: 15svh;
+  height: clamp(15rem, 40vw, 200rem);
+  width: clamp(20rem, 80vw, 80rem);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.408);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+}
+.error__text-container span {
+  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+}
+.error__text-container span:first-child {
+  font-size: clamp(1rem, 1.75vw + 1rem, 10rem);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .error__text-container {
+    font-size: clamp(3rem, 3vw + 1rem, 20rem);
+    padding: 3rem;
+  }
+  .error__text-container span {
+    font-size: clamp(3rem, 2vw + 1rem, 20rem);
   }
 }
 .staff__stafflist-grid {

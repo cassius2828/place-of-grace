@@ -1,6 +1,8 @@
 
 @use "../abstracts/" as *;
-
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
 .bg-video {
     position: absolute;
     top: 0;
@@ -10,6 +12,7 @@
     z-index: 1;
     opacity: .15;
     overflow: hidden;
+   animation: fadeInBgVideo 1s ease-in;
 
     &__content {
         height: 100%;

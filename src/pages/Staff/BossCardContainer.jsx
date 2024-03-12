@@ -14,6 +14,7 @@ const BossCardContainer = () => {
         level="boss"
         email="David.Price@placeofgrace.net"
         iconSize="xl"
+        
       />
       <HeadshotCard
         id="sally-price"

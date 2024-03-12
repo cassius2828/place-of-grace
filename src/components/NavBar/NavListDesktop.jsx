@@ -1,7 +1,11 @@
+
 import NavListItem from "./NavListItem";
+import {useGlobalContext} from "../../customHooks/useGlobalContext";
 
 const NavListDesktop = ({ className }) => {
   const isDesktop = true;
+ 
+   const { handleFormFocus } = useGlobalContext();
   return (
     <nav id="desktop-nav">
       <ul className={className}>
@@ -33,6 +37,7 @@ const NavListDesktop = ({ className }) => {
         <NavListItem
           keepWhite={true}
           isDesktop={isDesktop}
+          func={handleFormFocus}
           link="contact"
           text="contact"
           num="6"

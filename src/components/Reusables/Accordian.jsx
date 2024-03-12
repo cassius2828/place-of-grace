@@ -17,9 +17,14 @@ import Spring from "/staff/Spring.webp";
 
 const Accordian = () => {
   const [openTab, setOpenTab] = useState(null);
-  const handleOpenTab = (num) => {
+  const handleOpenTab = (num, ref) => {
     if (num === openTab) setOpenTab(null);
-    else setOpenTab(num);
+    else {
+       setOpenTab(num);
+      //  allows us to scroll into view of the selected element
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+ 
+    }
   };
   return (
     <div className="accordion" id="accordianStaff">

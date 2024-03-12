@@ -2,9 +2,8 @@ import VideoOfHills from "/videos/708884_Faial Island Azores Landscape Scenery_B
 const BgVideo = () => {
   return (
     <div className="bg-video">
-      <video className="bg-video__content" autoPlay muted loop>
+      <video className="bg-video__content" loading="lazy" autoPlay muted loop>
         <source src={VideoOfHills} type="video/webm" />
-        Your browser is not supported!
       </video>
     </div>
   );

@@ -6,9 +6,7 @@
       position: absolute;
       top: 8%;
       font-size: clamp(6rem, 10vw + 0.1rem, 12rem);
-
       color: $color-company-white;
-
       animation: moveInLeft 1.5s ease-in;
     }
   }
@@ -18,7 +16,6 @@
       position: absolute;
       top: 60%;
       font-size: clamp(3rem, 2vw + 0.1rem, 8rem);
-
       color: $color-company-white;
       border: solid 1px $color-company-white;
       border-radius: $base-br;
@@ -49,6 +46,7 @@
 .hero-bg {
   position: relative;
   background: url(/images/hero/happy-patient-holding-caregiver-hand-600nw-688645165.webp);
+  background-color: #2b2b2b;
   background-size: cover;
   background-position: center;
   width: 100%;

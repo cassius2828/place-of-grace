@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Lazy loading components
-const Home = lazy(() => import("../../pages/Home/OurStory"));
+const Home = lazy(() => import("../../pages/OurStory/OurStory"));
 const Mission = lazy(() => import("../../pages/Mission/Mission"));
 const StaffPage = lazy(() => import("../../pages/Staff/StaffPage"));
 const Serve = lazy(() => import("../../pages/Serve/Serve"));
@@ -11,6 +11,7 @@ const ContactSection = lazy(() =>
   import("../../components/ContactForm/ContactSection")
 );
 const LandingPage = lazy(() => import("../../pages/LandingPage/LandingPage"));
+const Error = lazy(() => import("../../pages/Errors/Error"));
 
 // Mapping of page titles to routes
 const PageTitles = {
@@ -25,15 +26,15 @@ const PageTitles = {
 
 const Main = () => {
   // State to manage the document title
-  const [tabTitle, setTabTitle] = React.useState(PageTitles[location.pathname]);
+  const [tabTitle, setTabTitle] = useState(PageTitles[location.pathname]);
 
   // Update document title when pathname changes
-  React.useEffect(() => {
+  useEffect(() => {
     if (location.pathname !== "/") setTabTitle(PageTitles[location.pathname]);
   }, [location.pathname]);
 
   // Update document title
-  React.useEffect(() => {
+  useEffect(() => {
     document.title = tabTitle;
   }, [tabTitle]);
 
@@ -57,6 +58,16 @@ const Main = () => {
           <Route path="/serve" element={<Serve />} />
           <Route path="/careers" element={<Join />} />
           <Route path="/contact" element={<ContactSection />} />
+          <Route
+            path="*"
+            element={
+              <Error
+                errorType="404"
+                firstMessage={`Sorry, we can not find the requested page`}
+                secondMessage={`Please choose a different path`}
+              />
+            }
+          />
         </Routes>
       </Suspense>
     </main>

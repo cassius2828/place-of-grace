@@ -1,27 +1,19 @@
-export const RoundedButton = ({ text, src = null, newTab }) => {
+export const RoundedButton = ({ text, func, funcParams }) => {
   return (
     <>
-      {newTab ? (
- 
-          <button className="button button__rounded" role="button">
-            {text}
-          </button>
-  
-      ) : (
-        
-          <button className="button button__rounded" role="button">
-            {text}
-          </button>
-        
-      )}
+    {/* check to see if this affects submit form button later */}
+      <button
+        onClick={() => func(funcParams)}
+        className="button button__rounded"
+        role="button"
+      >
+        {text}
+      </button>
     </>
   );
 };
-export const RoundedButtonTransparent = ({
-  text,
-  src = null,
-  specialPadding,
-}) => {
+
+export const RoundedButtonTransparent = ({ text, specialPadding }) => {
   return (
     <button
       style={{ padding: specialPadding ? specialPadding : null }}

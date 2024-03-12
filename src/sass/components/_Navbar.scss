@@ -13,6 +13,8 @@
     width: 100%;
     text-transform: capitalize;
     margin-right: 0;
+    margin-bottom: 0;
+
     li {
       font-size: clamp(1rem, 1vw + 0.1rem, 4rem);
       margin: auto 0.5rem;

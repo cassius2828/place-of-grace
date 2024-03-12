@@ -10,16 +10,19 @@ const ImageFloats = () => {
           src={picnic}
           alt="Photo 1"
           className="composition__photo composition__photo--p1"
+          loading="lazy"
         />
         <img
           src={party}
           alt="Photo 2"
           className="composition__photo composition__photo--p2"
+          loading="lazy"
         />
         <img
           src={xmas}
           alt="Photo 3"
           className="composition__photo composition__photo--p3"
+          loading="lazy"
         />
       </div>{" "}
     </>

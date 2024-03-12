@@ -73,7 +73,7 @@
     width: 100vw;
     background-color: $color-light-brown;
     opacity: 1;
-    z-index: 5;
+    z-index: 4;
     &-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -6,7 +6,7 @@ const HeadshotCard = ({ iconSize='lg', id,img, name, title, level, email }) => {
     <div className={level + "-card"}>
       <div id={id} className="staff-card__img-bg">
         {" "}
-        <img  src={img} alt={name + " the " + title} />
+        <img src={img} alt={name + " the " + title} loading="lazy" />
       </div>
 
       <div className="name-email-container">
