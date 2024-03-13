@@ -1438,11 +1438,14 @@ button {
   .landing-page__nav-container {
     top: 80%;
   }
+  .landing-page__nav-container span {
+    font-size: 3rem;
+  }
   .landing-page__nav-list {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 1000px) {
