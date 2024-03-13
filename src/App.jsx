@@ -6,8 +6,8 @@ import Content from "./layout/Content/Content";
 import ErrorBoundary from "./pages/Errors/ErrorBoundary";
 
 function App() {
-  const { openMobileMenu } = useGlobalContext();
-
+  const { openMobileMenu, useScreenOrientationLock } = useGlobalContext();
+  useScreenOrientationLock();
   return (
     <div className={openMobileMenu ? `mobile-app mobile-active` : `mobile-app`}>
       <BrowserRouter>

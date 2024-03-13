@@ -18,21 +18,9 @@ export const GlobalProvider = ({ children }) => {
   const formRef = useRef();
   // const accordionRefs = useRef([]);
 
- 
   const handleMobileMenuToggle = () => {
     dispatch({ type: "toggleMobileMenu" });
   };
-  // adds a new ref to the current property's array
-  // const addAccordionRef = (el) => {
-  //   if (accordionRefs.current.length > 3) return;
-  //   if (el && !accordionRefs.current.includes(el)) {
-  //     accordionRefs.current.push(el);
-  //     console.log(accordionRefs)
-  //   }
-  //   //   refs.current.map(elem => {
-  //   //   if(elem.includes(el)) return
-  //   //  })
-  // };
 
   // focuses form if user clicks contact us on the contact page
   const handleFormFocus = (pathname) => {
@@ -41,14 +29,25 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  // focuses form if user clicks contact us on the contact page
-  // const handleAccordianItemFocus = (id, ref) => {
-  //   ref.current.map((item, index) => {
-  //     if (item.id === id) {
-  //       ref.current[index].focus();
-  //     }
-  //   });
-  // };
+  const useScreenOrientationLock = () => {
+    useEffect(() => {
+      // Lock screen orientation to portrait mode when component mounts
+      const lockScreenOrientation = () => {
+        if (screen.orientation) {
+          screen.orientation.lock("portrait");
+        }
+      };
+
+      lockScreenOrientation();
+
+      // Cleanup function to unlock orientation when component unmounts
+      return () => {
+        if (screen.orientation) {
+          screen.orientation.unlock();
+        }
+      };
+    }, []);
+  };
 
   return (
     <GlobalContext.Provider
@@ -56,11 +55,9 @@ export const GlobalProvider = ({ children }) => {
         openMobileMenu,
         handleMobileMenuToggle,
         handleFormFocus,
-        // handleAccordianItemFocus,
         dispatch,
-        // addAccordionRef,
         formRef,
-        // accordionRefs,
+    useScreenOrientationLock,
       }}
     >
       {children}
