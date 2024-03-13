@@ -26,7 +26,7 @@ const LandingPage = () => {
         >
          {showNav ? 
          <NavListDesktop className={`landing-page__nav-list`}/> 
-         : 'Learn About Us'}
+         : <span style={{padding: '0 2rem', textAlign: 'center'}}>Learn About Us</span>}
         </div>
       </div>
     </section>

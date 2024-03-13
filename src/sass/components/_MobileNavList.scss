@@ -6,10 +6,12 @@
   list-style-type: none;
   margin: 100px 0 0 20px;
   padding: 0;
+  height: 100vh;
+  height: 100svh;
   //   changing the animation from growing into a width to moving with
   // right fixed the issue of the boxes collapsing on the text
   right: -20rem;
-  overflow: hidden;
+  overflow: auto;
   visibility: hidden;
   @include transition(all 0.4s ease-in);
 
@@ -43,7 +45,6 @@
     &:visited {
       transform: translateY(-10%);
       background-color: wheat;
-
     }
   }
 }
@@ -74,10 +75,34 @@
 
 ///////////////////////////
 // ! MEDIA QUERIES
-/////////////////////////// 
+///////////////////////////
 
 @media (min: $md-device) {
-  .mobile-nav-list, .mobile-active, #hamburger {
+  .mobile-nav-list,
+  .mobile-active,
+  #hamburger {
     display: none;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1100px) {
+  .mobile-nav-list {
+    margin: 100px 0 0 50px;
+
+    //   changing the animation from growing into a width to moving with
+    // right fixed the issue of the boxes collapsing on the text
+    overflow: auto;
+    visibility: hidden;
+    @include transition(all 0.4s ease-in);
+
+    li {
+      font-size: 1.5rem;
+
+      height: 20px;
+      width: 140px;
+      margin: 20px 0;
+      background: #eae8e5;
+      opacity: 0;
+      border-radius: 4px;
+    }
   }
 }

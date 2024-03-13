@@ -20,6 +20,7 @@ const BgVideo = () => {
           autoPlay
           muted
           loop
+          playsInline
         >
           <source src={VideoOfHills} type="video/mp4" />
           <source src={VideoOfHillsWebm} type="video/webm" />

@@ -29,25 +29,25 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  const useScreenOrientationLock = () => {
-    useEffect(() => {
-      // Lock screen orientation to portrait mode when component mounts
-      const lockScreenOrientation = () => {
-        if (screen.orientation) {
-          screen.orientation.lock("portrait");
-        }
-      };
+  // const useScreenOrientationLock = () => {
+  //   useEffect(() => {
+  //     // Lock screen orientation to portrait mode when component mounts
+  //     const lockScreenOrientation = () => {
+  //       if (screen.orientation) {
+  //         screen.orientation.lock("portrait");
+  //       }
+  //     };
 
-      lockScreenOrientation();
+  //     lockScreenOrientation();
 
-      // Cleanup function to unlock orientation when component unmounts
-      return () => {
-        if (screen.orientation) {
-          screen.orientation.unlock();
-        }
-      };
-    }, []);
-  };
+  //     // Cleanup function to unlock orientation when component unmounts
+  //     return () => {
+  //       if (screen.orientation) {
+  //         screen.orientation.unlock();
+  //       }
+  //     };
+  //   }, []);
+  // };
 
   return (
     <GlobalContext.Provider
@@ -57,7 +57,7 @@ export const GlobalProvider = ({ children }) => {
         handleFormFocus,
         dispatch,
         formRef,
-    useScreenOrientationLock,
+    // useScreenOrientationLock,
       }}
     >
       {children}

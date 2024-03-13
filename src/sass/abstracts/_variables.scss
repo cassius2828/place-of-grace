@@ -1,10 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 // FONT FAMILY
 $font-family-primary: Montserrat;
-
-
 
 // THEME COLORS
 
@@ -22,13 +19,17 @@ $color-company-white-opacity2: #fefefe3e;
 $color-company-white-opacity4: #fefefe99;
 $color-company-white-opacity6: #fefefe6a;
 $color-company-white-opacity8: #fefefebb;
-
 $color-company-white-opacity95: #fefefeea;
+
+$color-black-opacity2: #0000002f;
+$color-black-opacity4: #00000062;
+
+
+$color-burgandy-light-opacity4: #70111154;
 $color-burgandy-light-opacity8: #701111c1;
 
 $color-cream-opacity8: #efe9e0b7;
 $color-lighter-brown-opacity8: #d3af7fb7;
-
 
 // GRAYSCALE
 $color-pure-black: #000;
@@ -50,7 +51,6 @@ $text-tab-lg: 3.25rem;
 $text-tab-xl: 4rem;
 $text-tab-xxl: 6rem;
 
-
 // BREAKPOINTS
 $xxs-device: 320px;
 $xs-device: 375px;
@@ -62,8 +62,5 @@ $xxl-device: 1650px;
 $xxxl-device: 2000px;
 $huge-device: 2400px;
 
-
 // BORDER RADIUS
 $base-br: 4px;
-
-
