@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-#OurStory {
+#our-story {
   padding-top: 10vw;
   display: flex;
   flex-direction: column-reverse;
@@ -63,7 +63,7 @@
 }
 
 @media (min-width: $md-device) {
-  #OurStory {
+  #our-story {
     flex-direction: row;
   }
 

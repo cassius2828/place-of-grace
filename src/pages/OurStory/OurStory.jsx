@@ -13,7 +13,7 @@ ourstory -->
 
 const OurStory = () => {
   return (
-    <section id="OurStory">
+    <section id="our-story">
       <OurStoryContainer side="left">
         <OurStoryText />
         <SignatureContainer className="OurStory__signature-container">

@@ -1402,7 +1402,7 @@ button {
     left: 15%;
   }
 }
-#OurStory {
+#our-story {
   padding-top: 10vw;
   display: flex;
   flex-direction: column-reverse;
@@ -1456,7 +1456,7 @@ button {
   }
 }
 @media (min-width: 800px) {
-  #OurStory {
+  #our-story {
     flex-direction: row;
   }
   .OurStory {
