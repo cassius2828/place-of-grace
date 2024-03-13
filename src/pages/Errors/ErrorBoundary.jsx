@@ -39,10 +39,9 @@ class ErrorBoundary extends Component {
       // Render fallback UI when an error occurs
       return (
         <Error
-          errorType="404"
-          firstMessage={`Sorry, we can not find the requested page`}
-          secondMessage={`Please choose a different path or refresh your browser`}
-          showRefresh={true}
+          firstMessage={`Sorry, an error has occured`}
+          secondMessage={`Please try refreshing your browser, going back a page, or enter a new url`}
+        
         />
       );
     }

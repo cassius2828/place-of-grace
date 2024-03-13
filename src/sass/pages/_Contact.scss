@@ -47,14 +47,16 @@
       @include paragraphFontSize(phone);
 
       padding: 1vw;
-      border: none;
+      border: solid 0.5px $color-black-opacity4;
+      border-radius: $base-br;
     }
 
     textarea {
       margin: 0 0 3vw 0;
       padding: 1vw;
       height: 5vh;
-      border: none;
+      border: solid 0.5px $color-black-opacity4;
+      border-radius: $base-br;
       @include paragraphFontSize(phone);
     }
     button {

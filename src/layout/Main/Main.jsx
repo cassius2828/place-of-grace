@@ -6,7 +6,7 @@ const Home = lazy(() => import("../../pages/OurStory/OurStory"));
 const Mission = lazy(() => import("../../pages/Mission/Mission"));
 const StaffPage = lazy(() => import("../../pages/Staff/StaffPage"));
 const Serve = lazy(() => import("../../pages/Serve/Serve"));
-const Join = lazy(() => import("../../pages/Join/Join"));
+const Careers = lazy(() => import("../../pages/Careers/Careers"));
 const ContactSection = lazy(() =>
   import("../../components/ContactForm/ContactSection")
 );
@@ -56,7 +56,7 @@ const Main = () => {
           <Route path="/mission" element={<Mission />} />
           <Route path="/staff" element={<StaffPage />} />
           <Route path="/serve" element={<Serve />} />
-          <Route path="/careers" element={<Join />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<ContactSection />} />
           <Route
             path="*"

@@ -1205,6 +1205,12 @@ button {
     transform: none;
   }
 }
+#careers__button--container {
+  width: 100%;
+  margin: auto;
+  border: solid;
+}
+
 .contact {
   padding-top: 10vh;
   display: flex;
@@ -1247,13 +1253,15 @@ button {
 .contact__form input {
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   padding: 1vw;
-  border: none;
+  border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
+  border-radius: 4px;
 }
 .contact__form textarea {
   margin: 0 0 3vw 0;
   padding: 1vw;
   height: 5vh;
-  border: none;
+  border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
+  border-radius: 4px;
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
 }
 .contact__form button {
@@ -1567,12 +1575,6 @@ button {
     width: 50%;
   }
 }
-.join__button--container {
-  width: 100%;
-  margin: auto;
-  border: solid;
-}
-
 .mission {
   display: flex;
   flex-direction: column;
