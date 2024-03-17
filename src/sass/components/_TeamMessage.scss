@@ -19,21 +19,22 @@
       margin: 2vw auto;
       line-height: 4vw;
       @include paragraphFontSize(phone);
-      line-height: clamp(2.5rem, 2vw, 5rem);
+      @include clamp("line-height", 2.5rem, 2vw, 0.1rem, 5rem);
     }
   }
 }
 
 @media (max-width: 375px) {
   .team-message {
-    padding: 7vh 5vw 25vh 5vw
+    padding: 7vh 5vw 25vh 5vw;
   }
 }
 
 @media (min-width: 1000px) {
   .team-message {
     // width: 75%;
-    padding-top: clamp(15rem, 15vh, 20rem);
+    @include clamp("padding-top", 15rem, 15vh, 0.1rem, 20rem);
+
     margin: auto;
   }
 }
@@ -42,6 +43,6 @@
   .team-message {
     // need to keep so padding top doesnt change
     padding: 10vw;
-    padding-top: clamp(15rem, 15vh, 20rem);
+    @include clamp("padding-top", 15rem, 15vh, 0.1rem, 20rem);
   }
 }

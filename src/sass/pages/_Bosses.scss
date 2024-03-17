@@ -8,7 +8,7 @@
 
   &__meetstaff {
     // meet staff container, title, and paragraph
- &--boss-container {
+    &--boss-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,7 +34,7 @@
         margin: 2vw auto;
         @include paragraphFontSize(phone);
         padding: 0 4vw;
-        line-height: clamp(3rem, 3vw, 10rem);
+        @include clamp("line-height", 3rem, 3vw, 0.1rem, 10rem);
       }
     }
   }
@@ -46,8 +46,8 @@
     // ceo img background container ids
     #david-price,
     #sally-price {
-      width: clamp(5rem, 30vw, 20rem);
-      height: clamp(5rem, 30vw, 20rem);
+      @include clamp("width", 5rem, 30vw, 0.1rem, 20rem);
+      @include clamp("height", 5rem, 30vw, 0.1rem, 20rem);
 
       img {
         position: relative;

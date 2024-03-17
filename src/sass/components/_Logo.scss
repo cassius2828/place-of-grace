@@ -3,7 +3,9 @@
 #logo {
   &-1 {
     margin-left: 3rem;
-    width: clamp(20rem, 20vw, 80rem);
+      @include clamp('width', 20rem, 20vw, .1rem, 80rem);
+
+   
   }
 }
 
@@ -14,8 +16,7 @@
 @media (min-width: 1000px) {
   #logo {
     &-2 {
-      width: clamp(3rem, 10vw, 10rem);
-    
+      @include clamp('width', 3rem, 10vw, .1rem, 10rem);
     }
   }
 }
@@ -26,7 +27,9 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: clamp(20rem, 18vw, 80rem);
+      @include clamp('width', 20rem, 18vw, .1rem, 80rem);
+
+
     }
   }
 }

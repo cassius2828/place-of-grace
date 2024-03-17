@@ -29,7 +29,7 @@ const Accordian = () => {
   return (
     <div className="accordion" id="accordianStaff">
       <AccordianItem
-        groupName="Meet our Administration Team | Northern Region"
+        groupName="Administration Team | Northern Region"
         num={1}
         handleOpenTab={handleOpenTab}
         openTab={openTab}
@@ -58,7 +58,7 @@ const Accordian = () => {
         </Suspense>
       </AccordianItem>
       <AccordianItem
-        groupName="Meet our Administration Team | Southern Region"
+        groupName="Administration Team | Southern Region"
         num={2}
         handleOpenTab={handleOpenTab}
         openTab={openTab}
@@ -85,7 +85,7 @@ const Accordian = () => {
         </Suspense>
       </AccordianItem>
       <AccordianItem
-        groupName="Meet our Corporate Team"
+        groupName="Corporate Team"
         num={3}
         handleOpenTab={handleOpenTab}
         openTab={openTab}
@@ -112,7 +112,7 @@ const Accordian = () => {
         </Suspense>
       </AccordianItem>
       <AccordianItem
-        groupName="Meet our Office Team"
+        groupName="Office Team"
         num={4}
         handleOpenTab={handleOpenTab}
         openTab={openTab}

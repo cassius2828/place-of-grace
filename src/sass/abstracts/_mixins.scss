@@ -46,6 +46,19 @@
   border-radius: $radius;
 }
 
+///////////////////////////
+// CLAMP
+///////////////////////////
+// * This mixin generates fallbacks for browsers that do not support clamp,
+// * the scaler to rem is used to ensure users can increase font size in browser by converting vw to rem
+
+@mixin clamp($property, $min-size, $scaler, $scalerToRem, $max-size) {
+  #{$property}: $max-size;
+  #{$property}: #{"min(max(#{$min-size}, #{$scaler} + #{$scalerToRem}, #{$max-size}))"};
+  #{$property}: clamp($min-size, $scaler + $scalerToRem, $max-size);
+}
+
+
 @mixin linkHoverAnimation($color1, $color2, $top, $lineWeight) {
   color: $color1;
   position: relative;
@@ -78,7 +91,7 @@
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-    color: #fff!important;
+  color: #fff !important;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -140,10 +153,13 @@
 
 @mixin titleFontSize($size) {
   @if $size == half {
-    font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+    @include clamp("font-size", 3rem, 2.5vw, 1rem, 20rem);
+    // font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
   }
   @if $size == full {
-    font-size: clamp(3rem, 3vw + 1rem, 20rem);
+    @include clamp("font-size", 3rem, 3vw, 1rem, 20rem);
+
+    // font-size: clamp(3rem, 3vw + 1rem, 20rem);
   }
   @if $size == desktop {
   }
@@ -153,10 +169,14 @@
 
 @mixin footerTitleFontSize($size) {
   @if $size == phone {
-    font-size: clamp(3rem, 1.5vw + 1rem, 6rem);
+    @include clamp("font-size", 3rem, 1.5vw, 1rem, 6rem);
+
+    // font-size: clamp(3rem, 1.5vw + 1rem, 6rem);
   }
   @if $size == tablet {
-    font-size: clamp(3rem, 2vw + 1rem, 10rem);
+    @include clamp("font-size", 3rem, 2vw, 1rem, 10rem);
+
+    // font-size: clamp(3rem, 2vw + 1rem, 10rem);
   }
   @if $size == desktop {
   }
@@ -166,10 +186,14 @@
 
 @mixin cardTitleFontSize($size) {
   @if $size == phone {
-    font-size: clamp(2.25rem, 1.5vw + 1rem, 12rem);
+    @include clamp("font-size", 2.25rem, 1.5vw, 1rem, 12rem);
+
+    // font-size: clamp(2.25rem, 1.5vw + 1rem, 12rem);
   }
   @if $size == tablet {
-    font-size: clamp(2.25rem, 2vw + 1rem, 12rem);
+    @include clamp("font-size", 2.25rem, 2vw, 1rem, 12rem);
+
+    // font-size: clamp(2.25rem, 2vw + 1rem, 12rem);
   }
   @if $size == desktop {
   }
@@ -177,13 +201,16 @@
   }
 }
 
-
 @mixin cardParagraphFontSize($size) {
   @if $size == phone {
-    font-size: clamp(1rem, .5vw + 1rem, 8rem);
+    @include clamp("font-size", 1rem, .5vw, 1rem, 8rem);
+
+    // font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   }
   @if $size == tablet {
-    font-size: clamp(1rem, 1vw + 1rem, 8rem);
+    @include clamp("font-size", 1rem, 1vw, 1rem, 8rem);
+
+    // font-size: clamp(1rem, 1vw + 1rem, 8rem);
   }
   @if $size == desktop {
   }
@@ -193,10 +220,14 @@
 
 @mixin paragraphFontSize($size) {
   @if $size == phone {
-    font-size: clamp(1rem, .5vw + 1rem, 8rem);
+    @include clamp("font-size", 1rem, .5vw, 1rem, 8rem);
+
+    // font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   }
   @if $size == tablet {
-    font-size: clamp(1rem, .75vw + 1rem, 8rem);
+    @include clamp("font-size", 1rem, .75vw, 1rem, 8rem);
+
+    // font-size: clamp(1rem, 0.75vw + 1rem, 8rem);
   }
   @if $size == desktop {
   }
@@ -205,19 +236,27 @@
 }
 
 @mixin navLinkFontSize() {
-  font-size: clamp(2rem, 1vw + 0.1rem, 4rem);
+    @include clamp("font-size", 2rem, 1vw, .1rem, 4rem);
+
+  // font-size: clamp(2rem, 1vw + 0.1rem, 4rem);
 }
 
 @mixin staffCardName() {
-  font-size: clamp(1rem, .75vw + 1rem, 5rem);
+    @include clamp("font-size", 1rem, .75vw, 1rem, 5rem);
+
+  // font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
 }
 
 @mixin staffCardTitle() {
-  font-size: clamp(1rem, .5vw + 1rem, 4rem);
+    @include clamp("font-size", 1rem, .5vw, 1rem, 4rem);
+
+  // font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
 }
 
 @mixin copyrightFontSize() {
-  font-size: clamp(1rem, .75vw, 4rem);
+    @include clamp("font-size", 1rem, .75vw, .1rem, 4rem);
+
+  // font-size: clamp(1rem, 0.75vw, 4rem);
 }
 
 @mixin absoluteCenter() {
@@ -225,3 +264,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+

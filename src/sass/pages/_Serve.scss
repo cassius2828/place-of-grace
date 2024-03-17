@@ -34,7 +34,7 @@
     &__story {
       @include paragraphFontSize(phone);
       margin: 1.25vw 0;
-      line-height: clamp(2rem, 3vw, 14rem);
+      @include clamp("line-height", 2rem, 3vw, 0.1rem, 14rem);
     }
   }
 
@@ -48,7 +48,6 @@
     button {
       margin: 2rem;
       text-transform: capitalize;
-     
     }
   }
 }
@@ -92,7 +91,6 @@
       display: none;
     }
     &__signature-container {
-    
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -100,16 +98,14 @@
   }
 }
 // prevents buttons from stacking text between md device and this width
-@media (max-width:1016px) {
-.serve {
-
-  &__signature-container {
-
-    button {
-      font-size: clamp(.75rem, 1.15vw, 1.35rem);
+@media (max-width: 1016px) {
+  .serve {
+    &__signature-container {
+      button {
+        @include clamp("font-size", 0.75rem, 1.15vw, 0.1rem, 1.35rem);
+      }
     }
   }
-}
 }
 
 @media (min-width: 2000px) {

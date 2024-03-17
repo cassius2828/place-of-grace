@@ -16,7 +16,9 @@
     margin-bottom: 0;
 
     li {
-      font-size: clamp(1rem, 1vw + 0.1rem, 4rem);
+      @include clamp("font-size", 1rem, 1vw, 0.1rem, 4rem);
+
+    
       margin: auto 0.5rem;
       @include linkHoverAnimation(
         $color-tar-600,

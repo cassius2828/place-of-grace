@@ -16,8 +16,10 @@
     margin: 2rem 0;
 
     &__img-bg {
-      width: clamp(3rem, 20vw, 10rem);
-      height: clamp(3rem, 20vw, 10rem);
+      @include clamp('width', 3rem, 20vw, .1rem, 10rem);
+      @include clamp('height', 3rem, 20vw, .1rem, 10rem);
+
+  
       border-radius: 50%;
       border: solid 2px $color-burgandy-light;
       overflow: hidden;
