@@ -1,17 +1,6 @@
-import { useState } from "react";
 import NavListDesktop from "../../components/NavBar/NavListDesktop";
 
-
 const LandingPage = () => {
-  const [showNav, setShowNav] = useState(false);
-  const handleShowNav = () => {
-    setShowNav(true);
-  };
-  const handleHideNav = () => {
-    setShowNav(false);
-  };
-
-
   return (
     <section className="landing-page" id="landing-page">
       <div className="hero-bg">
@@ -19,14 +8,8 @@ const LandingPage = () => {
           A Place <br />
           of Grace
         </h1>
-        <div
-          onMouseEnter={handleShowNav}
-          onMouseLeave={handleHideNav}
-          className="landing-page__nav-container"
-        >
-         {showNav ? 
-         <NavListDesktop className={`landing-page__nav-list`}/> 
-         : <span style={{padding: '0 2rem', textAlign: 'center'}}>Learn About Us</span>}
+        <div className="landing-page__nav-container">
+          <NavListDesktop className={`landing-page__nav-list`} />
         </div>
       </div>
     </section>
