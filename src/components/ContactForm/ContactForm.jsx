@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
-console.log(BASE_URL);
+
 const initialState = {
   firstName: "",
   firstNameValid: false,
@@ -62,7 +62,7 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(BASE_URL + "/form-submission", options);
+      await fetch(BASE_URL , options);
     } catch (error) {
       console.log("error sending data");
     } finally {
@@ -112,12 +112,12 @@ const ContactForm = () => {
         name="message"
       />
       <button
-        onClick={() =>
-          alert(
-            "in production this will send an email to the designated staff and send a confirmation email to the user. The form will also automatically be reset in production"
-          )
-        }
-        // onClick={submitForm}
+        // onClick={() =>
+        //   alert(
+        //     "in production this will send an email to the designated staff and send a confirmation email to the user. The form will also automatically be reset in production"
+        //   )
+        // }
+        onClick={submitForm}
         className=" form__button"
         type="button"
       >
