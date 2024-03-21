@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL2 = import.meta.env.VITE_BASE_URL2;
 
 const initialState = {
   firstName: "",
@@ -62,7 +63,7 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(BASE_URL , options);
+      await fetch(BASE_URL2 , options);
     } catch (error) {
       console.log("error sending data");
     } finally {

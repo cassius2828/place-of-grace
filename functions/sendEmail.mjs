@@ -4,13 +4,13 @@ import { MailtrapClient } from "mailtrap";
 
 // const USERNAME = import.meta.env.VITE_MT_USERNAME;
 // const PASSWORD = import.meta.env.VITE_MT_PASSWORD;
-const SENDER_EMAIL = "demomailtrap.com";
+// const SENDER_EMAIL = "demomailtrap.com";
 const RECIPIENT_EMAIL_STAFF = "cassius.reynolds.dev@gmail.com";
 const RECIPIENT_EMAIL_CLIENT = "cassius.reynolds@placeofgrace.net";
 const ENDPOINT = "https://send.api.mailtrap.io/";
 const TOKEN = import.meta.env.VITE_TOKEN;
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
