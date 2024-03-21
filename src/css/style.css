@@ -901,6 +901,55 @@ button {
     width: 100%;
   }
 }
+.value-cards-container {
+  margin-top: 40rem;
+  margin-top: min(max(10rem, 20vw + 0.1rem, 40rem));
+  margin-top: clamp(10rem, 20vw + 0.1rem, 40rem);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.value-card {
+  transition: all 0.2s ease-out;
+  width: 80vw;
+  border-radius: 4px;
+  background-color: rgba(254, 254, 254, 0.7333333333);
+  box-shadow: 0px 0px 5px 0px #d3af7f;
+}
+.value-card:hover {
+  transform: translateY(-5%);
+}
+.value-card img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .value-card {
+    width: 60%;
+  }
+}
+@media (min-width: 900px) {
+  .value-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    height: 110rem;
+    height: min(max(10rem, 50vh + 0.1rem, 110rem));
+    height: clamp(10rem, 50vh + 0.1rem, 110rem);
+    align-content: end;
+  }
+  .value-card {
+    width: 25vw;
+  }
+}
+@media (min-width: 3500px) {
+  .value-cards-container {
+    margin-top: 150rem;
+    margin-top: min(max(10rem, 35vw + 0.1rem, 150rem));
+    margin-top: clamp(10rem, 35vw + 0.1rem, 150rem);
+  }
+}
 #header {
   background-color: #fefefe;
   position: fixed;
@@ -1822,10 +1871,6 @@ button {
   }
 }
 @media (min-width: 5000px) {
-  .mission-bg {
-    display: flex;
-    justify-content: center;
-  }
   .mission-card {
     width: 20vw;
   }

@@ -68,7 +68,7 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-      @include clamp("padding", 1rem, 2vw, .1rem, 3rem);
+    @include clamp("padding", 1rem, 2vw, 0.1rem, 3rem);
     width: 80vw;
     border-radius: $base-br;
     background-color: $color-company-white-opacity8;
@@ -79,15 +79,14 @@
     color: $color-burgandy-dark;
 
     &__icon {
-      @include clamp("height", 2.5rem, 6vw, .1rem, 6rem);
-
+      @include clamp("height", 2.5rem, 6vw, 0.1rem, 6rem);
 
       margin: 1rem;
     }
     &__text {
       &--title {
         @include cardTitleFontSize(phone);
-      @include clamp("margin", .5rem, .5vw, .1rem, 2rem);
+        @include clamp("margin", 0.5rem, 0.5vw, 0.1rem, 2rem);
         margin-left: 0;
         margin-right: 0;
       }
@@ -106,11 +105,11 @@
 }
 
 @media (max-width: 424px) {
-.mission {
-  &-bg {
-    margin-top: -20vw;
+  .mission {
+    &-bg {
+      margin-top: -20vw;
+    }
   }
-}
 }
 
 @media (min-width: 768px) {
@@ -134,8 +133,7 @@
   .mission {
     &-bg {
       background-size: cover;
-      @include clamp('padding-bottom', 20rem, 55vh, .1rem, 160rem);
-   
+      @include clamp("padding-bottom", 20rem, 55vh, 0.1rem, 160rem);
     }
     &-statement-container {
       padding-left: 10vw;
@@ -143,7 +141,7 @@
     }
     &-cards-container {
       grid-template-columns: repeat(3, 1fr);
-      @include clamp('height', 10rem, 50vh, .1rem, 110rem);
+      @include clamp("height", 10rem, 50vh, 0.1rem, 110rem);
       align-content: end;
     }
 
@@ -175,11 +173,6 @@
 
 @media (min-width: 5000px) {
   .mission {
-    &-bg {
-      display: flex;
-      justify-content: center;
-    }
-
     &-card {
       width: 20vw;
       &__text {
