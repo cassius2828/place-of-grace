@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import TextTab from "../../components/Reusables/TextTab";
 
 const OurStoryText = () => {

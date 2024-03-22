@@ -1,6 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-const TestimonialCard = ({image, name, caption, quote}) => {
+import TextTab from "../Reusables/TextTab";
+const TestimonialCard = ({image, name, caption, quote=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+aspernatur libero repellat quis consequatur ducimus quam nisi
+exercitationem omnis earum qui.`}) => {
   return (
     <div className="testimonial__card">
       {/* <figure className="testimonial__shape">
@@ -19,18 +24,17 @@ const TestimonialCard = ({image, name, caption, quote}) => {
           icon={faQuoteLeft}
         />
         <h3
-          style={{ fontWeight: "800" }}
+          style={{ fontWeight: "800", textTransform: 'capitalize' }}
           className="testimonial__text--caption"
         >
-          I had the best week ever with my family
+      {caption}
         </h3>
         <p className="testimonial__text--quote">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-          ipsum sapiente aspernatur libero repellat quis consequatur ducimus
-          quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
-          aspernatur libero repellat quis consequatur ducimus quam nisi
-          exercitationem omnis earum qui.
-        </p>
+         {quote}
+        </p><span
+          style={{ fontWeight: "800", textTransform: 'capitalize' }}
+        
+        ><TextTab>&#8212;</TextTab> {name}</span>
       </div>
     </div>
   );

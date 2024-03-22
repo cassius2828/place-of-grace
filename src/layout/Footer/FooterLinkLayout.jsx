@@ -67,7 +67,7 @@ const FooterLinkLayout = () => {
             <a href="https://www.instagram.com/aplaceofgraceinc/">
               <FontAwesomeIcon className="icon" size="2x" icon={faInstagram} />
             </a>
-            <a href="https://www.linkedin.com/company/aplaceofgraceinc">
+            <a href="https://www.linkedin.com/company/aplaceofgraceinc/?viewAsMember=true">
               <FontAwesomeIcon className="icon" size="2x" icon={faLinkedin} />
             </a>
           </div>

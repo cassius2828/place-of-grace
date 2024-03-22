@@ -903,8 +903,8 @@ button {
 }
 .value-cards-container {
   margin-top: 40rem;
-  margin-top: min(max(10rem, 20vw + 0.1rem, 40rem));
-  margin-top: clamp(10rem, 20vw + 0.1rem, 40rem);
+  margin-top: min(max(10rem, 25vw + 0.1rem, 40rem));
+  margin-top: clamp(10rem, 25vw + 0.1rem, 40rem);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -943,11 +943,11 @@ button {
     width: 25vw;
   }
 }
-@media (min-width: 3500px) {
+@media (min-width: 3000px) {
   .value-cards-container {
-    margin-top: 150rem;
-    margin-top: min(max(10rem, 35vw + 0.1rem, 150rem));
-    margin-top: clamp(10rem, 35vw + 0.1rem, 150rem);
+    margin-top: 170rem;
+    margin-top: min(max(10rem, 55vw + 0.1rem, 170rem));
+    margin-top: clamp(10rem, 55vw + 0.1rem, 170rem);
   }
 }
 #header {
@@ -1014,9 +1014,8 @@ button {
   color: #efe9e0;
 }
 .footer__logo-container {
-  width: 75%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .footer img {
   width: 10rem;
@@ -1140,9 +1139,6 @@ button {
   }
 }
 @media (min-width: 1300px) {
-  .footer__logo-container {
-    width: 85%;
-  }
   .footer__list-container {
     width: 90%;
   }
@@ -1155,9 +1151,6 @@ button {
   }
 }
 @media (min-width: 1600px) {
-  .footer__logo-container {
-    width: 90%;
-  }
   .footer__button-container {
     margin: auto;
     width: 50%;
@@ -1629,7 +1622,6 @@ button {
   }
 }
 #our-story {
-  padding-top: 10vw;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -1639,7 +1631,7 @@ button {
   flex-direction: column;
 }
 .OurStory-right {
-  background-image: url("/images/our-story-desktop.webp");
+  background-image: url("/images/newImages/Dave_Sally_Our_Story-2.webp");
   background-size: cover;
   background-position: 50% 25%;
   position: relative;
@@ -1674,6 +1666,9 @@ button {
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   line-height: 5vw;
 }
+.OurStory--text__story-2 {
+  margin-bottom: 2vw;
+}
 .OurStory__signature-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1687,6 +1682,7 @@ button {
 }
 @media (min-width: 800px) {
   #our-story {
+    padding-top: 10vw;
     flex-direction: row;
   }
   .OurStory {
@@ -1706,6 +1702,9 @@ button {
   .OurStory--text__story {
     margin: 1.25vw 0;
     line-height: 2.5vw;
+  }
+  .OurStory--text__story-2 {
+    margin-bottom: 2vw;
   }
   .OurStory--img__hero {
     display: none;

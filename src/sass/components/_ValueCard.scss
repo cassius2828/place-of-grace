@@ -11,7 +11,7 @@
 //   }
 
 .value-cards-container {
-  @include clamp("margin-top", 10rem, 20vw, 0.1rem, 40rem);
+  @include clamp("margin-top", 10rem, 25vw, 0.1rem, 40rem);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -57,8 +57,8 @@
   }
 }
 
-@media (min-width: 3500px) {
+@media (min-width: 3000px) {
   .value-cards-container {
-    @include clamp("margin-top", 10rem, 35vw, 0.1rem, 150rem);
+    @include clamp("margin-top", 10rem, 55vw, 0.1rem, 170rem);
   }
 }

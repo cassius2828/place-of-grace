@@ -13,10 +13,9 @@ const Mission = () => {
             Our Mission
           </h1>
           <p className="mission__text--paragraph">
-            <TextTab>P</TextTab>roviding high-quality care and structured
-            support for the health and wellness of the Intellectually and
-            Developmentally Disabled population by hiring and training caring
-            professionals dedicated to compassionate care.
+            <TextTab>T</TextTab>o hire and train caring professionals who
+            provide the highest quality care and structured support for the
+            health and wellness of the population we serve.
           </p>
         </div>{" "}
         <div className="mission-bg">
@@ -26,15 +25,15 @@ const Mission = () => {
 
           <div className="value-cards-container">
             <ValueCard>
-              <img  src="/images/values/6.svg" alt="" />
+              <img src="/images/values/8.svg" alt="" />
             </ValueCard>
             <ValueCard>
-              <img  src="/images/values/7.svg" alt="" />
+              <img src="/images/values/9.svg" alt="" />
             </ValueCard>
             <ValueCard>
-              <img  src="/images/values/10.svg" alt="" />
+              <img src="/images/values/10.svg" alt="" />
             </ValueCard>
-      
+
             {/* <>
               {" "}
               <FeatureCard

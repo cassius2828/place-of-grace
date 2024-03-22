@@ -8,9 +8,12 @@ const Footer = () => {
       <div className="footer__logo-container">
         <Logo logoNum={`2`} imageUrl={`/images/NewPoGIcon.svg`} />
       </div>
+      {/* 
+      // ! logo container width is removed so it is centered 
+// ! until we decide on antoher logo
       <h1 className="footer__text--h1">
         Insiprational Quote of your choice here{" "}
-      </h1>
+      </h1> */}
       <hr />
       <br />
       <FooterButtonContainer />

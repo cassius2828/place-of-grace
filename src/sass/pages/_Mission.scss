@@ -59,6 +59,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+  
   }
 
   &-card {
@@ -118,8 +119,7 @@
       width: 60%;
 
       &__text {
-        &--title {
-        }
+       
         &--paragraph {
           @include cardParagraphFontSize(tablet);
           margin-bottom: 0;

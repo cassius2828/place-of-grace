@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 #our-story {
-  padding-top: 10vw;
+  
   display: flex;
   flex-direction: column-reverse;
 }
@@ -11,7 +11,7 @@
   flex-direction: column;
 
   &-right {
-    background-image: url("/images/our-story-desktop.webp");
+    background-image: url("/images/newImages/Dave_Sally_Our_Story-2.webp");
     background-size: cover;
     background-position: 50% 25%;
     position: relative;
@@ -42,6 +42,10 @@
       margin: 1.25vw 0;
       @include paragraphFontSize(phone);
       line-height: 5vw;
+
+      &-2 {
+        margin-bottom: 2vw;
+      }
     }
   }
 
@@ -64,6 +68,7 @@
 
 @media (min-width: $md-device) {
   #our-story {
+    padding-top: 10vw;
     flex-direction: row;
   }
 
@@ -83,6 +88,9 @@
       &__story {
         margin: 1.25vw 0;
         line-height: 2.5vw;
+        &-2 {
+          margin-bottom: 2vw;
+        }
       }
     }
 
