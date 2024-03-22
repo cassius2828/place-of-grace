@@ -2016,7 +2016,7 @@ button {
   }
 }
 #serve {
-  padding-top: 10vw;
+  padding-top: 4vh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -2067,6 +2067,11 @@ button {
   text-transform: capitalize;
 }
 
+@media (min-width: 500px) {
+  #serve {
+    padding-top: 10vw;
+  }
+}
 @media (min-width: 768px) {
   .serve--text__story {
     padding: 0 5vw;

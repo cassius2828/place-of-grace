@@ -3,7 +3,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 #serve {
-  padding-top: 10vw;
+ padding-top: 4vh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -49,6 +49,13 @@
       margin: 2rem;
       text-transform: capitalize;
     }
+  }
+}
+
+@media (min-width: 500px) {
+  #serve {
+    padding-top: 10vw;
+   
   }
 }
 
