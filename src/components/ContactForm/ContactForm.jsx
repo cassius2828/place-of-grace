@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 const BASE_URL2 = import.meta.env.VITE_BASE_URL2;
 
@@ -73,6 +76,7 @@ const ContactForm = () => {
 
  
   return (
+  
     <form action="" className="contact__form">
       <label htmlFor="firstName">First Name:</label>
       <input

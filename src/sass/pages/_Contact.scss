@@ -98,6 +98,33 @@
       color: $color-cream;
     }
   }
+
+  &__success {
+    &--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      position: relative;
+    }
+    &-icon {
+      font-size: 10rem;
+      margin: 1rem;
+      color: #198754;
+    }
+    &-message {
+      @include titleFontSize(half);
+      text-align: center;
+    }
+    &--close-icon {
+      @include titleFontSize(half);
+      position: absolute;
+      top: -2rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
 }
 @media (max-width: 375px) {
   .contact {
@@ -131,6 +158,15 @@
     .form-box {
       background-color: $color-company-white-opacity8;
       margin: 2rem 0;
+      min-height: 60rem;
+    }
+    &__success {
+      &--container {
+        min-height: 60rem;
+      }
+      &-icon {
+        font-size: 20rem;
+      }
     }
     padding: 10vh 8vw 0 8vw;
   }

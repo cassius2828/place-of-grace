@@ -1453,6 +1453,33 @@ button {
   transform: scale(1.1);
   color: #efe9e0;
 }
+.contact__success--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.contact__success-icon {
+  font-size: 10rem;
+  margin: 1rem;
+  color: #198754;
+}
+.contact__success-message {
+  font-size: 20rem;
+  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
+  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  text-align: center;
+}
+.contact__success--close-icon {
+  font-size: 20rem;
+  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
+  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  cursor: pointer;
+}
 
 @media (max-width: 375px) {
   .contact__form textarea {
@@ -1477,6 +1504,13 @@ button {
   .contact .form-box {
     background-color: rgba(254, 254, 254, 0.7333333333);
     margin: 2rem 0;
+    min-height: 60rem;
+  }
+  .contact__success--container {
+    min-height: 60rem;
+  }
+  .contact__success-icon {
+    font-size: 20rem;
   }
 }
 @media (min-width: 1000px) {

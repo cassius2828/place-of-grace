@@ -36,23 +36,47 @@ const Accordian = () => {
       >
         <Suspense fallback={<div>Loading...</div>}>
           <HeadshotCard
-            img={Patti}
-            name="Patti Ruona"
-            title="Administrator Assistant"
+            // img={Patti}
+            name="Bianca Fleming"
+            title="Administrator"
             level="staff"
           />
 
           <HeadshotCard
             img={Spring}
-            name="Mary Meter"
+            name="Spring Meeter"
             title="Administrative Mentor"
+            level="staff"
+          />
+           <HeadshotCard
+            // img={Spring}
+            name="Diane McCart"
+            title="Administrative EBSH"
             level="staff"
           />
 
           <HeadshotCard
-            img={Heather}
-            name="Heather Mundell"
-            title="Operations Manager & HR"
+            img={Dye}
+            name="Dyemond Mitchell"
+            title="Administrative EBSH"
+            level="staff"
+          />
+           <HeadshotCard
+            img={Freddie}
+            name="Freddie Diaz"
+            title="Administrative EBSH"
+            level="staff"
+          />
+           <HeadshotCard
+            img={Jesse}
+            name="Jesse Mendenhall"
+            title="Administrative EBSH"
+            level="staff"
+          />
+           <HeadshotCard
+            // img={Heather}
+            name="Roman Price"
+            title="Manager"
             level="staff"
           />
         </Suspense>
@@ -65,23 +89,18 @@ const Accordian = () => {
       >
         <Suspense fallback={<div>Loading...</div>}>
           <HeadshotCard
-            img={Dye}
-            name="Dyemond Mitchell"
+            // img={Dye}
+            name="Justin Felan"
             title="Administrator"
             level="staff"
           />
           <HeadshotCard
-            img={Freddie}
-            name="Freddie Diaz"
+            // img={Freddie}
+            name="Rob Turner"
             title="Administrator"
             level="staff"
           />
-          <HeadshotCard
-            img={Abby}
-            name="Abby Carvajal"
-            title="Administrator"
-            level="staff"
-          />
+      
         </Suspense>
       </AccordianItem>
       <AccordianItem
@@ -92,52 +111,32 @@ const Accordian = () => {
       >
         <Suspense fallback={<div>Loading...</div>}>
           <HeadshotCard
-            img={Jesse}
-            name="Jesse Mendenhall"
-            title="Administrator"
+            // img={Jesse}
+            name="Nicole Johnson"
+            title="Operations Director"
             level="staff"
           />
           <HeadshotCard
-            img={Kristin}
-            name="Kristin McGhie"
-            title="Admininstrator"
+            // img={Kristin}
+            name="Melissa Minniefee"
+            title="Human Resources Manager | SC"
             level="staff"
           />
-          <HeadshotCard
-            img={Shanta}
-            name="Shanta Haines"
-            title="Administrator"
+              <HeadshotCard
+            // img={Kristin}
+            name="Deanna Perry"
+            title="Human Resources Manager | NC"
+            level="staff"
+          />
+             <HeadshotCard
+            // img={Kristin}
+            name="Adrianna Price"
+            title="Human Resources Generalist & Tech Support"
             level="staff"
           />
         </Suspense>
       </AccordianItem>
-      <AccordianItem
-        groupName="Office Team"
-        num={4}
-        handleOpenTab={handleOpenTab}
-        openTab={openTab}
-      >
-        <Suspense fallback={<div>Loading...</div>}>
-          <HeadshotCard
-            img={Jesse}
-            name="Jesse Mendenhall"
-            title="Administrator"
-            level="staff"
-          />
-          <HeadshotCard
-            img={Kristin}
-            name="Kristin McGhie"
-            title="Admininstrator"
-            level="staff"
-          />
-          <HeadshotCard
-            img={Shanta}
-            name="Shanta Haines"
-            title="Administrator"
-            level="staff"
-          />
-        </Suspense>
-      </AccordianItem>
+     
     </div>
   );
 };
