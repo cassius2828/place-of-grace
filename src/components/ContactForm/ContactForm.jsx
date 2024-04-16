@@ -28,10 +28,7 @@ const ContactForm = () => {
   // const handleFormValidatorUI = (e) => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   // };
-  useEffect(() => {
-    console.log("hello");
-    console.log("ENV VARS: " + import.meta.env.VITE_HELLO_WORLD);
-  }, []);
+  
   const submitForm = async (e) => {
     e.preventDefault(); // Prevent form submission
     if (!firstName || !lastName || !email || !message) {
@@ -60,7 +57,7 @@ const ContactForm = () => {
       message: message,
     };
     const options = {
-      method: "get",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
       },
@@ -71,7 +68,7 @@ const ContactForm = () => {
       await fetch(`/${URL}`, options);
       console.log(URL);
     } catch (error) {
-      console.log("error sending data");
+      console.log("error sending data: cannot fetch");
     } finally {
       setFormData(initialState);
     }
