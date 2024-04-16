@@ -136,7 +136,6 @@ const Accordian = () => {
           />
         </Suspense>
       </AccordianItem>
-     
     </div>
   );
 };

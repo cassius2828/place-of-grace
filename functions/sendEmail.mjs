@@ -8,7 +8,8 @@ import { MailtrapClient } from "mailtrap";
 const RECIPIENT_EMAIL_STAFF = "cassius.reynolds.dev@gmail.com";
 const RECIPIENT_EMAIL_CLIENT = "cassius.reynolds@placeofgrace.net";
 const ENDPOINT = "https://send.api.mailtrap.io/";
-const TOKEN = import.meta.env.VITE_TOKEN;
+// const TOKEN = import.meta.env.VITE_TOKEN;
+const TOKEN = process.env.VITE_TOKEN;
 
 export const handler = async (event) => {
   if (event.httpMethod !== "POST") {

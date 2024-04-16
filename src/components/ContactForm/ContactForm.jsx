@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 const BASE_URL2 = import.meta.env.VITE_BASE_URL2;
+const EMAIL_FUNC_URL = import.meta.env.VITE_EMAIL_FUNC
+const HELLO_WORLD_URL = import.meta.env.VITE_HELLO_WORLD
+
 
 const initialState = {
   firstName: "",
@@ -29,7 +32,11 @@ const ContactForm = () => {
   // const handleFormValidatorUI = (e) => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   // };
+useEffect(() => {
+  console.log("hello")
+  console.log('ENV VARS: ' + import.meta.env.VITE_HELLO_WORLD)
 
+},[])
   const submitForm = async (e) => {
     e.preventDefault(); // Prevent form submission
     if (!firstName || !lastName || !email || !message) {
@@ -58,7 +65,7 @@ const ContactForm = () => {
       message: message,
     };
     const options = {
-      method: "post",
+      method: "get",
       headers: {
         "Content-Type": "application/json",
       },
@@ -66,7 +73,8 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(BASE_URL2 , options);
+      await fetch(`/${HELLO_WORLD_URL}` , options);
+      console.log(HELLO_WORLD_URL)
     } catch (error) {
       console.log("error sending data");
     } finally {
