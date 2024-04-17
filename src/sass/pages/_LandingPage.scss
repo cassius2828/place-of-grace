@@ -8,7 +8,7 @@
       // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
       font-size: 3rem;
       color: $gray-950;
-      animation: moveInLeft 1.5s ease-in;
+      animation: fadeIn 1s ease-in;
 
       & span {
         // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
@@ -29,7 +29,7 @@
       color: $color-company-white;
       // border-radius: $base-br;
       // padding: 1rem;
-      animation: moveInRight 1.5s ease-in;
+      animation: fadeIn 1s ease-in;
       backface-visibility: hidden;
       background-color: $color-black-opacity2;
       @include base-animation;
@@ -137,7 +137,6 @@
         color: $color-burgandy-theme;
         border-radius: $base-br;
         // padding: 1rem;
-        animation: moveInRight 1.5s ease-in;
         backface-visibility: hidden;
         background-color: $color-company-white-opacity8;
         @include base-animation;

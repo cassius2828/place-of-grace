@@ -1547,7 +1547,7 @@ button {
 .landing-page__text--title {
   font-size: 3rem;
   color: #0e0e0e;
-  animation: moveInLeft 1.5s ease-in;
+  animation: fadeIn 1s ease-in;
 }
 .landing-page__text--title span {
   font-size: 3rem;
@@ -1558,7 +1558,7 @@ button {
   position: absolute;
   bottom: 0%;
   color: #fefefe;
-  animation: moveInRight 1.5s ease-in;
+  animation: fadeIn 1s ease-in;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.1843137255);
   transition: all 0.2s ease-out;
@@ -1630,7 +1630,6 @@ button {
     bottom: 40%;
     color: #52111f;
     border-radius: 4px;
-    animation: moveInRight 1.5s ease-in;
     backface-visibility: hidden;
     background-color: rgba(254, 254, 254, 0.7333333333);
     transition: all 0.2s ease-out;
