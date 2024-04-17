@@ -8,7 +8,7 @@ const BossCardContainer = () => {
     <div className="staff__meetstaff--boss-container">
       <HeadshotCard
         id="david-price"
-        img={Dave}
+        // img={Dave}
         name="David Price"
         title="CEO"
         level="boss"
@@ -18,7 +18,7 @@ const BossCardContainer = () => {
       />
       <HeadshotCard
         id="sally-price"
-        img={Sally}
+        // img={Sally}
         name="Sally Price"
         title="Vice President"
         level="boss"

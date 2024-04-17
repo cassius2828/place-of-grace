@@ -11,4 +11,8 @@ Organization
 
 DESIGN:
 - implement the photo of 
+- ladning page nav strip 
+- image defaults
+- distortion of images
+- image optimization
 ///////////////////////////

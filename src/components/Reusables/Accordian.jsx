@@ -43,7 +43,7 @@ const Accordian = () => {
           />
 
           <HeadshotCard
-            img={Spring}
+            // img={Spring}
             name="Spring Meeter"
             title="Administrative Mentor"
             level="staff"
@@ -56,19 +56,19 @@ const Accordian = () => {
           />
 
           <HeadshotCard
-            img={Dye}
+            // img={Dye}
             name="Dyemond Mitchell"
             title="Administrative EBSH"
             level="staff"
           />
            <HeadshotCard
-            img={Freddie}
+            // img={Freddie}
             name="Freddie Diaz"
             title="Administrative EBSH"
             level="staff"
           />
            <HeadshotCard
-            img={Jesse}
+            // img={Jesse}
             name="Jesse Mendenhall"
             title="Administrative EBSH"
             level="staff"

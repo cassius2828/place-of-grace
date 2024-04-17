@@ -23,7 +23,7 @@ const ServeStory = () => {
         delivering the highest standard of care and support.
       </p>
       <p className="serve--text__story serve--text__story-4">
-        Click below to learn more about Regional Center eligibility requirements
+      <TextTab>Click</TextTab> below to learn more about Regional Center eligibility requirements
       </p>
     </>
   );

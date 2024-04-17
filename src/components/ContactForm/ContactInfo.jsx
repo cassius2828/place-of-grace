@@ -15,7 +15,7 @@ const ContactInfo = () => {
          Office:{" "}
           <a onClick={()=> alert('in production this will initiate a call to the provided number')} href="">
           {/* <a href="tel:7075674000"> */}
-            (707) 555-5555
+            (707) 447-7634
             <FontAwesomeIcon className="contact__icon" icon={faPhoneFlip} />
           </a>
         </span>

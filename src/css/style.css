@@ -1620,7 +1620,7 @@ button {
 @media (min-width: 768px) {
   .landing-page__text--title {
     position: absolute;
-    top: 40%;
+    top: 35%;
     transform: translateY(-50%);
     position: relative;
     font-size: 7rem;
@@ -1635,7 +1635,7 @@ button {
   }
   .landing-page__nav-container {
     width: 100%;
-    bottom: 40%;
+    bottom: 47.5%;
     color: #52111f;
     border-radius: 4px;
     backface-visibility: hidden;
