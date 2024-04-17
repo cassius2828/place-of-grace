@@ -18,7 +18,8 @@
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 3;
     }
-
+  
+ 
     &--p1 {
       top: 10vw;
       left: 0vw;
@@ -32,7 +33,16 @@
       top: 25vw;
       left: 10vw;
     }
+    &--p4 {
+      top: 41vw;
+      left: 20vw;
+    }
+    &--p5 {
+      top: 37vw;
+      left: 0vw;
+    }
   }
+ 
 }
 
 @media (min-width: $md-device) {

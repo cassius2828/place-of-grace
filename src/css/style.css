@@ -339,6 +339,14 @@ button {
   top: 25vw;
   left: 10vw;
 }
+.composition__photo--p4 {
+  top: 41vw;
+  left: 20vw;
+}
+.composition__photo--p5 {
+  top: 37vw;
+  left: 0vw;
+}
 
 @media (min-width: 800px) {
   .composition {
