@@ -99,7 +99,7 @@
     }
   }
 
-  &__success {
+  &__result {
     &--container {
       display: flex;
       flex-direction: column;
@@ -125,7 +125,10 @@
       cursor: pointer;
     }
   }
+ 
 }
+
+
 @media (max-width: 375px) {
   .contact {
     &__form {
@@ -160,7 +163,7 @@
       margin: 2rem 0;
       min-height: 60rem;
     }
-    &__success {
+    &__result {
       &--container {
         min-height: 60rem;
       }
@@ -168,6 +171,7 @@
         font-size: 20rem;
       }
     }
+  
     padding: 10vh 8vw 0 8vw;
   }
 }

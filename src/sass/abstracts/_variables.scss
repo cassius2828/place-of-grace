@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap');
+
 
 // FONT FAMILY
 $font-family-primary: Montserrat;
@@ -13,6 +14,7 @@ $color-dark-brown: #9b6d47;
 $color-darker-brown: #5b412b;
 $color-burgandy-light: #701111;
 $color-burgandy-dark: #4f0a0a;
+$color-burgandy-theme: #52111f;
 
 // THEME COLORS OPACITY
 $color-company-white-opacity2: #fefefe3e;
@@ -24,7 +26,6 @@ $color-company-white-opacity95: #fefefeea;
 $color-black-opacity2: #0000002f;
 $color-black-opacity4: #00000062;
 
-
 $color-burgandy-light-opacity4: #70111154;
 $color-burgandy-light-opacity8: #701111c1;
 
@@ -33,6 +34,7 @@ $color-lighter-brown-opacity8: #d3af7fb7;
 
 // GRAYSCALE
 $color-pure-black: #000;
+$gray-950: #0e0e0e;
 $color-tar-600: #27292d;
 $color-dark-gray-500: #3f4447;
 $color-gray-400: #717277;

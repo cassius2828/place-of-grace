@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap");
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 *,
@@ -1009,7 +1009,7 @@ button {
 
 .footer {
   width: 100vw;
-  background-color: #5b412b;
+  background-color: #52111f;
   padding: 2rem;
   color: #efe9e0;
 }
@@ -1453,25 +1453,25 @@ button {
   transform: scale(1.1);
   color: #efe9e0;
 }
-.contact__success--container {
+.contact__result--container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   position: relative;
 }
-.contact__success-icon {
+.contact__result-icon {
   font-size: 10rem;
   margin: 1rem;
   color: #198754;
 }
-.contact__success-message {
+.contact__result-message {
   font-size: 20rem;
   font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
   font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
   text-align: center;
 }
-.contact__success--close-icon {
+.contact__result--close-icon {
   font-size: 20rem;
   font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
   font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
@@ -1506,10 +1506,10 @@ button {
     margin: 2rem 0;
     min-height: 60rem;
   }
-  .contact__success--container {
+  .contact__result--container {
     min-height: 60rem;
   }
-  .contact__success-icon {
+  .contact__result-icon {
     font-size: 20rem;
   }
 }
@@ -1545,50 +1545,48 @@ button {
   }
 }
 .landing-page__text--title {
-  position: absolute;
-  font-size: 12rem;
-  font-size: min(max(6rem, 10vw + 0.1rem, 12rem));
-  font-size: clamp(6rem, 10vw + 0.1rem, 12rem);
-  color: #fefefe;
+  font-size: 3rem;
+  color: #0e0e0e;
   animation: moveInLeft 1.5s ease-in;
 }
+.landing-page__text--title span {
+  font-size: 3rem;
+  font-weight: 500;
+}
 .landing-page__nav-container {
+  width: 100%;
   position: absolute;
-  font-size: 8rem;
-  font-size: min(max(3rem, 2vw + 0.1rem, 8rem));
-  font-size: clamp(3rem, 2vw + 0.1rem, 8rem);
+  bottom: 0%;
   color: #fefefe;
-  border-radius: 4px;
   animation: moveInRight 1.5s ease-in;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.1843137255);
   transition: all 0.2s ease-out;
 }
 .landing-page__nav-list {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
 }
 .landing-page__nav-list li {
   padding: 0 2rem;
-  border-radius: none;
+  border-radius: 4px;
+  font-size: 2rem;
   transition: 0.3s all ease-out;
-}
-.landing-page__nav-list li:first-child {
-  border-radius: 4px 0 0 4px;
-}
-.landing-page__nav-list li:last-child {
-  border-radius: 0 4px 4px 0;
 }
 .landing-page__nav-list li:hover {
   background-color: rgba(112, 17, 17, 0.7568627451);
+  color: #fefefe;
 }
 
 .hero-bg {
   position: relative;
-  background: url(/images/hero/happy-patient-holding-caregiver-hand-600nw-688645165.webp);
+  background: url(/images/hero/Landing-Page-POG.png);
   background-color: #2b2b2b;
   background-size: cover;
   background-position: center;
@@ -1599,60 +1597,79 @@ button {
   align-items: center;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 425px) {
   .landing-page__text--title {
-    top: 20%;
-    left: 10%;
+    font-size: 4rem;
   }
-  .landing-page__nav-container {
-    top: 75%;
-  }
-}
-@media screen and (orientation: landscape) and (max-width: 1100px) {
-  .landing-page__nav-container {
-    top: 80%;
-  }
-  .landing-page__nav-container span {
+  .landing-page__text--title span {
     font-size: 3rem;
   }
-  .landing-page__nav-list {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    font-size: 2.5rem;
+  .landing-page__text--title span:first-child {
+    position: relative;
+    top: -5%;
   }
 }
-@media (max-width: 1000px) {
-  .landing-page__nav-container {
+@media (min-width: 768px) {
+  .landing-page__text--title {
     position: absolute;
-    top: 50%;
-    font-size: 8rem;
-    font-size: min(max(3rem, 2vw + 0.1rem, 8rem));
-    font-size: clamp(3rem, 2vw + 0.1rem, 8rem);
-    color: #fefefe;
+    top: 40%;
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 7rem;
+  }
+  .landing-page__text--title span {
+    font-weight: 500;
+    font-size: 6rem;
+  }
+  .landing-page__text--title span:first-child {
+    position: relative;
+    top: -15%;
+  }
+  .landing-page__nav-container {
+    width: 100%;
+    bottom: 40%;
+    color: #52111f;
     border-radius: 4px;
     animation: moveInRight 1.5s ease-in;
     backface-visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.1843137255);
+    background-color: rgba(254, 254, 254, 0.7333333333);
     transition: all 0.2s ease-out;
   }
   .landing-page__nav-list {
-    display: block;
-    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
   }
   .landing-page__nav-list li {
     padding: 0 2rem;
-    border-radius: none;
+    border-radius: 4px;
+    font-size: 1.75rem;
     transition: 0.3s all ease-out;
-  }
-  .landing-page__nav-list li:first-child {
-    border-radius: 4px 4px 0 0;
-  }
-  .landing-page__nav-list li:last-child {
-    border-radius: 0 0 4px 4px;
   }
   .landing-page__nav-list li:hover {
     background-color: rgba(112, 17, 17, 0.7568627451);
+    color: #fefefe;
+  }
+}
+@media (min-width: 774px) {
+  .landing-page__text--title {
+    font-size: 8rem;
+  }
+  .landing-page__nav-list li {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1082px) {
+  .landing-page__text--title {
+    font-size: 12rem;
+  }
+}
+@media (min-width: 1200px) {
+  .landing-page__nav-list li {
+    font-size: 3rem;
   }
 }
 #our-story {
@@ -1780,9 +1797,7 @@ button {
   position: relative;
 }
 .mission__text--title {
-  font-size: 20rem;
-  font-size: min(max(3rem, 3vw + 1rem, 20rem));
-  font-size: clamp(3rem, 3vw + 1rem, 20rem);
+  font-size: 3rem;
   letter-spacing: 1vw;
   margin-bottom: 3vw;
 }
@@ -1798,6 +1813,8 @@ button {
   font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
   line-height: 4vw;
   margin-bottom: 10vw;
+  font-style: italic;
+  text-align: center;
 }
 .mission-cards-container {
   width: 100%;
@@ -1858,6 +1875,9 @@ button {
   }
 }
 @media (min-width: 768px) {
+  .mission__text--title {
+    font-size: 6rem;
+  }
   .mission-card {
     width: 60%;
   }

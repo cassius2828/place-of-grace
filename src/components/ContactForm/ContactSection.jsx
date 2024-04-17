@@ -3,11 +3,20 @@ import ErrorBoundary from "../../pages/Errors/ErrorBoundary";
 import BgVideo from "../BgVideo/BgVideo";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import {
+  faCheckCircle,
+  faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { useGlobalContext } from "../../customHooks/useGlobalContext";
 
 const ContactFormSection = () => {
-  const [tempState, setTempState] = useState(false);
+  const {
+    successSubmission,
+    handleHideSuccessMessage,
+    failedSubmission,
+    handleHideFailedMessage,
+  } = useGlobalContext();
 
   return (
     <>
@@ -15,21 +24,43 @@ const ContactFormSection = () => {
       <section id="contact" className="contact">
         <BgVideo />
         <div className="form-box">
-          {tempState ? (
-            <div className="contact__success--container">
+          {successSubmission ? (
+            <div className="contact__result--container">
               <span
-                onClick={() => setTempState(false)}
-                className="contact__success--close-icon"
+                onClick={handleHideSuccessMessage}
+                className="contact__result--close-icon"
               >
                 x
               </span>
               <FontAwesomeIcon
-                className="contact__success-icon"
+                className="contact__result-icon"
                 icon={faCheckCircle}
               />
-              <h2 className="contact__success-message">
+              <h2 className="contact__result-message">
                 Message Sent Successfully!
               </h2>
+            </div>
+          ) : failedSubmission ? (
+            <div className="contact__result--container">
+              <span
+                onClick={handleHideFailedMessage}
+                className="contact__result--close-icon"
+              >
+                x
+              </span>
+              <FontAwesomeIcon
+                className="contact__result-icon"
+                icon={faCircleXmark}
+                style={{ color: "red" }}
+              />
+              <div>
+                <h2 style={{marginBottom: '1rem'}} className="contact__result-message">
+                Message Failed to Send
+                </h2>
+                <h3 className="contact__result-message--h3">
+                If issue persists, please reach out to example@gmail.com directly with your inquiry
+                </h3>
+              </div>
             </div>
           ) : (
             <>

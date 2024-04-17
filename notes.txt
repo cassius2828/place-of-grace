@@ -1,64 +1,14 @@
-
 ///////////////////////////
-LANDING PAGE
+THINGS TO DO: 4-16-2024
+DevOps
+- set up sub domain for emailing api on NS CNAME records (on mailtrap too)
+- migrate from personal netlify to a new netlify account for placeofgrace
+- test serverless functions on dev and production
+
+Organization
+- clean up and organize code 
+- write README.md 
+
+DESIGN:
+- implement the photo of 
 ///////////////////////////
-- style for landing page
-- shortened mission statement
-- possibly shorten my story
-
-
-
-///////////////////////////
-CAREERS
-///////////////////////////
-- change text to job opportunities
-- current job openings
-
-
-
-///////////////////////////
-PRACTICAL CHANGES I THINK SHOULD STAY
-///////////////////////////
-
-1. Job application form opening in new tab instead of inside the webpage 
-- if we did not do that then it will mess up the UI, could cause security issues, and is not very pleasant for the UX
-
-
-
-
-///////////////////////////
-THINGS TO DO 3-5-24
-///////////////////////////
-
-5. research moving from network solutions to aws 
-
-
-///////////////////////////
-THINGS TO DO AFTER GETTING RESOURCES FROM MANAGEMENT
-///////////////////////////
-
-1. Update all photos 
-- crop for correct dimensions 
-- apply to all pages 
-
-2. Organize the staff categories and put staff in there 
-- style the accordian to how they want it to be done 
-
-3. Staff testimonials 
-
-4. 
-
-
-///////////////////////////
-3/13/24
-///////////////////////////
-
-
-1. Get example of costs for AWS
-2. Launch instance on AWS 
-2b. Create an account for Place of Grace when time comes for production
-3. Transfer Domain to Route 53
-4. Test emailing functionality
-5. Test on all devices in staging 
-6. After completing staging, officially transfer the website domain to Route53 and run 
-ec2 with pm2 in bacgkround 

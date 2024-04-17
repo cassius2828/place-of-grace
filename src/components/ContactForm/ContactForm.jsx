@@ -19,7 +19,8 @@ const initialState = {
 const ContactForm = () => {
   const [formData, setFormData] = useState(initialState);
   const { firstName, lastName, email, message } = formData;
-  const { formRef } = useGlobalContext();
+  const { formRef, handleShowSuccessMessage, handleShowFailedMessage } =
+    useGlobalContext();
 
   // the brackets allow dynamic chosing of the state object key :)
   const handleFormChange = (e) => {
@@ -28,7 +29,7 @@ const ContactForm = () => {
   // const handleFormValidatorUI = (e) => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   // };
-  
+
   const submitForm = async (e) => {
     e.preventDefault(); // Prevent form submission
     if (!firstName || !lastName || !email || !message) {
@@ -65,10 +66,11 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(`/${URL}`, options);
-      console.log(URL);
+      await fetch(`${URL}`, options);
+      handleShowSuccessMessage();
     } catch (error) {
       console.log("error sending data: cannot fetch");
+      handleShowFailedMessage();
     } finally {
       setFormData(initialState);
     }

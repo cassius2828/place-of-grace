@@ -3,49 +3,66 @@
 .landing-page {
   &__text {
     &--title {
-      position: absolute;
+      // position: absolute;
       // top: 8%;
-      @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
-      color: $color-company-white;
+      // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
+      font-size: 3rem;
+      color: $gray-950;
       animation: moveInLeft 1.5s ease-in;
+
+      & span {
+        // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
+        font-size: 3rem;
+        font-weight: 500;
+      }
     }
   }
 
   &__nav {
     &-container {
+      width: 100%;
       position: absolute;
-      // top: 80%;
+      bottom: 0%;
+      // height: 50vh;
       // width: 80%;
-
-      @include clamp("font-size", 3rem, 2vw, .1rem, 8rem);
-
+      // @include clamp('font-size', 3rem, 2vw, .1rem, 8rem);
       color: $color-company-white;
-      border-radius: $base-br;
+      // border-radius: $base-br;
       // padding: 1rem;
       animation: moveInRight 1.5s ease-in;
       backface-visibility: hidden;
       background-color: $color-black-opacity2;
-
       @include base-animation;
     }
     &-list {
-      display: flex;
-      justify-content: space-between;
+      // * for larger displays
+      // display: flex;
+      // justify-content: space-between;
+      // align-content: end;
       width: 100%;
       margin: 0;
       padding: 0;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 50vh;
       li {
         padding: 0 2rem;
-        border-radius: none;
-        &:first-child {
-          border-radius: 4px 0 0 4px;
-        }
-        &:last-child {
-          border-radius: 0 4px 4px 0;
-        }
+        border-radius: 4px;
+        font-size: 2rem;
+
+        // background-color: $color-burgandy-light-opacity8;
+
+        // &:first-child {
+        //   border-radius: 4px 0 0 4px;
+        // }
+        // &:last-child {
+        //   border-radius: 0 4px 4px 0;
+        // }
         &:hover {
           background-color: $color-burgandy-light-opacity8;
+          color: $color-company-white;
         }
         transition: 0.3s all ease-out;
         //   color: $color-lighter-brown;
@@ -56,7 +73,7 @@
 
 .hero-bg {
   position: relative;
-  background: url(/images/hero/happy-patient-holding-caregiver-hand-600nw-688645165.webp);
+  background: url(/images/hero/Landing-Page-POG.png);
   background-color: #2b2b2b;
   background-size: cover;
   background-position: center;
@@ -67,82 +84,131 @@
   align-items: center;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 425px) {
   .landing-page {
     &__text {
       &--title {
-        top: 20%;
-        left: 10%;
-      }
-    }
-    &__nav {
-      &-container {
-        top: 75%;
+        // position: absolute;
+        // top: 8%;
+        // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
+        font-size: 4rem;
 
-        // left: 15%;
-      }
-    }
-  }
-}
+        & span {
+          // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
+          font-size: 3rem;
 
-@media screen and (orientation: landscape) and (max-width: 1100px) {
-  .landing-page {
-    &__nav {
-      &-container {
-        top: 80%;
-        span {
-        font-size: 3rem;
-
+          &:first-child {
+            position: relative;
+            top: -5%;
+          }
         }
       }
-      &-list {
-        display: flex;
-        justify-content: space-around;
-
-        width: 100%;
-        font-size: 2.5rem;
-      }
     }
   }
 }
-
-@media (max-width: 1000px) {
+@media (min-width: 768px) {
   .landing-page {
+    &__text {
+      &--title {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
+        position: relative;
+        font-size: 7rem;
+
+        & span {
+          // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
+          &:first-child {
+            position: relative;
+            top: -15%;
+          }
+          font-weight: 500;
+          font-size: 6rem;
+        }
+      }
+    }
     &__nav {
       &-container {
-        position: absolute;
-        top: 50%;
-        // width: 80%;
-        @include clamp('font-size', 3rem, 2vw, .1rem, 8rem);
-        color: $color-company-white;
+        width: 100%;
+        bottom: 40%;
+
+        // @include clamp("font-size", 3rem, 2vw, 0.1rem, 8rem);
+        color: $color-burgandy-theme;
         border-radius: $base-br;
         // padding: 1rem;
         animation: moveInRight 1.5s ease-in;
         backface-visibility: hidden;
-        background-color: $color-black-opacity2;
-
+        background-color: $color-company-white-opacity8;
         @include base-animation;
       }
       &-list {
-        
-        display: block;
-        text-align: center;
-
+        // * for larger displays
+        // display: flex;
+        // justify-content: space-between;
+        // align-content: end;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
 
         li {
           padding: 0 2rem;
-          border-radius: none;
-          &:first-child {
-            border-radius: 4px 4px 0 0;
-          }
-          &:last-child {
-            border-radius: 0 0 4px 4px;
-          }
+          border-radius: 4px;
+          font-size: 1.75rem;
+          // background-color: $color-burgandy-light-opacity8;
+
+          // &:first-child {
+          //   border-radius: 4px 0 0 4px;
+          // }
+          // &:last-child {
+          //   border-radius: 0 4px 4px 0;
+          // }
           &:hover {
             background-color: $color-burgandy-light-opacity8;
+            color: $color-company-white;
           }
           transition: 0.3s all ease-out;
           //   color: $color-lighter-brown;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 774px) {
+  .landing-page {
+    &__text {
+      &--title {
+        font-size: 8rem;
+      }
+    }
+    &__nav {
+      &-list {
+        li {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1082px) {
+  .landing-page {
+    &__text {
+      &--title {
+        font-size: 12rem;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .landing-page {
+    &__nav {
+      &-list {
+        li {
+          font-size: 3rem;
         }
       }
     }
