@@ -54,11 +54,18 @@ const ContactFormSection = () => {
                 style={{ color: "red" }}
               />
               <div>
-                <h2 style={{marginBottom: '1rem'}} className="contact__result-message">
-                Message Failed to Send
+                <h2
+                  style={{ marginBottom: "1rem" }}
+                  className="contact__result-message"
+                >
+                  Message Failed to Send
                 </h2>
-                <h3 className="contact__result-message--h3">
-                If issue persists, please reach out to example@gmail.com directly with your inquiry
+                <h3
+                  style={{ textAlign: "center" }}
+                  className="contact__result-message--h3"
+                >
+                  If issue persists, please reach out to example@gmail.com
+                  directly with your inquiry
                 </h3>
               </div>
             </div>
