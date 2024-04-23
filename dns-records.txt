@@ -1,0 +1,30 @@
+# A Records
+Type    Name    Value             TTL
+A       @       208.109.23.237    2 Hours
+A       *       208.109.23.237    2 Hours
+A       www     208.109.23.237    2 Hours
+
+# CNAME Records
+Type    Name                                        Value                                                      TTL
+CNAME   autodiscover                                autodiscover.outlook.com                                   1 Hour
+CNAME   _33611978884c4c484e89381e6ef438ea           c2704ce5c88552aba5cc44afa2a01367.ba2f6170cd14ab3d16c563a94418c610.e9144c94c092155.comodoca.com  1 Hour
+
+# MX Records
+Type    Name    Value                                        TTL
+MX      @       placeofgrace-net.mail.protection.outlook.com  1 Hour
+MX      @       mx001.netsol.xion.oxcs.net                    1/2 Hour
+MX      @       mx002.netsol.xion.oxcs.net                    1/2 Hour
+MX      @       mx003.netsol.xion.oxcs.net                    1/2 Hour
+MX      @       mx004.netsol.xion.oxcs.net                    1/2 Hour
+
+# TXT Records
+Type    Name    Value                                               TTL
+TXT     @       MS=ms68458454                                       1 Hour
+TXT     @       v=spf1 include:spf.protection.outlook.com -all      1 Hour
+TXT     @       google-site-verification=ONu7uF8umdkTkdi2_-tPbGVsO5UG73EZphd5FirEx-Y  2 Hours
+TXT     @       osnrrm6q4vujetv6ff8jnk30k8                          1 Hour
+
+
+# NAME SERVERS
+NS43.WORLDNIC.COM
+NS44.WORLDNIC.COM
