@@ -9,6 +9,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --port 8000",
+    "netlify-serve": "netlify serve",
     "sass": "sass src/sass/main.scss src/css/style.css -w"
   },
   "dependencies": {
