@@ -10,6 +10,7 @@ export const handler = async (event) => {
   //   }
 
   // Parse the JSON body from the event
+  if (!JSON.parse(event.body)) return;
   const { firstName, lastName, email, message } = JSON.parse(event.body);
 
   // Check for required fields
