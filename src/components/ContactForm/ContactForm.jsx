@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../customHooks/useGlobalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-const URL = "/api/sendEmail";
+const URL = "/api/outlookAPI";
 
 const initialState = {
   firstName: "",
@@ -58,7 +58,7 @@ const ContactForm = () => {
       message: message,
     };
     const options = {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -66,8 +66,9 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch(`${URL}`, options);
-      handleShowSuccessMessage();
+      const response = await fetch(`${URL}`, options);
+      if (response.ok) handleShowSuccessMessage();
+      else handleShowFailedMessage();
     } catch (error) {
       console.log("error sending data: cannot fetch");
       handleShowFailedMessage();
