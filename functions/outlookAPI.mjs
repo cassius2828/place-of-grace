@@ -1,5 +1,7 @@
 import axios from "axios";
-const targetEmail = 'sally.price@placeofgrace.net';
+const targetEmail = "developer@placeofgrace.net";
+const DeannaID = "dea24538-8630-4376-977c-b671701a37ea";
+const CassiusID = "268eda2e-210b-41bf-901c-154969d9302c";
 export const handler = async (event) => {
   // Only allow POST method
   console.log(event);
@@ -42,8 +44,7 @@ export const handler = async (event) => {
   // Send the email using the token
   const sendEmail = async (token) => {
     // const sendMailUrl = "https://graph.microsoft.com/v1.0/me/sendMail"; // Replace {user-id} with the user's ID or principal name
-    const sendMailUrl =
-      "https://graph.microsoft.com/v1.0/users/268eda2e-210b-41bf-901c-154969d9302c/sendMail"; // Replace {user-id} with the user's ID or principal name
+    const sendMailUrl = `https://graph.microsoft.com/v1.0/users/${DeannaID}/sendMail`; // Replace {user-id} with the user's ID or principal name
     const emailHeaders = {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
@@ -55,9 +56,7 @@ export const handler = async (event) => {
           contentType: "Text",
           content: `New inquiry from ${firstName} ${lastName}\nMessage: ${message}\nEmail: ${email}`,
         },
-        toRecipients: [
-          { emailAddress: { address: targetEmail } },
-        ],
+        toRecipients: [{ emailAddress: { address: targetEmail } }],
       },
       saveToSentItems: "true",
     };
