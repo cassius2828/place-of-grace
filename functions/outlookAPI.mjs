@@ -1,11 +1,11 @@
-import axios from 'axios';
-
+import axios from "axios";
+const targetEmail = 'sally.price@placeofgrace.net';
 export const handler = async (event) => {
   // Only allow POST method
-  console.log(event)
-//   if (event.method !== "POST") {
-//     return { statusCode: 405, body: "Method Not Allowed: this should return a status code of 405" };
-//   }
+  console.log(event);
+  //   if (event.method !== "POST") {
+  //     return { statusCode: 405, body: "Method Not Allowed: this should return a status code of 405" };
+  //   }
 
   // Parse the JSON body from the event
   const { firstName, lastName, email, message } = JSON.parse(event.body);
@@ -24,10 +24,10 @@ export const handler = async (event) => {
   // Get the access token
   const getToken = async () => {
     const tokenData = new URLSearchParams({
-      'grant_type': "client_credentials",
-      'client_id': clientId,
-      'client_secret': clientSecret,
-      'scope': "https://graph.microsoft.com/.default"
+      grant_type: "client_credentials",
+      client_id: clientId,
+      client_secret: clientSecret,
+      scope: "https://graph.microsoft.com/.default",
     });
 
     try {
@@ -42,25 +42,30 @@ export const handler = async (event) => {
   // Send the email using the token
   const sendEmail = async (token) => {
     // const sendMailUrl = "https://graph.microsoft.com/v1.0/me/sendMail"; // Replace {user-id} with the user's ID or principal name
-    const sendMailUrl = "https://graph.microsoft.com/v1.0/users/268eda2e-210b-41bf-901c-154969d9302c/sendMail"; // Replace {user-id} with the user's ID or principal name
+    const sendMailUrl =
+      "https://graph.microsoft.com/v1.0/users/268eda2e-210b-41bf-901c-154969d9302c/sendMail"; // Replace {user-id} with the user's ID or principal name
     const emailHeaders = {
       Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     };
     const emailData = {
-      "message": {
-        "subject": "New Contact Form Submission",
-        "body": {
-          "contentType": "Text",
-          "content": `New message from ${firstName} ${lastName} (${email}): ${message}`
+      message: {
+        subject: "New Contact Form Submission",
+        body: {
+          contentType: "Text",
+          content: `New inquiry from ${firstName} ${lastName}\nMessage: ${message}\nEmail: ${email}`,
         },
-        "toRecipients": [{ "emailAddress": { "address": "cassius.reynolds.dev@gmail.com" }}]
+        toRecipients: [
+          { emailAddress: { address: targetEmail } },
+        ],
       },
-      "saveToSentItems": "true"
+      saveToSentItems: "true",
     };
 
     try {
-      const response = await axios.post(sendMailUrl, emailData, { headers: emailHeaders });
+      const response = await axios.post(sendMailUrl, emailData, {
+        headers: emailHeaders,
+      });
       return response.data;
     } catch (error) {
       console.error("Error sending email:", error);
@@ -74,15 +79,24 @@ export const handler = async (event) => {
       const emailResponse = await sendEmail(token);
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Email sent successfully", data: emailResponse })
+        body: JSON.stringify({
+          message: "Email sent successfully",
+          data: emailResponse,
+        }),
       };
     } else {
-      return { statusCode: 401, body: "Failed to authenticate with Microsoft Graph API" };
+      return {
+        statusCode: 401,
+        body: "Failed to authenticate with Microsoft Graph API",
+      };
     }
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Internal Server Error", error: error.message })
+      body: JSON.stringify({
+        message: "Internal Server Error",
+        error: error.message,
+      }),
     };
   }
 };
