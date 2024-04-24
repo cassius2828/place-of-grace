@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const URL = "/api/outlookAPI";
+// const URL = "/.netlify/functions/outlookAPI";
 
 const initialState = {
   firstName: "",
@@ -67,6 +68,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(`${URL}`, options);
+      console.log(response)
       if (response.ok) handleShowSuccessMessage();
       else handleShowFailedMessage();
     } catch (error) {

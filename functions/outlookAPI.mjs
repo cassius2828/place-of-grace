@@ -10,8 +10,9 @@ export const handler = async (event) => {
   //   }
 
   // Parse the JSON body from the event
-  if (!JSON.parse(event.body)) return;
+  // if (!event.body) return;
   const { firstName, lastName, email, message } = JSON.parse(event.body);
+  // const { firstName, lastName, email, message } = event.body;
 
   // Check for required fields
   if (!firstName || !lastName || !email || !message) {
@@ -59,7 +60,7 @@ export const handler = async (event) => {
         },
         toRecipients: [{ emailAddress: { address: targetEmail } }],
       },
-      saveToSentItems: "true",
+      saveToSentItems: "false",
     };
 
     try {
