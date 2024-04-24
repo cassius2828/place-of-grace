@@ -19,9 +19,15 @@ const initialState = {
 
 const ContactForm = () => {
   const [formData, setFormData] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
   const { firstName, lastName, email, message } = formData;
-  const { formRef, handleShowSuccessMessage, handleShowFailedMessage } =
-    useGlobalContext();
+  const {
+    formRef,
+    handleShowSuccessMessage,
+    handleShowFailedMessage,
+
+    handleFormDoneLoading,
+  } = useGlobalContext();
 
   // the brackets allow dynamic chosing of the state object key :)
   const handleFormChange = (e) => {
@@ -51,6 +57,7 @@ const ContactForm = () => {
       alert("incorrect form submission");
       return false;
     }
+    setIsLoading(true);
 
     const params = {
       firstName: firstName,
@@ -68,7 +75,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(`${URL}`, options);
-      console.log(response)
+      console.log(response);
       if (response.ok) handleShowSuccessMessage();
       else handleShowFailedMessage();
     } catch (error) {
@@ -76,6 +83,8 @@ const ContactForm = () => {
       handleShowFailedMessage();
     } finally {
       setFormData(initialState);
+      setIsLoading(false);
+      handleFormDoneLoading();
     }
   };
 
@@ -129,7 +138,15 @@ const ContactForm = () => {
         className=" form__button"
         type="button"
       >
-        Submit
+        {isLoading ? (
+          <span>
+            Processing <span className="loading-dot loading-dot--1">.</span>
+            <span className="loading-dot loading-dot--2">.</span>
+            <span className="loading-dot loading-dot--3">.</span>
+          </span>
+        ) : (
+          <span>Submit</span>
+        )}
       </button>
     </form>
   );

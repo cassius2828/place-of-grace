@@ -4,6 +4,7 @@ const initialState = {
   openMobileMenu: false,
   successSubmission: false,
   failedSubmission: false,
+  isFormLoading: false,
 };
 
 const reducer = (state, action) => {
@@ -18,6 +19,10 @@ const reducer = (state, action) => {
       return { ...state, failedSubmission: true };
     case "failedSubmissionFalse":
       return { ...state, failedSubmission: false };
+      case "formIsLoading":
+        return { ...state, isFormLoading: true };
+        case "formDoneLoading":
+          return { ...state, isFormLoading: false };
     default:
       break;
   }
@@ -43,6 +48,12 @@ export const GlobalProvider = ({ children }) => {
   };
   const handleHideFailedMessage = () => {
     dispatch({ type: "failedSubmissionFalse" });
+  };
+  const handleFormIsLoading = () => {
+    dispatch({ type: "formIsLoading" });
+  };
+  const handleFormDoneLoading = () => {
+    dispatch({ type: "formDoneLoading" });
   };
 
   // focuses form if user clicks contact us on the contact page
@@ -86,6 +97,8 @@ export const GlobalProvider = ({ children }) => {
         failedSubmission,
         handleShowFailedMessage,
         handleHideFailedMessage,
+        handleFormIsLoading,
+        handleFormDoneLoading
         // useScreenOrientationLock,
       }}
     >

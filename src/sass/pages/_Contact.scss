@@ -125,9 +125,21 @@
       cursor: pointer;
     }
   }
- 
+  .loading-dot {
+    &--1 {
+      animation: fadeInAndOut 2s infinite;
+      animation-delay: 0s;
+    }
+    &--2 {
+      animation: fadeInAndOut 2s infinite;
+      animation-delay: 0.2s;
+    }
+    &--3 {
+      animation: fadeInAndOut 2s infinite;
+      animation-delay: 0.35s;
+    }
+  }
 }
-
 
 @media (max-width: 375px) {
   .contact {
@@ -171,7 +183,7 @@
         font-size: 20rem;
       }
     }
-  
+
     padding: 10vh 8vw 0 8vw;
   }
 }

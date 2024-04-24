@@ -64,6 +64,17 @@ hr {
     opacity: 1;
   }
 }
+@keyframes fadeInAndOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes fadeInBgVideo {
   0% {
     opacity: 0;
@@ -1487,6 +1498,18 @@ button {
   top: -2rem;
   right: 1rem;
   cursor: pointer;
+}
+.contact .loading-dot--1 {
+  animation: fadeInAndOut 2s infinite;
+  animation-delay: 0s;
+}
+.contact .loading-dot--2 {
+  animation: fadeInAndOut 2s infinite;
+  animation-delay: 0.2s;
+}
+.contact .loading-dot--3 {
+  animation: fadeInAndOut 2s infinite;
+  animation-delay: 0.35s;
 }
 
 @media (max-width: 375px) {
