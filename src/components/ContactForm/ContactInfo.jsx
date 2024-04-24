@@ -13,8 +13,7 @@ const ContactInfo = () => {
         {/* test this later for mobile and desktop */}
         <span className="contact__text contact__text--phone">
          Office:{" "}
-          <a onClick={()=> alert('in production this will initiate a call to the provided number')} href="">
-          {/* <a href="tel:7075674000"> */}
+          <a href="tel:7074477634">
             (707) 447-7634
             <FontAwesomeIcon className="contact__icon" icon={faPhoneFlip} />
           </a>
