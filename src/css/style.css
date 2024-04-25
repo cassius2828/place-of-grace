@@ -942,6 +942,11 @@ button {
     width: 25vw;
   }
 }
+@media (min-width: 1900px) {
+  .value-cards-container {
+    margin-top: 55rem;
+  }
+}
 @media (min-width: 3000px) {
   .value-cards-container {
     margin-top: 170rem;

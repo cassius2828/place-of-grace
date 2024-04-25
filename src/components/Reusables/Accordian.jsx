@@ -17,17 +17,29 @@ const HeadshotCard = lazy(() =>
 
 const Accordian = () => {
   const [openTab, setOpenTab] = useState(null);
+  const isMobile = () => window.innerWidth < 768;
+  const mobile = isMobile();
+
   const handleOpenTab = (num, ref) => {
     // * this logic prevents issue where the scroll would be off when selecting a lower row with a higher row currently opened
     if (num === openTab) setOpenTab(null);
-    // * aims for end of view block when the higher row is opened so the UI is in the correct place when scrolled into view
+    // * conditionally sets scroll view based on mobile vs desktop
     else if (num !== openTab && openTab !== null && num > openTab) {
-      setOpenTab(num);
-      ref.current.scrollIntoView({ behavior: "smooth", block: "end" });
+      ////////////////////////////////////////////////
+      if (mobile) {
+        // ! MOBILE SCROLL VIEW
+        setOpenTab(num);
+        // * uses the entire window height instead of the element to determine scroll view
+        window.scrollTo(0, 200);
+      } else {
+        // ! DESKTOP SCROLL VIEW
+        setOpenTab(num);
+        ref.current.scrollIntoView({ behavior: "smooth", block: "end" });
+      }
+      ////////////////////////////////////////////////
     } else {
       // * aims for center of view block when the lower row is opened or no row is opened so the UI is in the correct place when scrolled into view
       setOpenTab(num);
-      //  allows us to scroll into view of the selected element
       ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };

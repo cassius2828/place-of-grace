@@ -177,6 +177,17 @@
     }
   }
 }
+// * This is to test if the value cards container need more top margin so they are not covered
+// * by the whiite background
+// @media (min-width: 1900px) {
+//   .mission {
+//     &__text {
+//       &--paragraph {
+//         color: red;
+//       }
+//     }
+//   }
+// }
 
 @media (min-width: 5000px) {
   .mission {

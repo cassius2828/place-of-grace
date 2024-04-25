@@ -1,17 +1,18 @@
 @use "../abstracts/" as *;
 
-
-.value-cards-container {  display: grid;
+.value-cards-container {
+  display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   justify-items: center;
 
-    width: 100%;
+  width: 100%;
 
   @include clamp("margin-top", 10rem, 25vw, 0.1rem, 40rem);
 }
 
-.value-card {  width: 80vw;
+.value-card {
+  width: 80vw;
 
   @include base-animation;
 
@@ -46,6 +47,11 @@
 
   .value-card {
     width: 25vw;
+  }
+}
+@media (min-width: 1900px) {
+  .value-cards-container {
+    margin-top: 55rem;
   }
 }
 
