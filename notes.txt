@@ -1,18 +1,11 @@
 ///////////////////////////
-THINGS TO DO: 4-16-2024
-DevOps
-- set up sub domain for emailing api on NS CNAME records (on mailtrap too)
-- migrate from personal netlify to a new netlify account for placeofgrace
-- test serverless functions on dev and production
+THINGS TO DO: 4-24-2024
 
-Organization
-- clean up and organize code 
-- write README.md 
-
-DESIGN:
-- implement the photo of 
-- ladning page nav strip 
-- image defaults
-- distortion of images
-- image optimization
+1. Finalize all photos being used 
+1b: Ensure proper proportions are being used
+2. Optimize all photos being used 
+3. Ensure serverless functions work in production environment 
+4. Complete the DNS changes, whether delgating to netlify and changing NS in network solutions and adding all records to netlify 
+or 
+point A/AAAA records to netlify load balancer IP address in network solutions 
 ///////////////////////////
