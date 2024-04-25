@@ -8,7 +8,6 @@ const AccordianItem = ({
   children,
   groupName = "meet our ___ team",
 }) => {
-  // const { addAccordionRef } = useGlobalContext();
   const accordionRef = useRef();
 
   return (

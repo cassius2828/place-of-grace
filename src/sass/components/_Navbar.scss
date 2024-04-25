@@ -1,16 +1,19 @@
 @use "../abstracts/" as *;
-#desktop-nav {
-  width: 100%;
-  display: flex;
+#desktop-nav { display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  width: 100%;
+ 
 }
 .navbar-list {
   &--desktop {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     width: 100%;
+
     text-transform: capitalize;
     margin-right: 0;
     margin-bottom: 0;
@@ -18,7 +21,6 @@
     li {
       @include clamp("font-size", 1rem, 1vw, 0.1rem, 4rem);
 
-    
       margin: auto 0.5rem;
       @include linkHoverAnimation(
         $color-tar-600,
@@ -31,7 +33,7 @@
         &::before {
           display: none;
         }
-
+// mixin stays on top so below styles override the original mixin styles
         @include roundedBtn($color-light-brown, $color-lighter-brown);
         display: flex;
         align-items: center;

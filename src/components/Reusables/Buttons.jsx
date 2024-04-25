@@ -1,7 +1,6 @@
 export const RoundedButton = ({ text, func, funcParams }) => {
   return (
     <>
-    {/* check to see if this affects submit form button later */}
       <button
         onClick={() => func(funcParams)}
         className="button button__rounded"

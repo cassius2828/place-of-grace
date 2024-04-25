@@ -3,7 +3,6 @@ import Footer from "../Footer/Footer";
 import { useLocation } from "react-router-dom";
 import MobileNav from "../../components/NavBar/MobileNav";
 import Main from "../Main/Main";
-import { useGlobalContext } from "../../customHooks/useGlobalContext";
 
 const Content = () => {
   const location = useLocation();
@@ -11,10 +10,7 @@ const Content = () => {
 
   return (
     <>
-      <div
- 
-        className="mobile-content"
-      >
+      <div className="mobile-content">
         {isHome ? (
           <Main />
         ) : (

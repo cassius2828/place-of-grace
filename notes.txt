@@ -4,7 +4,7 @@ THINGS TO DO: 4-24-2024
 1. Finalize all photos being used 
 1b: Ensure proper proportions are being used
 2. Optimize all photos being used 
-3. Ensure serverless functions work in production environment 
+
 4. Complete the DNS changes, whether delgating to netlify and changing NS in network solutions and adding all records to netlify 
 or 
 point A/AAAA records to netlify load balancer IP address in network solutions 

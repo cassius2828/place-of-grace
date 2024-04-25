@@ -5,15 +5,15 @@ const HeadshotCard = lazy(() =>
   import("../../components/HeadshotCard/HeadshotCard")
 );
 
-import Abby from "/staff/Abby.webp";
-import Dye from "/staff/Dye.webp";
-import Freddie from "/staff/Freddie.webp";
-import Heather from "/staff/Heather.webp";
-import Jesse from "/staff/Jesse.webp";
-import Kristin from "/staff/Kristin.webp";
-import Patti from "/staff/Patti.webp";
-import Shanta from "/staff/Shanta.webp";
-import Spring from "/staff/Spring.webp";
+// import Abby from "/staff/Abby.webp";
+// import Dye from "/staff/Dye.webp";
+// import Freddie from "/staff/Freddie.webp";
+// import Heather from "/staff/Heather.webp";
+// import Jesse from "/staff/Jesse.webp";
+// import Kristin from "/staff/Kristin.webp";
+// import Patti from "/staff/Patti.webp";
+// import Shanta from "/staff/Shanta.webp";
+// import Spring from "/staff/Spring.webp";
 
 const Accordian = () => {
   const [openTab, setOpenTab] = useState(null);

@@ -1,18 +1,21 @@
 @use "../abstracts/" as *;
 
-// ! logo container width is removed so it is centered 
+// ! logo container width is removed so it is centered
 // ! until we decide on antoher logo
 
 .footer {
   width: 100vw;
-  background-color: $color-burgandy-theme;
+
   padding: 2rem;
+
   color: $color-cream;
+  background-color: $color-burgandy-theme;
 
   &__logo-container {
-    // width: 75%;
     display: flex;
     justify-content: center;
+
+    // width: 75%;
   }
   img {
     width: 10rem;
@@ -25,10 +28,13 @@
   }
 
   & hr {
-    margin: 2rem auto;
     width: 75%;
-    text-align: center;
     height: 1px;
+
+    margin: 2rem auto;
+
+    text-align: center;
+
     border: none;
     background-color: $color-cream;
   }
@@ -37,10 +43,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    #contact-form-focus {
-      // margin: auto
-    }
   }
 
   &__list {
@@ -58,10 +60,12 @@
       }
     }
     &-container {
-      width: 95%;
-      margin: auto;
       display: flex;
       justify-content: space-between;
+
+      width: 95%;
+
+      margin: auto;
 
       &--horizontal {
         margin: auto;
@@ -69,9 +73,10 @@
 
         &__social-container {
           width: 100%;
-          text-align: center;
 
           margin: auto auto 4rem auto;
+
+          text-align: center;
         }
 
         & ul {
@@ -79,10 +84,12 @@
           justify-content: space-between;
 
           .footer__icon-container {
-            margin: auto;
-            width: 60%;
             display: flex;
             justify-content: space-between;
+
+            width: 60%;
+
+            margin: auto;
           }
         }
       }
@@ -99,7 +106,6 @@
     }
   }
 }
-
 
 @media (min-width: $md-device) {
   .footer {
@@ -246,8 +252,8 @@
 
     &__list {
       &-container {
-        width: 80%;
         justify-content: space-around;
+        width: 80%;
 
         &--horizontal {
           margin-top: 5rem;

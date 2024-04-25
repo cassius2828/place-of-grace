@@ -95,7 +95,7 @@
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
@@ -150,7 +150,6 @@
 }
 
 // TYPOGRAPHY
-
 @mixin titleFontSize($size) {
   @if $size == half {
     @include clamp("font-size", 3rem, 2.5vw, 1rem, 20rem);

@@ -1,10 +1,13 @@
 @use "../abstracts/" as *;
 
 #mobile-main {
-  background: $color-company-white;
   position: relative;
+
   width: 100%;
   height: 100%;
+
+  background: $color-company-white;
+
   overflow: hidden;
   visibility: visible;
   @include transition(all 0.4s ease-in);
@@ -21,9 +24,11 @@
 .mobile-active {
   .screen-dimmer {
     position: fixed;
+    z-index: 2;
+
     width: 100rem;
     height: 100rem;
+
     background-color: $color-company-white;
-    z-index: 2;
   }
 }

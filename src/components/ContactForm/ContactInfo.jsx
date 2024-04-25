@@ -10,7 +10,6 @@ const ContactInfo = () => {
   return (
     <div className="contact__info">
       <div className="contact__info-container">
-        {/* test this later for mobile and desktop */}
         <span className="contact__text contact__text--phone">
          Office:{" "}
           <a href="tel:7074477634">

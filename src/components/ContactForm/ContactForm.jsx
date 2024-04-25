@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useGlobalContext } from "../../customHooks/useGlobalContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const URL = "/api/outlookAPI";
-// const URL = "/.netlify/functions/outlookAPI";
 
 const initialState = {
   firstName: "",
@@ -33,9 +30,6 @@ const ContactForm = () => {
   const handleFormChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  // const handleFormValidatorUI = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
 
   const submitForm = async (e) => {
     e.preventDefault(); // Prevent form submission
@@ -128,16 +122,7 @@ const ContactForm = () => {
         type="text"
         name="message"
       />
-      <button
-        // onClick={() =>
-        //   alert(
-        //     "in production this will send an email to the designated staff and send a confirmation email to the user. The form will also automatically be reset in production"
-        //   )
-        // }
-        onClick={submitForm}
-        className=" form__button"
-        type="button"
-      >
+      <button onClick={submitForm} className=" form__button" type="button">
         {isLoading ? (
           <span>
             Processing <span className="loading-dot loading-dot--1">.</span>

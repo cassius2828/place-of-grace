@@ -1,7 +1,6 @@
 @use "../abstracts/" as *;
 
 #our-story {
-  
   display: flex;
   flex-direction: column-reverse;
 }
@@ -11,11 +10,12 @@
   flex-direction: column;
 
   &-right {
+    width: 100%;
+
     background-image: url("/images/newImages/Dave_Sally_Our_Story-2.webp");
     background-size: cover;
     background-position: 50% 25%;
     position: relative;
-    width: 100%;
     background-repeat: no-repeat;
   }
 
@@ -68,8 +68,8 @@
 
 @media (min-width: $md-device) {
   #our-story {
-    padding-top: 10vw;
     flex-direction: row;
+    padding-top: 10vw;
   }
 
   .OurStory {

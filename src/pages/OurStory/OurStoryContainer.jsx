@@ -1,5 +1,4 @@
-
-const OurStoryContainer = ({side, children}) => {
+const OurStoryContainer = ({ side, children }) => {
   return <div className={`OurStory OurStory-${side}`}>{children}</div>;
-}
-export default OurStoryContainer
+};
+export default OurStoryContainer;

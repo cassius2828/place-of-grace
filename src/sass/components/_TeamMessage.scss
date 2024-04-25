@@ -3,20 +3,25 @@
 .team-message {
   position: relative;
   z-index: 1;
+
   padding: 15vh 5vw;
 
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   background-color: $color-company-white;
   &__text {
     &--title {
-      margin: 2vw auto;
+    width: 75%;
+    
+    margin: 2vw auto;
+
       text-align: center;
-      width: 75%;
       @include titleFontSize(half);
     }
     &--paragraph {
       width: 75%;
+
       margin: 2vw auto;
+
       line-height: 4vw;
       @include paragraphFontSize(phone);
       @include clamp("line-height", 2.5rem, 2vw, 0.1rem, 5rem);
@@ -34,7 +39,6 @@
   .team-message {
     // width: 75%;
     @include clamp("padding-top", 15rem, 15vh, 0.1rem, 20rem);
-
     margin: auto;
   }
 }

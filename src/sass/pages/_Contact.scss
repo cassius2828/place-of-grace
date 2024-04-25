@@ -1,16 +1,20 @@
 @use "../abstracts/" as *;
 // check this again
 .contact {
-  padding-top: 10vh;
   display: flex;
   flex-direction: column;
+
   margin-top: 0;
+  padding-top: 10vh;
+
   .form-box {
-    background-color: $color-company-white-opacity4;
-    padding: 1rem;
     z-index: 2;
-    border-radius: $base-br;
+
     margin-top: -5vh;
+    padding: 1rem;
+
+    background-color: $color-company-white-opacity4;
+    border-radius: $base-br;
   }
   &__text {
     &--container {
@@ -34,6 +38,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+
     width: 75vw;
 
     margin: 3vw auto;
@@ -52,9 +57,11 @@
     }
 
     textarea {
+      height: 5vh;
+
       margin: 0 0 3vw 0;
       padding: 1vw;
-      height: 5vh;
+
       border: solid 0.5px $color-black-opacity4;
       border-radius: $base-br;
       @include paragraphFontSize(phone);
@@ -72,15 +79,19 @@
 
   &__info {
     position: relative;
+    z-index: 4;
+
     width: 100vw;
+
     background-color: $color-light-brown;
     opacity: 1;
-    z-index: 4;
+
     &-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       justify-items: center;
       align-items: center;
+
       padding: 2rem;
     }
   }
@@ -101,16 +112,16 @@
 
   &__result {
     &--container {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-
-      position: relative;
     }
     &-icon {
-      font-size: 10rem;
       margin: 1rem;
+
+      font-size: 10rem;
       color: #198754;
     }
     &-message {
@@ -171,9 +182,9 @@
 @media (min-width: 768px) {
   .contact {
     .form-box {
-      background-color: $color-company-white-opacity8;
-      margin: 2rem 0;
       min-height: 60rem;
+      margin: 2rem 0;
+      background-color: $color-company-white-opacity8;
     }
     &__result {
       &--container {

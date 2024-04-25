@@ -3,14 +3,17 @@
 .mobile-nav-list {
   position: fixed;
   z-index: 10;
+  right: -20rem;
+
   list-style-type: none;
   margin: 100px 0 0 20px;
   padding: 0;
+
   height: 100vh;
   height: 100svh;
   //   changing the animation from growing into a width to moving with
   // right fixed the issue of the boxes collapsing on the text
-  right: -20rem;
+
   overflow: auto;
   visibility: hidden;
   @include transition(all 0.4s ease-in);
@@ -20,10 +23,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    text-transform: capitalize;
+
     height: 30px;
     width: 200px;
+
+    font-size: 2rem;
+    text-transform: capitalize;
+
     margin: 30px 0;
     background: #eae8e5;
     opacity: 0;
@@ -66,9 +72,10 @@
     }
     &:after {
       @include rotate(135deg);
-      bottom: 11px;
+
       width: 33px;
       left: -2px;
+      bottom: 11px;
     }
   }
 }
@@ -92,13 +99,14 @@
     // right fixed the issue of the boxes collapsing on the text
     overflow: auto;
     visibility: hidden;
+
     @include transition(all 0.4s ease-in);
 
     li {
-      font-size: 1.5rem;
-
       height: 20px;
       width: 140px;
+
+      font-size: 1.5rem;
       margin: 20px 0;
       background: #eae8e5;
       opacity: 0;

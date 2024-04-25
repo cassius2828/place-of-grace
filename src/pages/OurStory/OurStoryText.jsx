@@ -4,7 +4,6 @@ import TextTab from "../../components/Reusables/TextTab";
 const OurStoryText = () => {
   return (
     <>
-
       <h1 className="OurStory--text__title">Our Story</h1>
       <hr className="OurStory--hr__story" />
       <p className="OurStory--text__story OurStory--text__story-1">

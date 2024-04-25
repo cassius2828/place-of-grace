@@ -1,7 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import defaultProfilePic from '/images/default/default-profile.jpeg'
-const HeadshotCard = ({ iconSize='lg', id,img=defaultProfilePic, name, title, level, email }) => {
+import defaultProfilePic from "/images/default/default-profile.jpeg";
+
+const HeadshotCard = ({
+  iconSize = "lg",
+  id,
+  img = defaultProfilePic,
+  name,
+  title,
+  level,
+  email,
+}) => {
   return (
     <div className={level + "-card"}>
       <div id={id} className="staff-card__img-bg">

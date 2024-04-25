@@ -3,10 +3,10 @@
 .testimonial {
   &__container {
     position: relative;
-      @include clamp('padding-top', 22rem, 20vh, .1rem, 40rem);
 
- 
+    @include clamp("padding-top", 22rem, 20vh, 0.1rem, 40rem);
     margin-top: -25rem;
+
     background-image: linear-gradient(
         to right bottom,
         $color-cream-opacity8,
@@ -15,6 +15,7 @@
       url(/images/high-angle-shot-magnificent-mountains-covered-with-trees-blue-sky.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
     padding-bottom: 3vw;
 
     .button {
@@ -22,13 +23,11 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
-      // width: 10vw;
-      // max-width: 50rem;
-      // height: 5vw;
-      // max-height: 12rem;
-      @include clamp('font-size', 1rem, 1.75vw, .1rem, 6rem);
-      @include clamp('padding', .5rem, 1.5vw, .1rem, 5rem);
+
       height: auto;
+
+      @include clamp("font-size", 1rem, 1.75vw, 0.1rem, 6rem);
+      @include clamp("padding", 0.5rem, 1.5vw, 0.1rem, 5rem);
     }
   }
   &__icon {
@@ -38,24 +37,28 @@
   &__card {
     min-width: 60%;
     max-width: 85%;
+
     margin: 4vw auto;
+    padding: 6rem;
+    padding-left: 9rem;
+
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 3px;
-    padding: 6rem;
-    padding-left: 9rem;
+
     @include paragraphFontSize(phone);
-    // change this for mobile
+    // change this for mobile ?
     transform: skewX(-12deg);
   }
 
   &__shape {
-      @include clamp('width', 7rem, 12vw, .1rem, 20rem);
-      @include clamp('height', 7rem, 12vw, .1rem, 20rem);
+    position: relative;
+
+    @include clamp("width", 7rem, 12vw, 0.1rem, 20rem);
+    @include clamp("height", 7rem, 12vw, 0.1rem, 20rem);
 
     float: left;
     transform: translateX(-3rem) skewX(12deg);
-    position: relative;
     overflow: hidden;
     border-radius: 50%;
 
@@ -70,28 +73,32 @@
 
   &__img {
     // not sure why 200% works but it does for these pics in these dimensions
-    height: 200%;
     transform: translateX(-4rem);
+
+    height: 200%;
+
     backface-visibility: hidden;
     transition: all 0.5s;
   }
 
   &__text {
     transform: skewX(12deg);
+
     width: 70%;
+
     margin: auto;
     &--caption {
       text-transform: capitalize;
       font-weight: 800;
       // maybe use this for variable font size heights
-      @include clamp('font-size', 1.25rem, 1.5vw, .1rem, 3.75rem);
+      @include clamp("font-size", 1.25rem, 1.5vw, 0.1rem, 3.75rem);
       text-align: left;
     }
   }
 
   &__card:hover .testimonial__caption {
-    opacity: 1;
     transform: translate(-50%, -50%);
+    opacity: 1;
   }
   &__card:hover .testimonial__img {
     transform: translateX(-4rem) scale(1);
@@ -115,20 +122,23 @@
   .testimonial {
     &__card {
       min-width: 75%;
+
+      margin: 3rem auto;
       padding: 2rem;
 
       font-size: 0.6rem;
-      margin: 3rem auto;
+
       // change this for mobile
       transform: skewX(0);
     }
 
     &__shape {
       // width: 50%;
-      width: 4.5rem;
-      height: 4.5rem;
       transform: translateX(-0) skewX(0);
       left: -0.5rem;
+
+      width: 4.5rem;
+      height: 4.5rem;
     }
     &__text {
       transform: skewX(0);
@@ -152,8 +162,8 @@
     }
     &__container {
       .button {
-        font-size: 1.25rem;
         padding: 5px;
+        font-size: 1.25rem;
       }
     }
   }
@@ -162,18 +172,21 @@
 @media (max-width: $md-device) {
   .testimonial {
     &__card {
-      padding: 1rem;
-      font-size: 1rem;
-      margin: 3rem auto;
       // change this for mobile
       transform: skewX(-12deg);
+
+      padding: 1rem;
+
+      margin: 3rem auto;
+      font-size: 1rem;
     }
 
     &__shape {
-      width: 7rem;
-      height: 7rem;
       transform: translateX(-0) skewX(12deg);
       left: -0.5rem;
+
+      width: 7rem;
+      height: 7rem;
     }
 
     &__text {

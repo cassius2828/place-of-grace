@@ -3,15 +3,11 @@
 .landing-page {
   &__text {
     &--title {
-      // position: absolute;
-      // top: 8%;
-      // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
       font-size: 3rem;
       color: $gray-950;
       animation: fadeIn 1s ease-in;
 
       & span {
-        // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
         font-size: 3rem;
         font-weight: 500;
       }
@@ -20,52 +16,39 @@
 
   &__nav {
     &-container {
-      width: 100%;
       position: absolute;
       bottom: 0%;
-      // height: 50vh;
-      // width: 80%;
-      // @include clamp('font-size', 3rem, 2vw, .1rem, 8rem);
+
+      width: 100%;
+
+      background-color: $color-black-opacity2;
       color: $color-company-white;
-      // border-radius: $base-br;
-      // padding: 1rem;
+
       animation: fadeIn 1s ease-in;
       backface-visibility: hidden;
-      background-color: $color-black-opacity2;
       @include base-animation;
     }
     &-list {
-      // * for larger displays
-      // display: flex;
-      // justify-content: space-between;
-      // align-content: end;
-      width: 100%;
-      margin: 0;
-      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+
+      width: 100%;
       height: 50vh;
+
+      margin: 0;
+      padding: 0;
+
       li {
         padding: 0 2rem;
         border-radius: 4px;
         font-size: 2rem;
-
-        // background-color: $color-burgandy-light-opacity8;
-
-        // &:first-child {
-        //   border-radius: 4px 0 0 4px;
-        // }
-        // &:last-child {
-        //   border-radius: 0 4px 4px 0;
-        // }
         &:hover {
           background-color: $color-burgandy-light-opacity8;
           color: $color-company-white;
         }
         transition: 0.3s all ease-out;
-        //   color: $color-lighter-brown;
       }
     }
   }
@@ -73,28 +56,26 @@
 
 .hero-bg {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
   background: url(/images/hero/Landing-Page-POG.png);
   background-color: #2b2b2b;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 @media (min-width: 425px) {
   .landing-page {
     &__text {
       &--title {
-        // position: absolute;
-        // top: 8%;
-        // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
         font-size: 4rem;
 
         & span {
-          // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
           font-size: 3rem;
 
           &:first-child {
@@ -110,15 +91,13 @@
   .landing-page {
     &__text {
       &--title {
-        position: absolute;
+        position: relative;
         top: 35%;
         transform: translateY(-50%);
-        // @include clamp("font-size", 6rem, 10vw, .1rem, 12rem);
-        position: relative;
+
         font-size: 7rem;
 
         & span {
-          // @include clamp("font-size", 3rem, 5vw, .1rem, 6rem);
           &:first-child {
             position: relative;
             top: -15%;
@@ -130,48 +109,37 @@
     }
     &__nav {
       &-container {
-        width: 100%;
         bottom: 47.5%;
-        // transform: translateY(-50%);
 
-        // @include clamp("font-size", 3rem, 2vw, 0.1rem, 8rem);
-        color: $color-burgandy-theme;
-        border-radius: $base-br;
-        // padding: 1rem;
-        backface-visibility: hidden;
+        width: 100%;
+
         background-color: $color-company-white-opacity8;
+        color: $color-burgandy-theme;
+
+        border-radius: $base-br;
+        backface-visibility: hidden;
         @include base-animation;
       }
       &-list {
-        // * for larger displays
-        // display: flex;
-        // justify-content: space-between;
-        // align-content: end;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-direction: row;
+
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
 
         li {
           padding: 0 2rem;
           border-radius: 4px;
           font-size: 1.75rem;
-          // background-color: $color-burgandy-light-opacity8;
 
-          // &:first-child {
-          //   border-radius: 4px 0 0 4px;
-          // }
-          // &:last-child {
-          //   border-radius: 0 4px 4px 0;
-          // }
           &:hover {
             background-color: $color-burgandy-light-opacity8;
             color: $color-company-white;
           }
           transition: 0.3s all ease-out;
-          //   color: $color-lighter-brown;
         }
       }
     }

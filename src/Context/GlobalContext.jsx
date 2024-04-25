@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer, useRef } from "react";
+import { createContext, useReducer, useRef } from "react";
 export const GlobalContext = createContext();
 const initialState = {
   openMobileMenu: false,
@@ -19,10 +19,10 @@ const reducer = (state, action) => {
       return { ...state, failedSubmission: true };
     case "failedSubmissionFalse":
       return { ...state, failedSubmission: false };
-      case "formIsLoading":
-        return { ...state, isFormLoading: true };
-        case "formDoneLoading":
-          return { ...state, isFormLoading: false };
+    case "formIsLoading":
+      return { ...state, isFormLoading: true };
+    case "formDoneLoading":
+      return { ...state, isFormLoading: false };
     default:
       break;
   }
@@ -63,26 +63,6 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  // const useScreenOrientationLock = () => {
-  //   useEffect(() => {
-  //     // Lock screen orientation to portrait mode when component mounts
-  //     const lockScreenOrientation = () => {
-  //       if (screen.orientation) {
-  //         screen.orientation.lock("portrait");
-  //       }
-  //     };
-
-  //     lockScreenOrientation();
-
-  //     // Cleanup function to unlock orientation when component unmounts
-  //     return () => {
-  //       if (screen.orientation) {
-  //         screen.orientation.unlock();
-  //       }
-  //     };
-  //   }, []);
-  // };
-
   return (
     <GlobalContext.Provider
       value={{
@@ -98,8 +78,7 @@ export const GlobalProvider = ({ children }) => {
         handleShowFailedMessage,
         handleHideFailedMessage,
         handleFormIsLoading,
-        handleFormDoneLoading
-        // useScreenOrientationLock,
+        handleFormDoneLoading,
       }}
     >
       {children}

@@ -5,24 +5,25 @@
   position: relative;
 
   &__photo {
-    width: 25vw;
     position: absolute;
+    width: 25vw;
+
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 2px;
-    transition: all 0.2s;
     outline-offset: 2rem;
 
+    transition: all 0.2s;
     &:hover {
-      outline: .5rem solid $color-burgandy-light;
+      outline: 0.5rem solid $color-burgandy-light;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 3;
     }
-  
- 
+
     &--p1 {
       top: 10vw;
       left: 0vw;
+      
       z-index: 2;
     }
     &--p2 {
@@ -42,7 +43,6 @@
       left: 0vw;
     }
   }
- 
 }
 
 @media (min-width: $md-device) {

@@ -1,6 +1,4 @@
-import { faHandHoldingHeart } from "@fortawesome/free-solid-svg-icons";
 import TextTab from "../../components/Reusables/TextTab";
-import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import ValueCard from "../../components/ValueCard/ValueCard";
 
 const Mission = () => {
@@ -33,25 +31,6 @@ const Mission = () => {
             <ValueCard>
               <img src="/images/values/10.svg" alt="" />
             </ValueCard>
-
-            {/* <>
-              {" "}
-              <FeatureCard
-                icon={faHandHoldingHeart}
-                size="3x"
-                // dont forget title and content
-              />{" "}
-              <FeatureCard
-                icon={faHandHoldingHeart}
-                size="3x"
-                // dont forget title and content
-              />{" "}
-              <FeatureCard
-                icon={faHandHoldingHeart}
-                size="3x"
-                // dont forget title and content
-              />
-            </> */}
           </div>
         </div>
       </section>{" "}

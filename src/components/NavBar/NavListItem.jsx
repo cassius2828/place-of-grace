@@ -17,10 +17,10 @@ const NavListItem = ({
   const regex = /\//;
   const comparePath = pathname.replace(regex, "");
 
-
   ///////////////////////////
   // * Following conditional rendering of code restricts a refresh of the user if we are already on the same page
   ///////////////////////////
+  
   if (comparePath === link) {
     return (
       <>
@@ -69,11 +69,9 @@ const NavListItem = ({
               isDesktop
                 ? () => {
                     func(pathname);
-                    // scrollToTop();
                   }
                 : () => {
                     dispatch({ type: "toggleMobileMenu" });
-                    // scrollToTop();
                   }
             }
           >

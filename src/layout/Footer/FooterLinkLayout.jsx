@@ -41,13 +41,13 @@ const FooterLinkLayout = () => {
         </ul>
         <ul className="footer__list footer__list3">
           <NavListItem
-          isRoute={false}
+            isRoute={false}
             isDesktop={isDesktop}
             link="https://nbrc.net/client-services/eligibility/"
             text="North Bay Regional Center"
           />
           <NavListItem
-          isRoute={false}
+            isRoute={false}
             isDesktop={isDesktop}
             link="https://www.sdrc.org/eligible"
             text="San Diego Regional Center"
@@ -77,10 +77,3 @@ const FooterLinkLayout = () => {
   );
 };
 export default FooterLinkLayout;
-
-/*
-
- 
-     
-      <NavListItem isDesktop={isDesktop} link="careers" text="careers" num="5" />
-      <NavListItem isDesktop={isDesktop} link="contact" text="contact" num="6" />*/

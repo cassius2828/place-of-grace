@@ -1,12 +1,14 @@
 @use "../abstracts/" as *;
 
 #header {
-  background-color: $color-company-white;
   position: fixed;
+  z-index: 5;
+
+  width: 100vw;
   min-height: 5vw;
   max-height: 25rem;
-  z-index: 5;
-  width: 100vw;
+
+  background-color: $color-company-white;
   box-shadow: 0px 4px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
