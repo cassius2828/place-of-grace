@@ -64,7 +64,7 @@ const ContactFormSection = () => {
                   style={{ textAlign: "center" }}
                   className="contact__result-message--h3"
                 >
-                  If issue persists, please reach out to example@gmail.com
+                  If issue persists, please reach out to deanna.perry@gmail.com
                   directly with your inquiry
                 </h3>
               </div>

@@ -18,8 +18,8 @@ const ContactInfo = () => {
           </a>
         </span>
         <span className="contact__text contact__text--email">
-          Email: example@placeofgrace.net{" "}
-          <a href="mailto:example@placeofgrace.net">
+          Email: deanna.perry@placeofgrace.net{" "}
+          <a href="mailto:deanna.perry@placeofgrace.net">
             <FontAwesomeIcon className="contact__icon" icon={faEnvelope} />
           </a>
         </span>{" "}
