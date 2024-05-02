@@ -76,7 +76,7 @@ const ContactFormSection = () => {
                 <h2 className="contact__text--title">Reach Out</h2>
                 <h4 className="contact__text--sub-title">
                   Use the form below to send us any comments, questions, or
-                  cencerns
+                  concerns
                 </h4>
                 <hr className="contact__hr" />
               </div>
