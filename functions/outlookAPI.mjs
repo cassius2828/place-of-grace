@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useGlobalContext } from "../src/customHooks/useGlobalContext";
-const targetEmail = "developer@placeofgrace.net";
+const targetEmail = "deanna.perry@placeofgrace.net";
 const DeannaID = "dea24538-8630-4376-977c-b671701a37ea";
 const CassiusID = "268eda2e-210b-41bf-901c-154969d9302c";
 export const handler = async (event) => {
