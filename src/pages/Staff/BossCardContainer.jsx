@@ -1,6 +1,6 @@
 
-import Dave from "/bosses/Dave.webp";
-import Sally from "/bosses/Sally.webp";
+// import Dave from "/bosses/Dave.webp";
+// import Sally from "/bosses/Sally.webp";
 import HeadshotCard from "../../components/HeadshotCard/HeadshotCard";
 
 const BossCardContainer = () => {
