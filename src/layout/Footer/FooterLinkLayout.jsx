@@ -59,6 +59,7 @@ const FooterLinkLayout = () => {
         <div className="footer__list-container--horizontal__social-container">
           <span className="social-media-text">Connect with us here!</span>
         </div>
+        {/* need to add li in here for SEO and accessibility */}
         <ul className="footer__list--horizontal footer__list4">
           <div className="footer__icon-container">
             <a href="https://www.facebook.com/profile.php?id=100090846635808">

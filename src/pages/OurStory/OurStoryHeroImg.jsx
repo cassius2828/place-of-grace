@@ -2,10 +2,15 @@ const OurStoryHeroImg = () => {
   return (
     <img
       className="OurStory--img__hero"
-      // * no longer need the query at the end, new image did not have cache issue
-      // i was getting a 304 response which meant the image was getting cached and the updated img was
-      // not making it to the browser. THis query forces the image to have to be downloaded each time to ensure it does not get cached
-      src="/images/newImages/Dave_Sally_Our_Story.webp"
+      src="https://placeofgrace.net/images/newImages/Dave_Sally_Our_Story.webp?nf_resize=fit&w=800"
+      srcSet="https://placeofgrace.net/images/newImages/Dave_Sally_Our_Story.webp?nf_resize=fit&w=350 350w,
+            https://placeofgrace.net/images/newImages/Dave_Sally_Our_Story.webp?nf_resize=fit&w=425 425w,
+            https://placeofgrace.net/images/newImages/Dave_Sally_Our_Story.webp?nf_resize=fit&w=500 500w,
+            https://placeofgrace.net/images/newImages/Dave_Sally_Our_Story.webp?nf_resize=fit&w=800 800w"
+      sizes="(max-width: 350px) 350px,
+           (max-width: 425px) 425px,
+           (max-width: 500px) 500px,
+           800px"
       alt=""
       loading="lazy"
     />
