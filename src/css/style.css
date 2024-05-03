@@ -1796,6 +1796,7 @@ button {
   height: 100%;
   margin-top: -17vw;
   padding-bottom: 5vh;
+  padding-top: 10vh;
   background-image: linear-gradient(to right bottom, rgba(239, 233, 224, 0.7176470588), rgba(211, 175, 127, 0.7176470588)), url(/images/lagoon-valley-pic.webp);
   background-position: 20%;
   background-repeat: no-repeat;

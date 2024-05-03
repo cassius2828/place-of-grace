@@ -30,7 +30,8 @@ const Accordian = () => {
         // ! MOBILE SCROLL VIEW
         setOpenTab(num);
         // * uses the entire window height instead of the element to determine scroll view
-        window.scrollTo(0, 200);
+      //  i just changed this frm 200 to 50, mobile was not a pleasant distance from top, it was too far in prod
+        window.scrollTo(0, 50);
       } else {
         // ! DESKTOP SCROLL VIEW
         setOpenTab(num);
