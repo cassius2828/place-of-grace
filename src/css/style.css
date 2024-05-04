@@ -858,15 +858,6 @@ button {
     transform: translateX(-0.75rem);
   }
 }
-@media (max-width: 600px) {
-  .testimonial__card {
-    width: 75%;
-  }
-  .testimonial__container .button {
-    padding: 5px;
-    font-size: 1.25rem;
-  }
-}
 @media (max-width: 800px) {
   .testimonial__card {
     transform: skewX(-12deg);
@@ -901,6 +892,27 @@ button {
 @media (min-width: 3000px) {
   .testimonial__text {
     width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial__card {
+    width: 100%;
+    margin: 4vw auto;
+    padding: 1rem;
+    font-size: 1.25rem;
+    transform: skewX(0);
+  }
+  .testimonial__text {
+    transform: skewX(0);
+    width: 100%;
+    margin: auto;
+  }
+  .testimonial__text--caption {
+    font-size: 2rem;
+  }
+  .testimonial__container .button {
+    padding: 5px;
+    font-size: 1.25rem;
   }
 }
 .value-cards-container {
@@ -1790,13 +1802,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
 }
 .mission-bg {
   width: 100vw;
   height: 100%;
   margin-top: -20vw;
   padding-bottom: 5vh;
-  padding-top: 10vh;
+  padding-top: 15vh;
   background-image: linear-gradient(to right bottom, rgba(239, 233, 224, 0.7176470588), rgba(211, 175, 127, 0.7176470588)), url(/images/lagoon-valley-pic.webp);
   background-position: 20%;
   background-repeat: no-repeat;
@@ -1885,12 +1898,15 @@ button {
   background-color: #fefefe;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 425px) {
   .mission-bg {
-    margin-top: -20vw;
+    margin-top: -30vw;
   }
 }
 @media (min-width: 768px) {
+  .mission {
+    margin-top: 0;
+  }
   .mission__text--title {
     font-size: 7rem;
   }
@@ -1930,11 +1946,6 @@ button {
     width: 50%;
   }
   .mission__text--paragraph {
-    width: 50%;
-  }
-}
-@media (min-width: 1900px) {
-  .mission__statement-container {
     width: 50%;
   }
   .mission__text--paragraph .stsm {

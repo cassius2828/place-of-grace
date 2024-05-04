@@ -44,6 +44,7 @@
 
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.6);
+
     border-radius: 3px;
 
     // @include paragraphFontSize(phone);
@@ -157,20 +158,6 @@
   }
 }
 
-@media (max-width: 600px) {
-  .testimonial {
-    &__card {
-      width: 75%;
-    }
-    &__container {
-      .button {
-        padding: 5px;
-        font-size: 1.25rem;
-      }
-    }
-  }
-}
-
 @media (max-width: $md-device) {
   .testimonial {
     &__card {
@@ -195,7 +182,6 @@
       transform: skewX(12deg);
       &--caption {
         font-size: 2rem;
-
       }
     }
     &__img {
@@ -217,6 +203,37 @@
   .testimonial {
     &__text {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial {
+    &__card {
+      width: 100%;
+
+      margin: 4vw auto;
+      padding: 1rem;
+
+      font-size: 1.25rem;
+
+      transform: skewX(0);
+    }
+    &__text {
+      transform: skewX(0);
+
+      width: 100%;
+
+      margin: auto;
+      &--caption {
+        font-size: 2rem;
+      }
+    }
+    &__container {
+      .button {
+        padding: 5px;
+        font-size: 1.25rem;
+      }
     }
   }
 }
