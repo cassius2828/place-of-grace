@@ -12,13 +12,13 @@ const ImageFloats = () => {
           src={EstherGroup}
           alt="Photo 1"
           className="composition__photo composition__photo--p1"
-          loading="lazy"
+          fetchPriority="high"
         />
         <img
           src={ParkBench}
           alt="Photo 2"
           className="composition__photo composition__photo--p2"
-          loading="lazy"
+          fetchPriority="high"
         />
         <img
           src={WaterFight}

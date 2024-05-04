@@ -1,8 +1,8 @@
-import party from "/images/clients/home2.png";
-import picnic from "/images/clients/home1.jpg";
-import ParkBench from "/images/clients/Park-Bench-Group.jpeg";
-import WaterFight from "/images/clients/Rome-Javon-Waterfight.jpeg";
-import EstherGroup from "/images/clients/Esther-Group-House.jpeg";
+import party from "/md-images/clients/home2.webp";
+import picnic from "/md-images/clients/home1.webp";
+import ParkBench from "/md-images/clients/Park-Bench-Group.webp";
+import WaterFight from "/md-images/clients/Rome-Javon-Waterfight.webp";
+import EstherGroup from "/md-images/clients/Esther-Group-House.webp";
 
 import Slider from "react-slick";
 
@@ -21,19 +21,31 @@ const Carousel = ({ slidesToShow }) => {
   return (
     <Slider {...settings}>
       <div className="carousel-img-container">
-        <img src={EstherGroup} alt="" loading="lazy" />
+        <img
+          src={EstherGroup}
+          alt="Esther's house of clients and staff"
+          fetchPriority="high"
+        />
       </div>
       <div className="carousel-img-container">
-        <img src={ParkBench} alt="" loading="lazy" />
+        <img
+          src={ParkBench}
+          alt="Clients enjoying a picnic at the park"
+          loading="lazy"
+        />
       </div>
       <div className="carousel-img-container">
-        <img src={WaterFight} alt="" loading="lazy" />
+        <img
+          src={WaterFight}
+          alt="Water ballon fight between an admin and a client"
+          loading="lazy"
+        />
       </div>
       <div className="carousel-img-container">
-        <img src={party} alt="" />
+        <img src={party} alt=" Christmas party" loading="lazy" />
       </div>
       <div className="carousel-img-container">
-        <img src={picnic} alt="" loading="lazy" />
+        <img src={picnic} alt=" Picnic at the park" loading="lazy" />
       </div>
     </Slider>
   );
