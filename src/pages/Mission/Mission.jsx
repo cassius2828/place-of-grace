@@ -14,10 +14,11 @@ const Mission = () => {
             <TextTab>T</TextTab>o hire and train caring professionals who
             provide the highest quality care and structured support for the
             health and wellness of the population we serve.
+            <span id="our-values"  className="stsm">Scroll to see our values <a href="#our-values">&darr;</a></span>
           </p>
         </div>{" "}
         <div className="mission-bg">
-          <h1 className="mission__text--title mission__text--title-2">
+          <h1  className="mission__text--title mission__text--title-2">
             Our Values
           </h1>
 

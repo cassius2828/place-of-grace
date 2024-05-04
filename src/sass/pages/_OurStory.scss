@@ -34,7 +34,8 @@
   &--text {
     &__title {
       letter-spacing: 1vw;
-      @include titleFontSize(full);
+      // @include titleFontSize(full);
+      font-size: $title-mobile-size;
       text-align: center;
       margin-bottom: 1vw;
     }
@@ -83,7 +84,8 @@
 
     &--text {
       &__title {
-        @include titleFontSize(half);
+        // @include titleFontSize(half);
+        font-size: $title-desktop-size;
       }
       &__story {
         margin: 1.25vw 0;

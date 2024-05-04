@@ -5,6 +5,7 @@
     &--title {
       font-size: 3rem;
       color: $gray-950;
+      
       animation: fadeIn 1s ease-in;
 
       & span {
@@ -23,6 +24,7 @@
 
       background-color: $color-black-opacity2;
       color: $color-company-white;
+      font-weight: 500;
 
       animation: fadeIn 1s ease-in;
       backface-visibility: hidden;

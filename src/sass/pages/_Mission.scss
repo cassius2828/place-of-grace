@@ -10,7 +10,7 @@
     width: 100vw;
     height: 100%;
 
-    margin-top: -17vw;
+    margin-top: -20vw;
     padding-bottom: 5vh;
     // this affects the cards that did not have enough space from the above section (green card
     padding-top: 10vh;
@@ -40,7 +40,8 @@
   &__text {
     &--title {
       margin-bottom: 3vw;
-      font-size: 3rem;
+      font-size: $title-mobile-size;
+
       letter-spacing: 1vw;
 
       &-2 {
@@ -54,9 +55,12 @@
       @include paragraphFontSize(phone);
 
       margin-bottom: 10vw;
-      line-height: 4vw;
+      line-height: 4rem;
       font-style: italic;
       text-align: center;
+      .stsm {
+        display: none;
+      }
     }
   }
 
@@ -123,19 +127,23 @@
   .mission {
     &__text {
       &--title {
-        font-size: 6rem;
+        font-size: $title-desktop-size;
+      }
+      &--paragraph {
+        // reset line height to 4vw
+        line-height: 4vw;
       }
     }
-    &-card {
-      width: 60%;
+    // &-card {
+    //   width: 60%;
 
-      &__text {
-        &--paragraph {
-          @include cardParagraphFontSize(tablet);
-          margin-bottom: 0;
-        }
-      }
-    }
+    //   &__text {
+    //     &--paragraph {
+    //       @include cardParagraphFontSize(tablet);
+    //       margin-bottom: 0;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -181,15 +189,28 @@
 }
 // * This is to test if the value cards container need more top margin so they are not covered
 // * by the whiite background
-// @media (min-width: 1900px) {
-//   .mission {
-//     &__text {
-//       &--paragraph {
-//         color: red;
-//       }
-//     }
-//   }
-// }
+@media (min-width: 1900px) {
+  .mission {
+    &__statement-container {
+      width: 50%;
+    }
+
+    &__text {
+      &--paragraph {
+        .stsm {
+          margin-top: 3rem;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          a {
+            margin-left: 2rem;
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 5000px) {
   .mission {

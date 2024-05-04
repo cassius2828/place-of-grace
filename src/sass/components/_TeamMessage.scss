@@ -11,11 +11,13 @@
   &__text {
     &--title {
     width: 75%;
+
+    font-size: $title-mobile-size;
     
     margin: 2vw auto;
 
       text-align: center;
-      @include titleFontSize(half);
+ 
     }
     &--paragraph {
       width: 75%;
@@ -34,7 +36,18 @@
     padding: 7vh 5vw 25vh 5vw;
   }
 }
+@media (min-width: 768px) {
+  // @include paragraphFontSize(tablet);
+.team-message {
+  &__text {
+    &--title {
+    font-size: $title-desktop-size;
 
+    }
+  }
+}
+
+}
 @media (min-width: 1000px) {
   .team-message {
     // width: 75%;

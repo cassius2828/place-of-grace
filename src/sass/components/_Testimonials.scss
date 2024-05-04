@@ -46,7 +46,8 @@
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 3px;
 
-    @include paragraphFontSize(phone);
+    // @include paragraphFontSize(phone);
+    font-size: 3rem;
     // change this for mobile ?
     transform: skewX(-12deg);
   }
@@ -91,7 +92,8 @@
       text-transform: capitalize;
       font-weight: 800;
       // maybe use this for variable font size heights
-      @include clamp("font-size", 1.25rem, 1.5vw, 0.1rem, 3.75rem);
+      // @include clamp("font-size", 1.25rem, 1.5vw, 0.1rem, 3.75rem);
+      font-size: 4rem;
       text-align: left;
     }
   }
@@ -178,7 +180,7 @@
       padding: 1rem;
 
       margin: 3rem auto;
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 
     &__shape {
@@ -191,6 +193,10 @@
 
     &__text {
       transform: skewX(12deg);
+      &--caption {
+        font-size: 2rem;
+
+      }
     }
     &__img {
       transform: translateX(-0.75rem);

@@ -694,19 +694,17 @@ button {
 }
 .team-message__text--title {
   width: 75%;
+  font-size: 4rem;
   margin: 2vw auto;
   text-align: center;
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
 }
 .team-message__text--paragraph {
   width: 75%;
   margin: 2vw auto;
   line-height: 4vw;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   line-height: 5rem;
   line-height: min(max(2.5rem, 2vw + 0.1rem, 5rem));
   line-height: clamp(2.5rem, 2vw + 0.1rem, 5rem);
@@ -715,6 +713,11 @@ button {
 @media (max-width: 375px) {
   .team-message {
     padding: 7vh 5vw 25vh 5vw;
+  }
+}
+@media (min-width: 768px) {
+  .team-message__text--title {
+    font-size: 7rem;
   }
 }
 @media (min-width: 1000px) {
@@ -770,9 +773,7 @@ button {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
-  font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: 3rem;
   transform: skewX(-12deg);
 }
 .testimonial__shape {
@@ -811,9 +812,7 @@ button {
 .testimonial__text--caption {
   text-transform: capitalize;
   font-weight: 800;
-  font-size: 3.75rem;
-  font-size: min(max(1.25rem, 1.5vw + 0.1rem, 3.75rem));
-  font-size: clamp(1.25rem, 1.5vw + 0.1rem, 3.75rem);
+  font-size: 4rem;
   text-align: left;
 }
 .testimonial__card:hover .testimonial__caption {
@@ -873,7 +872,7 @@ button {
     transform: skewX(-12deg);
     padding: 1rem;
     margin: 3rem auto;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .testimonial__shape {
     transform: translateX(0) skewX(12deg);
@@ -883,6 +882,9 @@ button {
   }
   .testimonial__text {
     transform: skewX(12deg);
+  }
+  .testimonial__text--caption {
+    font-size: 2rem;
   }
   .testimonial__img {
     transform: translateX(-0.75rem);
@@ -1247,8 +1249,8 @@ button {
 .staff__meetstaff--text__paragraph {
   margin: 2vw auto;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   padding: 0 4vw;
   line-height: 10rem;
   line-height: min(max(3rem, 3vw + 0.1rem, 10rem));
@@ -1354,8 +1356,8 @@ button {
 }
 .contact__text--sub-title {
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   margin-bottom: 2vw;
 }
 .contact__hr {
@@ -1372,13 +1374,13 @@ button {
 .contact__form label {
   margin: 1rem 0;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
 }
 .contact__form input {
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   padding: 1vw;
   border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
   border-radius: 4px;
@@ -1390,8 +1392,8 @@ button {
   border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
   border-radius: 4px;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
 }
 .contact__form button {
   background-color: #bc9461;
@@ -1423,8 +1425,8 @@ button {
   min-height: 4rem;
   min-width: 10rem;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
 }
 .contact__form button:hover, .contact__form button:focus {
   background-color: #d3af7f;
@@ -1446,8 +1448,8 @@ button {
 .contact__text {
   color: #fefefe;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   text-align: center;
 }
 .contact__icon {
@@ -1576,6 +1578,7 @@ button {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1843137255);
   color: #fefefe;
+  font-weight: 500;
   animation: fadeIn 1s ease-in;
   backface-visibility: hidden;
   transition: all 0.2s ease-out;
@@ -1719,17 +1722,15 @@ button {
 }
 .OurStory--text__title {
   letter-spacing: 1vw;
-  font-size: 20rem;
-  font-size: min(max(3rem, 3vw + 1rem, 20rem));
-  font-size: clamp(3rem, 3vw + 1rem, 20rem);
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 1vw;
 }
 .OurStory--text__story {
   margin: 1.25vw 0;
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   line-height: 5vw;
 }
 .OurStory--text__story-2 {
@@ -1761,9 +1762,7 @@ button {
     min-height: 50vh;
   }
   .OurStory--text__title {
-    font-size: 20rem;
-    font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-    font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+    font-size: 7rem;
   }
   .OurStory--text__story {
     margin: 1.25vw 0;
@@ -1795,7 +1794,7 @@ button {
 .mission-bg {
   width: 100vw;
   height: 100%;
-  margin-top: -17vw;
+  margin-top: -20vw;
   padding-bottom: 5vh;
   padding-top: 10vh;
   background-image: linear-gradient(to right bottom, rgba(239, 233, 224, 0.7176470588), rgba(211, 175, 127, 0.7176470588)), url(/images/lagoon-valley-pic.webp);
@@ -1814,7 +1813,7 @@ button {
 }
 .mission__text--title {
   margin-bottom: 3vw;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 1vw;
 }
 .mission__text--title-2 {
@@ -1825,12 +1824,15 @@ button {
 }
 .mission__text--paragraph {
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   margin-bottom: 10vw;
-  line-height: 4vw;
+  line-height: 4rem;
   font-style: italic;
   text-align: center;
+}
+.mission__text--paragraph .stsm {
+  display: none;
 }
 .mission-cards-container {
   display: grid;
@@ -1890,16 +1892,10 @@ button {
 }
 @media (min-width: 768px) {
   .mission__text--title {
-    font-size: 6rem;
+    font-size: 7rem;
   }
-  .mission-card {
-    width: 60%;
-  }
-  .mission-card__text--paragraph {
-    font-size: 8rem;
-    font-size: min(max(1rem, 1vw + 1rem, 8rem));
-    font-size: clamp(1rem, 1vw + 1rem, 8rem);
-    margin-bottom: 0;
+  .mission__text--paragraph {
+    line-height: 4vw;
   }
 }
 @media (min-width: 900px) {
@@ -1925,8 +1921,8 @@ button {
   }
   .mission-card__text--paragraph {
     font-size: 8rem;
-    font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-    font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+    font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+    font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   }
 }
 @media (min-width: 1400px) {
@@ -1935,6 +1931,21 @@ button {
   }
   .mission__text--paragraph {
     width: 50%;
+  }
+}
+@media (min-width: 1900px) {
+  .mission__statement-container {
+    width: 50%;
+  }
+  .mission__text--paragraph .stsm {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .mission__text--paragraph .stsm a {
+    margin-left: 2rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 5000px) {
@@ -2006,6 +2017,9 @@ button {
   justify-items: center;
   align-items: center;
 }
+.staff__meetstaff--text__title {
+  font-size: 4rem;
+}
 .staff-card {
   text-align: center;
   margin: 2rem 0;
@@ -2048,15 +2062,13 @@ button {
   color: #701111;
 }
 
-.meet-the-team {
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+.meet-the-staff {
+  font-size: 3rem;
   margin: 3vw 0;
   text-align: center;
   text-transform: capitalize;
 }
-.meet-the-team-hr {
+.meet-the-staff-hr {
   width: 60%;
   margin: 1rem auto;
   border: solid 1px #701111;
@@ -2073,6 +2085,9 @@ button {
   }
 }
 @media (min-width: 800px) {
+  .staff__meetstaff--text__title {
+    font-size: 7rem;
+  }
   .staff__meetstaff--boss-container {
     display: flex;
     flex-direction: column;
@@ -2081,6 +2096,9 @@ button {
   }
   .staff__stafflist-grid {
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  }
+  .meet-the-staff {
+    font-size: 4rem;
   }
 }
 #serve {
@@ -2107,17 +2125,15 @@ button {
   padding: 0rem 3rem;
 }
 .serve--text__title {
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  font-size: 4rem;
   margin-bottom: 1vw;
   letter-spacing: 1vw;
   text-align: center;
 }
 .serve--text__story {
   font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
+  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
+  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   margin: 1.25vw 0;
   line-height: 14rem;
   line-height: min(max(2rem, 3vw + 0.1rem, 14rem));
@@ -2160,6 +2176,7 @@ button {
   }
   .serve--text__title {
     margin-bottom: 1vw;
+    font-size: 7rem;
   }
   .serve--text__story {
     margin: 1.25vw 0;
@@ -2171,13 +2188,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
-}
-@media (max-width: 1016px) {
-  .serve__signature-container button {
-    font-size: 1.35rem;
-    font-size: min(max(0.75rem, 1.15vw + 0.1rem, 1.35rem));
-    font-size: clamp(0.75rem, 1.15vw + 0.1rem, 1.35rem);
   }
 }
 @media (min-width: 2000px) {

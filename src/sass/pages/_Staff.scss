@@ -10,6 +10,14 @@
     }
   }
 
+  &__meetstaff {
+    &--text {
+      &__title {
+        font-size: $title-mobile-size;
+      }
+    }
+  }
+
   &-card {
     text-align: center;
     margin: 2rem 0;
@@ -59,8 +67,9 @@
   }
 }
 
-.meet-the-team {
-  @include titleFontSize(half);
+.meet-the-staff {
+  font-size: 3rem;
+
   margin: 3vw 0;
 
   text-align: center;
@@ -109,6 +118,11 @@
 @media (min-width: $md-device) {
   .staff {
     &__meetstaff {
+      &--text {
+        &__title {
+          font-size: $title-desktop-size;
+        }
+      }
       &--boss-container {
         display: flex;
         flex-direction: column;
@@ -121,5 +135,8 @@
         grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
       }
     }
+  }
+  .meet-the-staff {
+    font-size: $title-mobile-size;
   }
 }
