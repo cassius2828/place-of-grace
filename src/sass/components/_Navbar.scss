@@ -1,10 +1,10 @@
 @use "../abstracts/" as *;
-#desktop-nav { display: flex;
+#desktop-nav {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 
   width: 100%;
- 
 }
 .navbar-list {
   &--desktop {
@@ -19,7 +19,8 @@
     margin-bottom: 0;
 
     li {
-      @include clamp("font-size", 1rem, 1vw, 0.1rem, 4rem);
+      // @include clamp("font-size", 1rem, 1vw, 0.1rem, 4rem);
+      font-size: 1.5rem;
 
       margin: auto 0.5rem;
       @include linkHoverAnimation(
@@ -33,7 +34,7 @@
         &::before {
           display: none;
         }
-// mixin stays on top so below styles override the original mixin styles
+        // mixin stays on top so below styles override the original mixin styles
         @include roundedBtn($color-light-brown, $color-lighter-brown);
         display: flex;
         align-items: center;
@@ -48,6 +49,7 @@
 // ! MEDIA QUERIES
 ///////////////////////////
 // / going up
+
 @media (min-width: $md-device) {
   .navbar-list {
     &--desktop {
@@ -79,7 +81,8 @@
   .navbar-list {
     &--desktop {
       li {
-        @include navLinkFontSize;
+        font-size: 2rem;
+
         @include linkHoverAnimation(
           $color-tar-600,
           $color-dark-brown,

@@ -8,7 +8,7 @@
 
   width: 100%;
 
-  @include clamp("margin-top", 10rem, 25vw, 0.1rem, 40rem);
+  margin-top: 10rem;
 }
 
 .value-card {
@@ -41,22 +41,12 @@
 @media (min-width: 900px) {
   .value-cards-container {
     grid-template-columns: repeat(3, 1fr);
-    @include clamp("height", 10rem, 50vh, 0.1rem, 110rem);
+    margin-top: 20rem;
+
     align-content: end;
   }
 
   .value-card {
     width: 25vw;
-  }
-}
-@media (min-width: 1900px) {
-  .value-cards-container {
-    margin-top: 55rem;
-  }
-}
-
-@media (min-width: 3000px) {
-  .value-cards-container {
-    @include clamp("margin-top", 10rem, 55vw, 0.1rem, 170rem);
   }
 }

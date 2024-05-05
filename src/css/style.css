@@ -96,9 +96,7 @@ h4 {
   background-color: rgba(254, 254, 254, 0.4156862745);
   outline: none;
   transition: 0.3s all ease;
-  font-size: 5rem;
-  font-size: min(max(1rem, 0.75vw + 1rem, 5rem));
-  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
+  font-size: 1.75;
 }
 .accordion-button:not(.collapsed):focus {
   box-shadow: 0px 0px 3px #701111;
@@ -227,9 +225,7 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 10rem;
-  font-size: min(max(1rem, 1vw + 0.1rem, 10rem));
-  font-size: clamp(1rem, 1vw + 0.1rem, 10rem);
+  font-size: 7rem;
   padding: 3rem;
 }
 .error__form-submission button {
@@ -347,26 +343,25 @@ button {
 }
 #logo-1 {
   margin-left: 3rem;
-  width: 80rem;
-  width: min(max(20rem, 20vw + 0.1rem, 80rem));
-  width: clamp(20rem, 20vw + 0.1rem, 80rem);
+  width: 20rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
+  #logo-1 {
+    width: 25rem;
+  }
   #logo-2 {
     width: 10rem;
-    width: min(max(3rem, 10vw + 0.1rem, 10rem));
-    width: clamp(3rem, 10vw + 0.1rem, 10rem);
   }
 }
-@media (min-width: 5000px) {
+@media (min-width: 1300px) {
   #logo-1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 80rem;
-    width: min(max(20rem, 18vw + 0.1rem, 80rem));
-    width: clamp(20rem, 18vw + 0.1rem, 80rem);
+    width: 30rem;
+  }
+}
+@media (min-width: 1500px) {
+  #logo-1 {
+    width: 40rem;
   }
 }
 .mobile-nav-list {
@@ -495,9 +490,7 @@ button {
   margin-bottom: 0;
 }
 .navbar-list--desktop li {
-  font-size: 4rem;
-  font-size: min(max(1rem, 1vw + 0.1rem, 4rem));
-  font-size: clamp(1rem, 1vw + 0.1rem, 4rem);
+  font-size: 1.5rem;
   margin: auto 0.5rem;
   color: #27292d;
   position: relative;
@@ -575,9 +568,7 @@ button {
 }
 @media (min-width: 1230px) {
   .navbar-list--desktop li {
-    font-size: 4rem;
-    font-size: min(max(2rem, 1vw + 0.1rem, 4rem));
-    font-size: clamp(2rem, 1vw + 0.1rem, 4rem);
+    font-size: 2rem;
     color: #27292d;
     position: relative;
     text-align: center;
@@ -625,14 +616,10 @@ button {
   margin: 1rem 0;
 }
 .signature h3 {
-  font-size: 5rem;
-  font-size: min(max(1rem, 0.75vw + 1rem, 5rem));
-  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
+  font-size: 1.75rem;
 }
 .signature span {
-  font-size: 4rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 4rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+  font-size: 1.5rem;
 }
 .signature-img {
   width: 100%;
@@ -702,12 +689,8 @@ button {
   width: 75%;
   margin: 2vw auto;
   line-height: 4vw;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
-  line-height: 5rem;
-  line-height: min(max(2.5rem, 2vw + 0.1rem, 5rem));
-  line-height: clamp(2.5rem, 2vw + 0.1rem, 5rem);
+  font-size: 1.2rem;
+  line-height: 3rem;
 }
 
 @media (max-width: 375px) {
@@ -719,28 +702,14 @@ button {
   .team-message__text--title {
     font-size: 7rem;
   }
-}
-@media (min-width: 1000px) {
-  .team-message {
-    padding-top: 20rem;
-    padding-top: min(max(15rem, 15vh + 0.1rem, 20rem));
-    padding-top: clamp(15rem, 15vh + 0.1rem, 20rem);
-    margin: auto;
-  }
-}
-@media (min-width: 4000px) {
-  .team-message {
-    padding: 10vw;
-    padding-top: 20rem;
-    padding-top: min(max(15rem, 15vh + 0.1rem, 20rem));
-    padding-top: clamp(15rem, 15vh + 0.1rem, 20rem);
+  .team-message__text--paragraph {
+    font-size: 2rem;
+    line-height: 5rem;
   }
 }
 .testimonial__container {
   position: relative;
-  padding-top: 40rem;
-  padding-top: min(max(22rem, 20vh + 0.1rem, 40rem));
-  padding-top: clamp(22rem, 20vh + 0.1rem, 40rem);
+  padding-top: 30rem;
   margin-top: -25rem;
   background-image: linear-gradient(to right bottom, rgba(239, 233, 224, 0.7176470588), rgba(211, 175, 127, 0.7176470588)), url(/images/high-angle-shot-magnificent-mountains-covered-with-trees-blue-sky.jpg);
   background-repeat: no-repeat;
@@ -753,9 +722,7 @@ button {
   transform: translateX(-50%);
   z-index: 1;
   height: auto;
-  font-size: 6rem;
-  font-size: min(max(1rem, 1.75vw + 0.1rem, 6rem));
-  font-size: clamp(1rem, 1.75vw + 0.1rem, 6rem);
+  font-size: 3rem;
   padding: 5rem;
   padding: min(max(0.5rem, 1.5vw + 0.1rem, 5rem));
   padding: clamp(0.5rem, 1.5vw + 0.1rem, 5rem);
@@ -776,34 +743,6 @@ button {
   font-size: 3rem;
   transform: skewX(-12deg);
 }
-.testimonial__shape {
-  position: relative;
-  width: 20rem;
-  width: min(max(7rem, 12vw + 0.1rem, 20rem));
-  width: clamp(7rem, 12vw + 0.1rem, 20rem);
-  height: 20rem;
-  height: min(max(7rem, 12vw + 0.1rem, 20rem));
-  height: clamp(7rem, 12vw + 0.1rem, 20rem);
-  float: left;
-  transform: translateX(-3rem) skewX(12deg);
-  overflow: hidden;
-  border-radius: 50%;
-}
-@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-  .testimonial__shape {
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    border-radius: none;
-  }
-}
-.testimonial__img {
-  transform: translateX(-4rem);
-  height: 200%;
-  backface-visibility: hidden;
-  transition: all 0.5s;
-}
 .testimonial__text {
   transform: skewX(12deg);
   width: 70%;
@@ -815,25 +754,7 @@ button {
   font-size: 4rem;
   text-align: left;
 }
-.testimonial__card:hover .testimonial__caption {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-.testimonial__card:hover .testimonial__img {
-  transform: translateX(-4rem) scale(1);
-  filter: blur(8px) brightness(80%);
-}
 
-@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-  .story__shape {
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    border-radius: none;
-  }
-}
-/*<a href="https://www.freepik.com/free-photo/high-angle-shot-magnificent-mountains-covered-with-trees-blue-sky_9077120.htm#query=hill&position=5&from_view=search&track=sph&uuid=e8588934-7050-4902-9d88-6d92df718fe5">Image by wirestock</a> on Freepik*/
 @media (max-width: 425px) {
   .testimonial__card {
     min-width: 75%;
@@ -842,34 +763,22 @@ button {
     font-size: 0.6rem;
     transform: skewX(0);
   }
-  .testimonial__shape {
-    transform: translateX(0) skewX(0);
-    left: -0.5rem;
-    width: 4.5rem;
-    height: 4.5rem;
-  }
   .testimonial__text {
     transform: skewX(0);
   }
   .testimonial__text--caption {
     margin-left: 1rem;
   }
-  .testimonial__img {
-    transform: translateX(-0.75rem);
-  }
 }
 @media (max-width: 800px) {
+  .testimonial__container {
+    padding-top: 25rem;
+  }
   .testimonial__card {
     transform: skewX(-12deg);
     padding: 1rem;
     margin: 3rem auto;
     font-size: 1.5rem;
-  }
-  .testimonial__shape {
-    transform: translateX(0) skewX(12deg);
-    left: -0.5rem;
-    width: 7rem;
-    height: 7rem;
   }
   .testimonial__text {
     transform: skewX(12deg);
@@ -883,9 +792,6 @@ button {
 }
 @media (min-width: 2000px) {
   .testimonial__card {
-    font-size: 8rem;
-    font-size: min(max(1rem, 0.75vw + 1rem, 8rem));
-    font-size: clamp(1rem, 0.75vw + 1rem, 8rem);
     width: 50%;
   }
 }
@@ -921,9 +827,7 @@ button {
   gap: 2rem;
   justify-items: center;
   width: 100%;
-  margin-top: 40rem;
-  margin-top: min(max(10rem, 25vw + 0.1rem, 40rem));
-  margin-top: clamp(10rem, 25vw + 0.1rem, 40rem);
+  margin-top: 10rem;
 }
 
 .value-card {
@@ -948,25 +852,11 @@ button {
 @media (min-width: 900px) {
   .value-cards-container {
     grid-template-columns: repeat(3, 1fr);
-    height: 110rem;
-    height: min(max(10rem, 50vh + 0.1rem, 110rem));
-    height: clamp(10rem, 50vh + 0.1rem, 110rem);
+    margin-top: 20rem;
     align-content: end;
   }
   .value-card {
     width: 25vw;
-  }
-}
-@media (min-width: 1900px) {
-  .value-cards-container {
-    margin-top: 55rem;
-  }
-}
-@media (min-width: 3000px) {
-  .value-cards-container {
-    margin-top: 170rem;
-    margin-top: min(max(10rem, 55vw + 0.1rem, 170rem));
-    margin-top: clamp(10rem, 55vw + 0.1rem, 170rem);
   }
 }
 #header {
@@ -1039,12 +929,6 @@ button {
 .footer img {
   width: 10rem;
 }
-.footer__text--h1 {
-  width: 80%;
-  font-size: 6rem;
-  font-size: min(max(3rem, 1.5vw + 1rem, 6rem));
-  font-size: clamp(3rem, 1.5vw + 1rem, 6rem);
-}
 .footer hr {
   width: 75%;
   height: 1px;
@@ -1059,9 +943,7 @@ button {
   justify-content: space-around;
 }
 .footer__list {
-  font-size: 8rem;
-  font-size: min(max(1rem, 0.75vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.75vw + 1rem, 8rem);
+  font-size: 1.2rem;
 }
 .footer__list1, .footer__list2, .footer__list3 {
   margin: auto;
@@ -1081,9 +963,7 @@ button {
 }
 .footer__list-container--horizontal {
   margin: auto;
-  font-size: 4rem;
-  font-size: min(max(2rem, 1vw + 0.1rem, 4rem));
-  font-size: clamp(2rem, 1vw + 0.1rem, 4rem);
+  font-size: 2rem;
 }
 .footer__list-container--horizontal__social-container {
   width: 100%;
@@ -1103,9 +983,7 @@ button {
 .footer__copyright {
   display: flex;
   flex-direction: column;
-  font-size: 4rem;
-  font-size: min(max(1rem, 0.75vw + 0.1rem, 4rem));
-  font-size: clamp(1rem, 0.75vw + 0.1rem, 4rem);
+  font-size: 0.8rem;
 }
 .footer__copyright span {
   margin: 0.5rem 0;
@@ -1113,6 +991,9 @@ button {
 }
 
 @media (min-width: 800px) {
+  .footer__list {
+    font-size: 2rem;
+  }
   .footer__list1 li a:hover, .footer__list2 li a:hover, .footer__list3 li a:hover {
     color: #efe9e0;
   }
@@ -1143,6 +1024,15 @@ button {
   .footer__list a:hover {
     color: #efe9e0;
   }
+  .footer__copyright {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+  }
+  .footer__copyright span {
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+  }
 }
 @media (min-width: 1000px) {
   .footer {
@@ -1150,11 +1040,6 @@ button {
   }
   .footer__button-container a {
     margin: 1rem auto 2rem auto;
-  }
-  .footer__list {
-    font-size: 4rem;
-    font-size: min(max(2rem, 1vw + 0.1rem, 4rem));
-    font-size: clamp(2rem, 1vw + 0.1rem, 4rem);
   }
 }
 @media (min-width: 1300px) {
@@ -1201,9 +1086,6 @@ button {
   }
 }
 @media (min-width: 4000px) {
-  .footer__text--h1 {
-    text-align: center;
-  }
   .footer__button-container {
     width: 60%;
   }
@@ -1216,9 +1098,6 @@ button {
   }
 }
 @media (min-width: 6000px) {
-  .footer__text--h1 {
-    width: 70%;
-  }
   .footer__list-container ul li {
     margin: 10rem;
   }
@@ -1254,19 +1133,12 @@ button {
 .staff__meetstaff--text__title {
   margin: 2vw auto;
   text-align: center;
-  font-size: 20rem;
-  font-size: min(max(3rem, 3vw + 1rem, 20rem));
-  font-size: clamp(3rem, 3vw + 1rem, 20rem);
 }
 .staff__meetstaff--text__paragraph {
   margin: 2vw auto;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
   padding: 0 4vw;
-  line-height: 10rem;
-  line-height: min(max(3rem, 3vw + 0.1rem, 10rem));
-  line-height: clamp(3rem, 3vw + 0.1rem, 10rem);
+  line-height: 3rem;
 }
 .staff .boss-card {
   margin: 3vw auto;
@@ -1274,12 +1146,8 @@ button {
 }
 .staff .boss-card #david-price,
 .staff .boss-card #sally-price {
-  width: 20rem;
-  width: min(max(5rem, 30vw + 0.1rem, 20rem));
-  width: clamp(5rem, 30vw + 0.1rem, 20rem);
-  height: 20rem;
-  height: min(max(5rem, 30vw + 0.1rem, 20rem));
-  height: clamp(5rem, 30vw + 0.1rem, 20rem);
+  width: 10rem;
+  height: 10rem;
 }
 .staff .boss-card #david-price img,
 .staff .boss-card #sally-price img {
@@ -1293,15 +1161,11 @@ button {
   align-items: center;
 }
 .staff .boss-card__text--name {
-  font-size: 5rem;
-  font-size: min(max(1rem, 0.75vw + 1rem, 5rem));
-  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
+  font-size: 1.75rem;
   margin: 0 2vw;
 }
 .staff .boss-card__text--title {
-  font-size: 4rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 4rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+  font-size: 1.5rem;
 }
 
 @media (min-width: 800px) {
@@ -1312,15 +1176,11 @@ button {
   }
   .staff__meetstaff--text__title {
     margin: 2vw auto;
-    font-size: 20rem;
-    font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-    font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
     text-align: center;
   }
   .staff__meetstaff--text__paragraph {
-    font-size: 8rem;
-    font-size: min(max(1rem, 0.75vw + 1rem, 8rem));
-    font-size: clamp(1rem, 0.75vw + 1rem, 8rem);
+    font-size: 2rem;
+    line-height: 8rem;
   }
   .staff__meetstaff--boss-container {
     display: flex;
@@ -1336,6 +1196,11 @@ button {
     width: auto;
     border-radius: 4px;
     transform: none;
+  }
+  .staff__meetstaff--boss-container .boss-card #david-price,
+  .staff__meetstaff--boss-container .boss-card #sally-price {
+    width: 20rem;
+    height: 20rem;
   }
 }
 #careers__button--container {
@@ -1357,19 +1222,20 @@ button {
   background-color: rgba(254, 254, 254, 0.6);
   border-radius: 4px;
 }
+.contact__text {
+  color: #fefefe;
+  text-align: center;
+  font-size: 1.2rem;
+}
 .contact__text--container {
   text-align: center;
 }
 .contact__text--title {
   margin: 1rem 0;
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  font-size: 4rem;
 }
 .contact__text--sub-title {
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
   margin-bottom: 2vw;
 }
 .contact__hr {
@@ -1385,14 +1251,10 @@ button {
 }
 .contact__form label {
   margin: 1rem 0;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
 }
 .contact__form input {
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
   padding: 1vw;
   border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
   border-radius: 4px;
@@ -1403,9 +1265,7 @@ button {
   padding: 1vw;
   border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
   border-radius: 4px;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
 }
 .contact__form button {
   background-color: #bc9461;
@@ -1436,9 +1296,6 @@ button {
   height: 3vw;
   min-height: 4rem;
   min-width: 10rem;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
 }
 .contact__form button:hover, .contact__form button:focus {
   background-color: #d3af7f;
@@ -1456,13 +1313,6 @@ button {
   justify-items: center;
   align-items: center;
   padding: 2rem;
-}
-.contact__text {
-  color: #fefefe;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
-  text-align: center;
 }
 .contact__icon {
   margin-left: 1rem;
@@ -1485,15 +1335,11 @@ button {
   color: #198754;
 }
 .contact__result-message {
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  font-size: 4rem;
   text-align: center;
 }
 .contact__result--close-icon {
-  font-size: 20rem;
-  font-size: min(max(3rem, 2.5vw + 1rem, 20rem));
-  font-size: clamp(3rem, 2.5vw + 1rem, 20rem);
+  font-size: 4rem;
   position: absolute;
   top: -2rem;
   right: 1rem;
@@ -1537,11 +1383,43 @@ button {
     margin: 2rem 0;
     background-color: rgba(254, 254, 254, 0.7333333333);
   }
+  .contact__text {
+    font-size: 1.5rem;
+  }
+  .contact__text--title {
+    font-size: 7rem;
+  }
+  .contact__text--sub-title {
+    font-size: 2rem;
+  }
   .contact__result--container {
     min-height: 60rem;
   }
   .contact__result-icon {
     font-size: 20rem;
+  }
+  .contact__form label {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .contact__form input {
+    font-size: 1.6rem;
+    padding: 1vw;
+    border: solid 0.5px rgba(0, 0, 0, 0.3843137255);
+    border-radius: 4px;
+  }
+  .contact__form textarea {
+    height: 15vh;
+    font-size: 1.6rem;
+  }
+  .contact__form button {
+    font-size: 1.6rem;
+  }
+  .contact__result-message {
+    font-size: 7rem;
+  }
+  .contact__result--close-icon {
+    font-size: 7rem;
   }
 }
 @media (min-width: 1000px) {
@@ -1557,6 +1435,35 @@ button {
   }
   .contact__form input {
     padding: 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contact__text {
+    font-size: 1.75rem;
+  }
+  .contact__text--title {
+    font-size: 7rem;
+  }
+  .contact__text--sub-title {
+    font-size: 2rem;
+  }
+  .contact__form label {
+    font-size: 2rem;
+  }
+  .contact__form input {
+    font-size: 2rem;
+  }
+  .contact__form textarea {
+    font-size: 2rem;
+  }
+  .contact__form button {
+    font-size: 2rem;
+  }
+  .contact__result-message {
+    font-size: 7rem;
+  }
+  .contact__result--close-icon {
+    font-size: 7rem;
   }
 }
 @media (min-width: 2000px) {
@@ -1740,10 +1647,8 @@ button {
 }
 .OurStory--text__story {
   margin: 1.25vw 0;
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
-  line-height: 5vw;
+  font-size: 1.6rem;
+  line-height: 3.25rem;
 }
 .OurStory--text__story-2 {
   margin-bottom: 2vw;
@@ -1757,6 +1662,8 @@ button {
 @media (min-width: 768px) {
   .OurStory--text__story {
     padding: 0 5vw;
+    font-size: 2rem;
+    line-height: 5rem;
   }
 }
 @media (min-width: 800px) {
@@ -1778,7 +1685,6 @@ button {
   }
   .OurStory--text__story {
     margin: 1.25vw 0;
-    line-height: 2.5vw;
   }
   .OurStory--text__story-2 {
     margin-bottom: 2vw;
@@ -1836,9 +1742,7 @@ button {
   text-align: center;
 }
 .mission__text--paragraph {
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.6rem;
   margin-bottom: 10vw;
   line-height: 4rem;
   font-style: italic;
@@ -1846,56 +1750,6 @@ button {
 }
 .mission__text--paragraph .stsm {
   display: none;
-}
-.mission-cards-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  width: 100%;
-}
-.mission-card {
-  transition: all 0.2s ease-out;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80vw;
-  margin: auto;
-  padding: 3rem;
-  padding: min(max(1rem, 2vw + 0.1rem, 3rem));
-  padding: clamp(1rem, 2vw + 0.1rem, 3rem);
-  background-color: rgba(254, 254, 254, 0.7333333333);
-  color: #4f0a0a;
-  border-radius: 4px;
-  box-shadow: 0px 0px 5px 0px #d3af7f;
-  border: solid 1px #d3af7f;
-}
-.mission-card__icon {
-  height: 6rem;
-  height: min(max(2.5rem, 6vw + 0.1rem, 6rem));
-  height: clamp(2.5rem, 6vw + 0.1rem, 6rem);
-  margin: 1rem;
-}
-.mission-card__text--title {
-  font-size: 12rem;
-  font-size: min(max(2.25rem, 1.5vw + 1rem, 12rem));
-  font-size: clamp(2.25rem, 1.5vw + 1rem, 12rem);
-  margin: 2rem;
-  margin: min(max(0.5rem, 0.5vw + 0.1rem, 2rem));
-  margin: clamp(0.5rem, 0.5vw + 0.1rem, 2rem);
-  margin-left: 0;
-  margin-right: 0;
-}
-.mission-card__text--paragraph {
-  font-size: 8rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 8rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 8rem);
-  color: #27292d;
-  text-align: center;
-}
-.mission-card:hover {
-  transform: translateY(-5%);
-  background-color: #fefefe;
 }
 
 @media (max-width: 425px) {
@@ -1911,34 +1765,18 @@ button {
     font-size: 7rem;
   }
   .mission__text--paragraph {
+    font-size: 2rem;
     line-height: 4vw;
   }
 }
 @media (min-width: 900px) {
   .mission-bg {
     background-size: cover;
-    padding-bottom: 160rem;
-    padding-bottom: min(max(20rem, 55vh + 0.1rem, 160rem));
-    padding-bottom: clamp(20rem, 55vh + 0.1rem, 160rem);
+    padding-bottom: 20rem;
   }
   .mission-statement-container {
     padding-left: 10vw;
     padding-right: 10vw;
-  }
-  .mission-cards-container {
-    grid-template-columns: repeat(3, 1fr);
-    align-content: end;
-    height: 110rem;
-    height: min(max(10rem, 50vh + 0.1rem, 110rem));
-    height: clamp(10rem, 50vh + 0.1rem, 110rem);
-  }
-  .mission-card {
-    width: 25vw;
-  }
-  .mission-card__text--paragraph {
-    font-size: 8rem;
-    font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-    font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
   }
 }
 @media (min-width: 1400px) {
@@ -1959,17 +1797,6 @@ button {
     font-size: 4rem;
   }
 }
-@media (min-width: 5000px) {
-  .mission-card {
-    width: 20vw;
-  }
-  .mission-card__text--title {
-    margin: 2vw 0;
-  }
-  .mission-card__text--paragraph {
-    color: #27292d;
-  }
-}
 .error {
   position: relative;
   display: flex;
@@ -1977,19 +1804,13 @@ button {
   height: 100vh;
   height: 100svh;
   background-color: #fefefe;
-  font-size: 10rem;
-  font-size: min(max(1rem, 1vw + 1rem, 10rem));
-  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  font-size: 2rem;
   font-size: 1rem;
   color: #27292d;
 }
 .error__text-container {
-  height: 200rem;
-  height: min(max(15rem, 40vw + 0.1rem, 200rem));
-  height: clamp(15rem, 40vw + 0.1rem, 200rem);
-  width: 80rem;
-  width: min(max(20rem, 80vw + 0.1rem, 80rem));
-  width: clamp(20rem, 80vw + 0.1rem, 80rem);
+  max-width: 80vw;
+  max-height: 60vh;
   margin-top: 15vh;
   margin-top: 15svh;
   padding: 2rem;
@@ -1998,28 +1819,19 @@ button {
   border-radius: 4px;
 }
 .error__text-container span {
-  font-size: 10rem;
-  font-size: min(max(1rem, 1vw + 1rem, 10rem));
-  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  font-size: 1.5rem;
 }
 .error__text-container span:first-child {
-  font-size: 10rem;
-  font-size: min(max(1rem, 1.75vw + 1rem, 10rem));
-  font-size: clamp(1rem, 1.75vw + 1rem, 10rem);
   font-weight: 700;
 }
 
 @media (min-width: 768px) {
   .error__text-container {
-    font-size: 20rem;
-    font-size: min(max(3rem, 3vw + 1rem, 20rem));
-    font-size: clamp(3rem, 3vw + 1rem, 20rem);
+    font-size: 7rem;
     padding: 3rem;
   }
   .error__text-container span {
-    font-size: 20rem;
-    font-size: min(max(3rem, 2vw + 1rem, 20rem));
-    font-size: clamp(3rem, 2vw + 1rem, 20rem);
+    font-size: 4rem;
   }
 }
 .staff__stafflist-grid {
@@ -2037,11 +1849,7 @@ button {
 }
 .staff-card__img-bg {
   width: 10rem;
-  width: min(max(3rem, 20vw + 0.1rem, 10rem));
-  width: clamp(3rem, 20vw + 0.1rem, 10rem);
   height: 10rem;
-  height: min(max(3rem, 20vw + 0.1rem, 10rem));
-  height: clamp(3rem, 20vw + 0.1rem, 10rem);
   margin: auto;
   border-radius: 50%;
   border: solid 2px #701111;
@@ -2060,14 +1868,10 @@ button {
 }
 .staff-card__text--name {
   margin-right: 2vw;
-  font-size: 5rem;
-  font-size: min(max(1rem, 0.75vw + 1rem, 5rem));
-  font-size: clamp(1rem, 0.75vw + 1rem, 5rem);
+  font-size: 1.75rem;
 }
 .staff-card__text--title {
-  font-size: 4rem;
-  font-size: min(max(1rem, 0.5vw + 1rem, 4rem));
-  font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+  font-size: 1.5rem;
 }
 .staff a:hover {
   color: #701111;
@@ -2093,6 +1897,10 @@ button {
 @media (min-width: 768px) {
   .staff-card__text--name {
     margin-right: 1vw;
+    font-size: 2rem;
+  }
+  .staff-card__text--title {
+    font-size: 1.75rem;
   }
 }
 @media (min-width: 800px) {
@@ -2142,13 +1950,9 @@ button {
   text-align: center;
 }
 .serve--text__story {
-  font-size: 8rem;
-  font-size: min(max(1.25rem, 0.95vw + 1rem, 8rem));
-  font-size: clamp(1.25rem, 0.95vw + 1rem, 8rem);
+  font-size: 1.2rem;
   margin: 1.25vw 0;
-  line-height: 14rem;
-  line-height: min(max(2rem, 3vw + 0.1rem, 14rem));
-  line-height: clamp(2rem, 3vw + 0.1rem, 14rem);
+  line-height: 4rem;
 }
 .serve__signature-container {
   display: grid;
@@ -2170,6 +1974,8 @@ button {
 @media (min-width: 768px) {
   .serve--text__story {
     padding: 0 5vw;
+    font-size: 2rem;
+    line-height: 6rem;
   }
 }
 @media (min-width: 800px) {

@@ -30,17 +30,15 @@
         margin: 2vw auto;
 
         text-align: center;
-        // add clamps to this
-        @include titleFontSize(full);
       }
 
       &__paragraph {
         margin: 2vw auto;
-        // keep mixin above to overrride mixin styles
-        @include paragraphFontSize(phone);
+
+        font-size: $sm-text-mobile;
         padding: 0 4vw;
 
-        @include clamp("line-height", 3rem, 3vw, 0.1rem, 10rem);
+        line-height: 3rem;
       }
     }
   }
@@ -52,8 +50,8 @@
     // ceo img background container ids
     #david-price,
     #sally-price {
-      @include clamp("width", 5rem, 30vw, 0.1rem, 20rem);
-      @include clamp("height", 5rem, 30vw, 0.1rem, 20rem);
+      width: 10rem;
+      height: 10rem;
 
       img {
         position: relative;
@@ -70,12 +68,13 @@
 
     &__text {
       &--name {
-        @include staffCardName;
+        font-size: 1.75rem;
+
         margin: 0 2vw;
       }
 
       &--title {
-        @include staffCardTitle;
+        font-size: 1.5rem;
       }
     }
   }
@@ -93,20 +92,18 @@
       &--text {
         &__title {
           margin: 2vw auto;
-
-          @include titleFontSize(half);
           text-align: center;
         }
 
         &__paragraph {
-          @include paragraphFontSize(tablet);
+          font-size: $sm-text-desktop;
+          line-height: 8rem;
         }
       }
 
       &--boss-container {
         display: flex;
         flex-direction: row;
-
         // padding-right: 4vw;
         .boss-card {
           margin: auto 2vw;
@@ -119,6 +116,11 @@
 
             border-radius: 4px;
             transform: none;
+          }
+          #david-price,
+          #sally-price {
+            width: 20rem;
+            height: 20rem;
           }
         }
       }

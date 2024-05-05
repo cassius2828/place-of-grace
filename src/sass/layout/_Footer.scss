@@ -20,12 +20,6 @@
   img {
     width: 10rem;
   }
-  &__text {
-    &--h1 {
-      width: 80%;
-      @include footerTitleFontSize(phone);
-    }
-  }
 
   & hr {
     width: 75%;
@@ -46,7 +40,7 @@
   }
 
   &__list {
-    @include paragraphFontSize(tablet);
+    font-size: $sm-text-mobile;
     &1,
     &2,
     &3 {
@@ -69,8 +63,8 @@
 
       &--horizontal {
         margin: auto;
-        @include navLinkFontSize;
 
+        font-size: 2rem;
         &__social-container {
           width: 100%;
 
@@ -99,7 +93,7 @@
   &__copyright {
     display: flex;
     flex-direction: column;
-    @include copyrightFontSize;
+    font-size: 0.8rem;
     & span {
       margin: 0.5rem 0;
       text-transform: capitalize;
@@ -111,6 +105,8 @@
   .footer {
     &__list {
       // left two cols of links
+      font-size: $sm-text-desktop;
+
       &1,
       &2,
       &3 {
@@ -132,6 +128,15 @@
         }
       }
     }
+    &__copyright {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.25rem;
+      & span {
+        margin: 0.5rem 0;
+        text-transform: capitalize;
+      }
+    }
   }
 }
 
@@ -144,19 +149,11 @@
         margin: 1rem auto 2rem auto;
       }
     }
-
-    &__list {
-      @include navLinkFontSize;
-    }
   }
 }
 
 @media (min-width: 1300px) {
   .footer {
-    &__logo-container {
-      // width: 85%;
-    }
-
     &__list {
       &-container {
         width: 90%;
@@ -179,10 +176,6 @@
 
 @media (min-width: 1600px) {
   .footer {
-    &__logo-container {
-      // width: 90%;
-    }
-
     &__button-container {
       margin: auto;
       width: 50%;
@@ -240,12 +233,6 @@
 
 @media (min-width: 4000px) {
   .footer {
-    &__text {
-      &--h1 {
-        text-align: center;
-      }
-    }
-
     &__button-container {
       width: 60%;
     }
@@ -265,12 +252,6 @@
 
 @media (min-width: 6000px) {
   .footer {
-    &__text {
-      &--h1 {
-        width: 70%;
-      }
-    }
-
     &__list {
       &-container {
         & ul {

@@ -41,7 +41,6 @@
     &--title {
       margin-bottom: 3vw;
       font-size: $title-mobile-size;
-
       letter-spacing: 1vw;
 
       &-2 {
@@ -52,7 +51,8 @@
       }
     }
     &--paragraph {
-      @include paragraphFontSize(phone);
+
+      font-size: $sm-text-tablet;
 
       margin-bottom: 10vw;
       line-height: 4rem;
@@ -61,56 +61,6 @@
       .stsm {
         display: none;
       }
-    }
-  }
-
-  &-cards-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  &-card {
-    @include base-animation;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 80vw;
-
-    margin: auto;
-    @include clamp("padding", 1rem, 2vw, 0.1rem, 3rem);
-
-    background-color: $color-company-white-opacity8;
-    color: $color-burgandy-dark;
-
-    border-radius: $base-br;
-    box-shadow: 0px 0px 5px 0px $color-lighter-brown;
-    border: solid 1px $color-lighter-brown;
-
-    &__icon {
-      @include clamp("height", 2.5rem, 6vw, 0.1rem, 6rem);
-      margin: 1rem;
-    }
-    &__text {
-      &--title {
-        @include cardTitleFontSize(phone);
-        @include clamp("margin", 0.5rem, 0.5vw, 0.1rem, 2rem);
-        margin-left: 0;
-        margin-right: 0;
-      }
-      &--paragraph {
-        @include cardParagraphFontSize(phone);
-        color: $color-tar-600;
-        text-align: center;
-      }
-    }
-
-    &:hover {
-      transform: translateY(-5%);
-      background-color: $color-company-white;
     }
   }
 }
@@ -133,6 +83,8 @@
       }
       &--paragraph {
         // reset line height to 4vw
+        font-size: $sm-text-desktop;
+
         line-height: 4vw;
       }
     }
@@ -143,25 +95,11 @@
   .mission {
     &-bg {
       background-size: cover;
-      @include clamp("padding-bottom", 20rem, 55vh, 0.1rem, 160rem);
+      padding-bottom: 20rem;
     }
     &-statement-container {
       padding-left: 10vw;
       padding-right: 10vw;
-    }
-    &-cards-container {
-      grid-template-columns: repeat(3, 1fr);
-      align-content: end;
-      @include clamp("height", 10rem, 50vh, 0.1rem, 110rem);
-    }
-    &-card {
-      width: 25vw;
-
-      &__text {
-        &--paragraph {
-          @include paragraphFontSize(phone);
-        }
-      }
     }
   }
 }
@@ -184,22 +122,6 @@
             margin-left: 2rem;
             font-size: 4rem;
           }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 5000px) {
-  .mission {
-    &-card {
-      width: 20vw;
-      &__text {
-        &--title {
-          margin: 2vw 0;
-        }
-        &--paragraph {
-          color: $color-tar-600;
         }
       }
     }

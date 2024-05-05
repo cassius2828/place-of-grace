@@ -17,17 +17,20 @@
     border-radius: $base-br;
   }
   &__text {
+    color: $color-company-white;
+    text-align: center;
+    font-size: $sm-text-mobile;
     &--container {
       text-align: center;
     }
 
     &--title {
       margin: 1rem 0;
-      @include titleFontSize(half);
+
+      font-size: $title-mobile-size;
     }
     &--sub-title {
-      @include paragraphFontSize(phone);
-
+      font-size: 1.2rem;
       margin-bottom: 2vw;
     }
   }
@@ -45,11 +48,13 @@
 
     label {
       margin: 1rem 0;
+      font-size: $sm-text-mobile;
 
-      @include paragraphFontSize(phone);
+  
     }
     input {
-      @include paragraphFontSize(phone);
+   
+      font-size: $sm-text-mobile;
 
       padding: 1vw;
       border: solid 0.5px $color-black-opacity4;
@@ -64,7 +69,9 @@
 
       border: solid 0.5px $color-black-opacity4;
       border-radius: $base-br;
-      @include paragraphFontSize(phone);
+      font-size: $sm-text-mobile;
+
+
     }
     button {
       @include roundedBtn($color-light-brown, $color-lighter-brown);
@@ -73,7 +80,7 @@
       height: 3vw;
       min-height: 4rem;
       min-width: 10rem;
-      @include paragraphFontSize(phone);
+
     }
   }
 
@@ -94,11 +101,6 @@
 
       padding: 2rem;
     }
-  }
-  &__text {
-    color: $color-company-white;
-    @include paragraphFontSize(phone);
-    text-align: center;
   }
 
   &__icon {
@@ -125,11 +127,14 @@
       color: #198754;
     }
     &-message {
-      @include titleFontSize(half);
+  
+      font-size: $title-mobile-size;
       text-align: center;
     }
     &--close-icon {
-      @include titleFontSize(half);
+ 
+      font-size: $title-mobile-size;
+
       position: absolute;
       top: -2rem;
       right: 1rem;
@@ -186,6 +191,16 @@
       margin: 2rem 0;
       background-color: $color-company-white-opacity8;
     }
+    &__text {
+      font-size: 1.5rem;
+
+      &--title {
+        font-size: $title-desktop-size;
+      }
+      &--sub-title {
+        font-size: 2rem;
+      }
+    }
     &__result {
       &--container {
         min-height: 60rem;
@@ -196,6 +211,36 @@
     }
 
     padding: 10vh 8vw 0 8vw;
+    //  start
+    &__form {
+      label {
+        margin: 1rem 0;
+        font-size: $sm-text-tablet;
+      }
+      input {
+        font-size: $sm-text-tablet;
+
+        padding: 1vw;
+        border: solid 0.5px $color-black-opacity4;
+        border-radius: $base-br;
+      }
+
+      textarea {
+        height: 15vh;
+        font-size: $sm-text-tablet;
+      }
+      button {
+        font-size: $sm-text-tablet;
+      }
+    }
+    &__result {
+      &-message {
+        font-size: $title-desktop-size;
+      }
+      &--close-icon {
+        font-size: $title-desktop-size;
+      }
+    }
   }
 }
 
@@ -213,6 +258,44 @@
 
       input {
         padding: 0.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .contact {
+    &__text {
+      font-size: 1.75rem;
+      &--title {
+        font-size: $title-desktop-size;
+      }
+      &--sub-title {
+        font-size: 2rem;
+      }
+    }
+
+    //  start
+    &__form {
+      label {
+        font-size: $sm-text-desktop;
+      }
+      input {
+        font-size: $sm-text-desktop;
+      }
+
+      textarea {
+        font-size: $sm-text-desktop;
+      }
+      button {
+        font-size: $sm-text-desktop;
+      }
+    }
+    &__result {
+      &-message {
+        font-size: $title-desktop-size;
+      }
+      &--close-icon {
+        font-size: $title-desktop-size;
       }
     }
   }

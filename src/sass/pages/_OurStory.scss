@@ -34,15 +34,17 @@
   &--text {
     &__title {
       letter-spacing: 1vw;
-      // @include titleFontSize(full);
+
       font-size: $title-mobile-size;
       text-align: center;
       margin-bottom: 1vw;
     }
     &__story {
       margin: 1.25vw 0;
-      @include paragraphFontSize(phone);
-      line-height: 5vw;
+
+      font-size: $sm-text-tablet;
+
+      line-height: 3.25rem;
 
       &-2 {
         margin-bottom: 2vw;
@@ -62,6 +64,8 @@
     &--text {
       &__story {
         padding: 0 5vw;
+        font-size: $sm-text-desktop;
+        line-height: 5rem;
       }
     }
   }
@@ -84,12 +88,11 @@
 
     &--text {
       &__title {
-        // @include titleFontSize(half);
         font-size: $title-desktop-size;
       }
       &__story {
         margin: 1.25vw 0;
-        line-height: 2.5vw;
+
         &-2 {
           margin-bottom: 2vw;
         }

@@ -13,11 +13,11 @@
   }
   // * add clamps for these
   & h3 {
-    @include staffCardName;
+    font-size: 1.75rem;
   }
 
   & span {
-    @include staffCardTitle;
+    font-size: 1.5rem;
   }
   &-img {
     width: 100%;

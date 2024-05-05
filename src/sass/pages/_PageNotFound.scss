@@ -9,16 +9,16 @@
   height: 100svh;
 
   background-color: $color-company-white;
-  @include clamp("font-size", 1rem, 1vw, 1rem, 10rem);
+  font-size: 2rem;
   // ? why is this here overriding it?
   font-size: 1rem;
   color: $color-tar-600;
 
   &__text {
     &-container {
-      @include clamp("height", 15rem, 40vw, 0.1rem, 200rem);
-      @include clamp("width", 20rem, 80vw, 0.1rem, 80rem);
 
+max-width: 80vw;
+max-height: 60vh;
       margin-top: 15vh;
       margin-top: 15svh;
       padding: 2rem;
@@ -28,9 +28,8 @@
       border-radius: $base-br;
 
       span {
-        @include clamp("font-size", 1rem, 1vw, 1rem, 10rem);
+        font-size: 1.5rem;
         &:first-child {
-          @include clamp("font-size", 1rem, 1.75vw, 1rem, 10rem);
           font-weight: 700;
         }
       }
@@ -43,11 +42,11 @@
 ///////////////////////////
 @media (min-width: 768px) {
   .error__text-container {
-    @include titleFontSize(full);
+    font-size: $title-desktop-size;
     padding: 3rem;
 
     span {
-      @include clamp("font-size", 3rem, 2vw, 1rem, 20rem);
+      font-size: $title-mobile-size;
     }
   }
 }

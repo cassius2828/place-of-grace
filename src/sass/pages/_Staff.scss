@@ -23,8 +23,9 @@
     margin: 2rem 0;
 
     &__img-bg {
-      @include clamp("width", 3rem, 20vw, 0.1rem, 10rem);
-      @include clamp("height", 3rem, 20vw, 0.1rem, 10rem);
+  
+      width: 10rem;
+      height: 10rem;
 
       margin: auto;
 
@@ -53,10 +54,10 @@
     &__text {
       &--name {
         margin-right: 2vw;
-        @include staffCardName;
+        font-size: 1.75rem;
       }
       &--title {
-        @include staffCardTitle;
+        font-size: 1.5rem;
       }
     }
   }
@@ -109,6 +110,10 @@
       &__text {
         &--name {
           margin-right: 1vw;
+          font-size: 2rem;
+        }
+        &--title {
+          font-size: 1.75rem;
         }
       }
     }

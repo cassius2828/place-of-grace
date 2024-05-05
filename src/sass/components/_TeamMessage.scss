@@ -10,14 +10,13 @@
   background-color: $color-company-white;
   &__text {
     &--title {
-    width: 75%;
+      width: 75%;
 
-    font-size: $title-mobile-size;
-    
-    margin: 2vw auto;
+      font-size: $title-mobile-size;
+
+      margin: 2vw auto;
 
       text-align: center;
- 
     }
     &--paragraph {
       width: 75%;
@@ -25,8 +24,10 @@
       margin: 2vw auto;
 
       line-height: 4vw;
-      @include paragraphFontSize(phone);
-      @include clamp("line-height", 2.5rem, 2vw, 0.1rem, 5rem);
+
+      font-size: $sm-text-mobile;
+
+      line-height: 3rem;
     }
   }
 }
@@ -37,29 +38,20 @@
   }
 }
 @media (min-width: 768px) {
-  // @include paragraphFontSize(tablet);
-.team-message {
-  &__text {
-    &--title {
-    font-size: $title-desktop-size;
 
+  .team-message {
+    &__text {
+      &--title {
+        font-size: $title-desktop-size;
+      }
+      &--paragraph {
+        font-size: $sm-text-desktop;
+      line-height: 5rem;
+
+      }
     }
   }
 }
 
-}
-@media (min-width: 1000px) {
-  .team-message {
-    // width: 75%;
-    @include clamp("padding-top", 15rem, 15vh, 0.1rem, 20rem);
-    margin: auto;
-  }
-}
 
-@media (min-width: 4000px) {
-  .team-message {
-    // need to keep so padding top doesnt change
-    padding: 10vw;
-    @include clamp("padding-top", 15rem, 15vh, 0.1rem, 20rem);
-  }
-}
+

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap");
 
 // FONT FAMILY
 $font-family-primary: Montserrat;
@@ -67,7 +66,9 @@ $huge-device: 2400px;
 // BORDER RADIUS
 $base-br: 4px;
 
-
 // FONT SIZES
 $title-desktop-size: 7rem;
 $title-mobile-size: 4rem;
+$sm-text-mobile: 1.2rem;
+$sm-text-tablet: 1.6rem;
+$sm-text-desktop: 2rem;
