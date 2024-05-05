@@ -786,7 +786,7 @@ button {
     transform: skewX(-12deg);
     padding: 1rem;
     margin: 3rem auto;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .testimonial__text {
     transform: skewX(12deg);
@@ -812,8 +812,7 @@ button {
   .testimonial__card {
     width: 100%;
     margin: 4vw auto;
-    padding: 1rem;
-    font-size: 1.25rem;
+    padding: 1rem 2rem;
     transform: skewX(0);
   }
   .testimonial__text {

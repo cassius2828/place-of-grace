@@ -103,7 +103,7 @@
       padding: 1rem;
 
       margin: 3rem auto;
-      font-size: 1.5rem;
+      font-size: $sm-text-mobile;
     }
 
     &__text {
@@ -140,9 +140,9 @@
       width: 100%;
 
       margin: 4vw auto;
-      padding: 1rem;
+      padding: 1rem 2rem;
 
-      font-size: 1.25rem;
+      // font-size: 1.25rem;
 
       transform: skewX(0);
     }
