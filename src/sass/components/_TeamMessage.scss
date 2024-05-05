@@ -4,7 +4,7 @@
   position: relative;
   z-index: 1;
 
-  padding: 15vh 5vw;
+  padding: 15vh 5vw 25vw 5vw;
 
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   background-color: $color-company-white;
@@ -40,6 +40,8 @@
 @media (min-width: 768px) {
 
   .team-message {
+  // padding: 15vh 5vw;
+
     &__text {
       &--title {
         font-size: $title-desktop-size;
@@ -53,5 +55,12 @@
   }
 }
 
+@media (min-width: 1024px) {
 
+  .team-message {
+  padding: 15vh 5vw;
+
+  
+  }
+}
 

@@ -26,7 +26,8 @@
       height: auto;
 
       font-size: 3rem;
-      @include clamp("padding", 0.5rem, 1.5vw, 0.1rem, 5rem);
+      padding: 2rem;
+
     }
   }
   &__icon {
