@@ -8,12 +8,13 @@ const ImageFloats = () => {
   return (
     <>
       <div className="composition">
-        <img
+        {/* //* pic with person in yellow; backyard */}
+        {/* <img
           src={EstherGroup}
           alt="Photo 1"
           className="composition__photo composition__photo--p1"
           fetchPriority="high"
-        />
+        /> */}
         <img
           src={ParkBench}
           alt="Photo 2"
@@ -26,12 +27,13 @@ const ImageFloats = () => {
           className="composition__photo composition__photo--p3"
           loading="lazy"
         />
-        <img
+        {/* //* picture with jeff */}
+        {/* <img
           src={party}
           alt="Photo 4"
           className="composition__photo composition__photo--p4"
           loading="lazy"
-        />
+        /> */}
         <img
           src={picnic}
           alt="Photo 5"
