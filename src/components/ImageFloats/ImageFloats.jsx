@@ -1,8 +1,10 @@
-import party from "/images/clients/home2.png";
-import picnic from "/images/clients/home1.jpg";
-import ParkBench from "/images/clients/Park-Bench-Group.jpeg";
-import WaterFight from "/images/clients/Rome-Javon-Waterfight.jpeg";
-import EstherGroup from "/images/clients/Esther-Group-House.jpeg";
+const picnic = `${import.meta.env.VITE_CDN_PATH}/images/clients/home1.jpg`;
+const ParkBench = `${
+  import.meta.env.VITE_CDN_PATH
+}/images/clients/Park-Bench-Group.jpeg`;
+const WaterFight = `${
+  import.meta.env.VITE_CDN_PATH
+}/images/clients/Rome-Javon-Waterfight.jpeg`;
 
 const ImageFloats = () => {
   return (

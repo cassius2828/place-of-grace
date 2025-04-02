@@ -1,5 +1,10 @@
-import VideoOfHills from "/videos/formHillsBackground.mp4";
-import VideoOfHillsWebm from "/videos/formHillsBackground.webm";
+const VideoOfHills = `${
+  import.meta.env.VITE_CDN_PATH
+}/videos/formHillsBackground.mp4`;
+const VideoOfHillsWebm = `${
+  import.meta.env.VITE_CDN_PATH
+}/videos/videos/formHillsBackground.webm`;
+
 // import fallbackHills from "/images/wide-images/hillsArielImage.png";
 import { useState } from "react";
 

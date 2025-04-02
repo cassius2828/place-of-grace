@@ -1,8 +1,10 @@
-import party from "/md-images/clients/home2.webp";
-import picnic from "/md-images/clients/home1.webp";
-import ParkBench from "/md-images/clients/Park-Bench-Group.webp";
-import WaterFight from "/md-images/clients/Rome-Javon-Waterfight.webp";
-import EstherGroup from "/md-images/clients/Esther-Group-House.webp";
+const picnic = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/home1.webp`;
+const ParkBench = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Park-Bench-Group.webp`;
+const WaterFight = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Rome-Javon-Waterfight.webp`;
 
 import Slider from "react-slick";
 

@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import defaultProfilePic from "/images/default/default-profile.jpeg";
+const defaultProfilePic = `${
+  import.meta.env.VITE_CDN_PATH
+}/images/default/default-profile.jpeg`;
 
 const HeadshotCard = ({
   iconSize = "lg",
