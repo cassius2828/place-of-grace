@@ -13,4 +13,3 @@ const Header = () => {
   );
 };
 export default Header;
-// https://placeofgrace.net/NewPoGLogo.svg
