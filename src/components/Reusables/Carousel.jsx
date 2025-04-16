@@ -1,8 +1,16 @@
-import party from "/md-images/clients/home2.webp";
-import picnic from "/md-images/clients/home1.webp";
-import ParkBench from "/md-images/clients/Park-Bench-Group.webp";
-import WaterFight from "/md-images/clients/Rome-Javon-Waterfight.webp";
-import EstherGroup from "/md-images/clients/Esther-Group-House.webp";
+const picnic = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/home1.webp`;
+const laCruzOriginal = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/la-cruz-original.webp`;
+const SpringAndClientCrafts = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Spring-and-Client-Crafts-mobile.webp`;
+const ParkBench = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Park-Bench-Group.webp`;
+const WaterFight = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Rome-Javon-Waterfight.webp`;
 
 import Slider from "react-slick";
 
@@ -22,8 +30,8 @@ const Carousel = ({ slidesToShow }) => {
     <Slider {...settings}>
       <div className="carousel-img-container">
         <img
-          src={EstherGroup}
-          alt="Esther's house of clients and staff"
+          src={laCruzOriginal}
+          alt="La Cruz clients standing together on a creek bridge smiling and enjoying the afternoon."
           fetchPriority="high"
         />
       </div>
@@ -42,7 +50,11 @@ const Carousel = ({ slidesToShow }) => {
         />
       </div>
       <div className="carousel-img-container">
-        <img src={party} alt=" Christmas party" loading="lazy" />
+        <img
+          src={SpringAndClientCrafts}
+          alt="Admin Spring doing fun arts and crafts with a client"
+          loading="lazy"
+        />
       </div>
       <div className="carousel-img-container">
         <img src={picnic} alt=" Picnic at the park" loading="lazy" />
