@@ -1,5 +1,10 @@
 const picnic = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/home1.webp`;
-const laCruzOriginal = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/la-cruz-original.webp`;
+const laCruzOriginal = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/la-cruz-original.webp`;
+const SpringAndClientCrafts = `${
+  import.meta.env.VITE_CDN_PATH
+}/md-images/clients/Spring-and-Client-Crafts-mobile.webp`;
 const ParkBench = `${
   import.meta.env.VITE_CDN_PATH
 }/md-images/clients/Park-Bench-Group.webp`;
@@ -44,9 +49,13 @@ const Carousel = ({ slidesToShow }) => {
           loading="lazy"
         />
       </div>
-      {/* <div className="carousel-img-container">
-        <img src={party} alt=" Christmas party" loading="lazy" />
-      </div> */}
+      <div className="carousel-img-container">
+        <img
+          src={SpringAndClientCrafts}
+          alt="Admin Spring doing fun arts and crafts with a client"
+          loading="lazy"
+        />
+      </div>
       <div className="carousel-img-container">
         <img src={picnic} alt=" Picnic at the park" loading="lazy" />
       </div>
