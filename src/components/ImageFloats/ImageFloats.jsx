@@ -1,4 +1,8 @@
 const picnic = `${import.meta.env.VITE_CDN_PATH}/images/clients/home1.jpg`;
+const laCruzOriginal = `${
+  import.meta.env.VITE_CDN_PATH
+}/images/clients/la-cruz-original.jpeg`;
+
 const ParkBench = `${
   import.meta.env.VITE_CDN_PATH
 }/images/clients/Park-Bench-Group.jpeg`;
@@ -10,13 +14,12 @@ const ImageFloats = () => {
   return (
     <>
       <div className="composition">
-        {/* //* pic with person in yellow; backyard */}
-        {/* <img
-          src={EstherGroup}
-          alt="Photo 1"
+        <img
+          src={laCruzOriginal}
+          alt="La Cruz clients standing together on a creek bridge smiling and enjoying the afternoon."
           className="composition__photo composition__photo--p1"
           fetchPriority="high"
-        /> */}
+        />
         <img
           src={ParkBench}
           alt="Photo 2"

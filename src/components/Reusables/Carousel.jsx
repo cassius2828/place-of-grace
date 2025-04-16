@@ -1,4 +1,5 @@
 const picnic = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/home1.webp`;
+const laCruzOriginal = `${import.meta.env.VITE_CDN_PATH}/md-images/clients/la-cruz-original.webp`;
 const ParkBench = `${
   import.meta.env.VITE_CDN_PATH
 }/md-images/clients/Park-Bench-Group.webp`;
@@ -22,13 +23,13 @@ const Carousel = ({ slidesToShow }) => {
   };
   return (
     <Slider {...settings}>
-      {/* <div className="carousel-img-container">
+      <div className="carousel-img-container">
         <img
-          src={EstherGroup}
-          alt="Esther's house of clients and staff"
+          src={laCruzOriginal}
+          alt="La Cruz clients standing together on a creek bridge smiling and enjoying the afternoon."
           fetchPriority="high"
         />
-      </div> */}
+      </div>
       <div className="carousel-img-container">
         <img
           src={ParkBench}
