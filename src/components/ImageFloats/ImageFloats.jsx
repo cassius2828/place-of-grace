@@ -1,4 +1,7 @@
 const picnic = `${import.meta.env.VITE_CDN_PATH}/images/clients/home1.jpg`;
+const SpringAndClientCrafts = `${
+  import.meta.env.VITE_CDN_PATH
+}/images/clients/Spring-and-Client-Crafts.webp`;
 const laCruzOriginal = `${
   import.meta.env.VITE_CDN_PATH
 }/images/clients/la-cruz-original.jpeg`;
@@ -22,26 +25,26 @@ const ImageFloats = () => {
         />
         <img
           src={ParkBench}
-          alt="Photo 2"
+          alt="Picnic event of our clientele enjoying the food and nature"
           className="composition__photo composition__photo--p2"
           fetchPriority="high"
         />
         <img
           src={WaterFight}
-          alt="Photo 3"
+          alt="Water fight between Administrator Roman Price and clientele"
           className="composition__photo composition__photo--p3"
           loading="lazy"
         />
         {/* //* picture with jeff */}
-        {/* <img
-          src={party}
-          alt="Photo 4"
+        <img
+          src={SpringAndClientCrafts}
+          alt="Administrator Spring doing arts and crafts with clientele"
           className="composition__photo composition__photo--p4"
           loading="lazy"
-        /> */}
+        />
         <img
           src={picnic}
-          alt="Photo 5"
+          alt="A party at one of our locations features staff and clientele"
           className="composition__photo composition__photo--p5"
           loading="lazy"
         />
